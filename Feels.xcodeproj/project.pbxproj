@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB695D1BCD02E500268E8E /* AppDelegate.m */; };
+		0ACB69611BCD02E500268E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69601BCD02E500268E8E /* main.m */; };
+		0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69621BCD02E500268E8E /* Assets.xcassets */; };
+		0ACB69661BCD02E500268E8E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69641BCD02E500268E8E /* MainMenu.xib */; };
+		0ACB69711BCD02E500268E8E /* FeelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69701BCD02E500268E8E /* FeelsTests.m */; };
+		0ACB697C1BCD02E500268E8E /* FeelsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB697B1BCD02E500268E8E /* FeelsUITests.m */; };
+		0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */; };
+		0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB698D1BCD0A5200268E8E /* FeelsApp.m */; };
+		0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */; };
+		0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */; };
+		0ACB69991BCD334B00268E8E /* FeelContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69981BCD334B00268E8E /* FeelContainer.m */; };
+		0ACB699C1BCD383C00268E8E /* Feel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB699B1BCD383C00268E8E /* Feel.m */; };
+		0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB699E1BCD546E00268E8E /* FeelViewItem.m */; };
+		0ACB69A11BCD546E00268E8E /* FeelViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB699F1BCD546E00268E8E /* FeelViewItem.xib */; };
+		0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69A21BCD564C00268E8E /* Feels.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ACB696D1BCD02E500268E8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ACB69511BCD02E500268E8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ACB69581BCD02E500268E8E;
+			remoteInfo = Feels;
+		};
+		0ACB69781BCD02E500268E8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ACB69511BCD02E500268E8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ACB69581BCD02E500268E8E;
+			remoteInfo = Feels;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ACB69591BCD02E500268E8E /* Feels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACB695C1BCD02E500268E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0ACB695D1BCD02E500268E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0ACB69601BCD02E500268E8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0ACB69621BCD02E500268E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0ACB69651BCD02E500268E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0ACB69671BCD02E500268E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ACB696C1BCD02E500268E8E /* FeelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACB69701BCD02E500268E8E /* FeelsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeelsTests.m; sourceTree = "<group>"; };
+		0ACB69721BCD02E500268E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ACB69771BCD02E500268E8E /* FeelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACB697B1BCD02E500268E8E /* FeelsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeelsUITests.m; sourceTree = "<group>"; };
+		0ACB697D1BCD02E500268E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserWindow.xib; sourceTree = "<group>"; };
+		0ACB698C1BCD0A5200268E8E /* FeelsApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelsApp.h; sourceTree = "<group>"; };
+		0ACB698D1BCD0A5200268E8E /* FeelsApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelsApp.m; sourceTree = "<group>"; };
+		0ACB698F1BCD0B5100268E8E /* BrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserWindowController.h; sourceTree = "<group>"; };
+		0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserWindowController.m; sourceTree = "<group>"; };
+		0ACB69931BCD285D00268E8E /* BrowserCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserCoordinator.h; sourceTree = "<group>"; };
+		0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserCoordinator.m; sourceTree = "<group>"; };
+		0ACB69971BCD334B00268E8E /* FeelContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelContainer.h; sourceTree = "<group>"; };
+		0ACB69981BCD334B00268E8E /* FeelContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelContainer.m; sourceTree = "<group>"; };
+		0ACB699A1BCD383C00268E8E /* Feel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feel.h; sourceTree = "<group>"; };
+		0ACB699B1BCD383C00268E8E /* Feel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feel.m; sourceTree = "<group>"; };
+		0ACB699D1BCD546E00268E8E /* FeelViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelViewItem.h; sourceTree = "<group>"; };
+		0ACB699E1BCD546E00268E8E /* FeelViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelViewItem.m; sourceTree = "<group>"; };
+		0ACB699F1BCD546E00268E8E /* FeelViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeelViewItem.xib; sourceTree = "<group>"; };
+		0ACB69A21BCD564C00268E8E /* Feels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feels.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0ACB69561BCD02E500268E8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACB69691BCD02E500268E8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACB69741BCD02E500268E8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0ACB69501BCD02E500268E8E = {
+			isa = PBXGroup;
+			children = (
+				0ACB695B1BCD02E500268E8E /* Feels */,
+				0ACB696F1BCD02E500268E8E /* FeelsTests */,
+				0ACB697A1BCD02E500268E8E /* FeelsUITests */,
+				0ACB695A1BCD02E500268E8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0ACB695A1BCD02E500268E8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB69591BCD02E500268E8E /* Feels.app */,
+				0ACB696C1BCD02E500268E8E /* FeelsTests.xctest */,
+				0ACB69771BCD02E500268E8E /* FeelsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0ACB695B1BCD02E500268E8E /* Feels */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB695C1BCD02E500268E8E /* AppDelegate.h */,
+				0ACB695D1BCD02E500268E8E /* AppDelegate.m */,
+				0ACB698C1BCD0A5200268E8E /* FeelsApp.h */,
+				0ACB698D1BCD0A5200268E8E /* FeelsApp.m */,
+				0ACB69921BCD0EC700268E8E /* Browser */,
+				0ACB69891BCD097700268E8E /* Resources */,
+				0ACB695F1BCD02E500268E8E /* Supporting Files */,
+			);
+			path = Feels;
+			sourceTree = "<group>";
+		};
+		0ACB695F1BCD02E500268E8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB69601BCD02E500268E8E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ACB696F1BCD02E500268E8E /* FeelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB69701BCD02E500268E8E /* FeelsTests.m */,
+				0ACB69721BCD02E500268E8E /* Info.plist */,
+			);
+			path = FeelsTests;
+			sourceTree = "<group>";
+		};
+		0ACB697A1BCD02E500268E8E /* FeelsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB697B1BCD02E500268E8E /* FeelsUITests.m */,
+				0ACB697D1BCD02E500268E8E /* Info.plist */,
+			);
+			path = FeelsUITests;
+			sourceTree = "<group>";
+		};
+		0ACB69891BCD097700268E8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB69621BCD02E500268E8E /* Assets.xcassets */,
+				0ACB69641BCD02E500268E8E /* MainMenu.xib */,
+				0ACB69671BCD02E500268E8E /* Info.plist */,
+				0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */,
+				0ACB69A21BCD564C00268E8E /* Feels.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0ACB69921BCD0EC700268E8E /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB69931BCD285D00268E8E /* BrowserCoordinator.h */,
+				0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */,
+				0ACB698F1BCD0B5100268E8E /* BrowserWindowController.h */,
+				0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */,
+				0ACB69971BCD334B00268E8E /* FeelContainer.h */,
+				0ACB69981BCD334B00268E8E /* FeelContainer.m */,
+				0ACB699A1BCD383C00268E8E /* Feel.h */,
+				0ACB699B1BCD383C00268E8E /* Feel.m */,
+				0ACB699D1BCD546E00268E8E /* FeelViewItem.h */,
+				0ACB699E1BCD546E00268E8E /* FeelViewItem.m */,
+				0ACB699F1BCD546E00268E8E /* FeelViewItem.xib */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0ACB69581BCD02E500268E8E /* Feels */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ACB69801BCD02E500268E8E /* Build configuration list for PBXNativeTarget "Feels" */;
+			buildPhases = (
+				0ACB69551BCD02E500268E8E /* Sources */,
+				0ACB69561BCD02E500268E8E /* Frameworks */,
+				0ACB69571BCD02E500268E8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Feels;
+			productName = Feels;
+			productReference = 0ACB69591BCD02E500268E8E /* Feels.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0ACB696B1BCD02E500268E8E /* FeelsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ACB69831BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsTests" */;
+			buildPhases = (
+				0ACB69681BCD02E500268E8E /* Sources */,
+				0ACB69691BCD02E500268E8E /* Frameworks */,
+				0ACB696A1BCD02E500268E8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ACB696E1BCD02E500268E8E /* PBXTargetDependency */,
+			);
+			name = FeelsTests;
+			productName = FeelsTests;
+			productReference = 0ACB696C1BCD02E500268E8E /* FeelsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0ACB69761BCD02E500268E8E /* FeelsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ACB69861BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsUITests" */;
+			buildPhases = (
+				0ACB69731BCD02E500268E8E /* Sources */,
+				0ACB69741BCD02E500268E8E /* Frameworks */,
+				0ACB69751BCD02E500268E8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ACB69791BCD02E500268E8E /* PBXTargetDependency */,
+			);
+			name = FeelsUITests;
+			productName = FeelsUITests;
+			productReference = 0ACB69771BCD02E500268E8E /* FeelsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0ACB69511BCD02E500268E8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Internals Exposed";
+				TargetAttributes = {
+					0ACB69581BCD02E500268E8E = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					0ACB696B1BCD02E500268E8E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 0ACB69581BCD02E500268E8E;
+					};
+					0ACB69761BCD02E500268E8E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 0ACB69581BCD02E500268E8E;
+					};
+				};
+			};
+			buildConfigurationList = 0ACB69541BCD02E500268E8E /* Build configuration list for PBXProject "Feels" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0ACB69501BCD02E500268E8E;
+			productRefGroup = 0ACB695A1BCD02E500268E8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0ACB69581BCD02E500268E8E /* Feels */,
+				0ACB696B1BCD02E500268E8E /* FeelsTests */,
+				0ACB69761BCD02E500268E8E /* FeelsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0ACB69571BCD02E500268E8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */,
+				0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */,
+				0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */,
+				0ACB69661BCD02E500268E8E /* MainMenu.xib in Resources */,
+				0ACB69A11BCD546E00268E8E /* FeelViewItem.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACB696A1BCD02E500268E8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACB69751BCD02E500268E8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ACB69551BCD02E500268E8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */,
+				0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */,
+				0ACB69611BCD02E500268E8E /* main.m in Sources */,
+				0ACB699C1BCD383C00268E8E /* Feel.m in Sources */,
+				0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */,
+				0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */,
+				0ACB69991BCD334B00268E8E /* FeelContainer.m in Sources */,
+				0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACB69681BCD02E500268E8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACB69711BCD02E500268E8E /* FeelsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACB69731BCD02E500268E8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACB697C1BCD02E500268E8E /* FeelsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ACB696E1BCD02E500268E8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ACB69581BCD02E500268E8E /* Feels */;
+			targetProxy = 0ACB696D1BCD02E500268E8E /* PBXContainerItemProxy */;
+		};
+		0ACB69791BCD02E500268E8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ACB69581BCD02E500268E8E /* Feels */;
+			targetProxy = 0ACB69781BCD02E500268E8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0ACB69641BCD02E500268E8E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ACB69651BCD02E500268E8E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0ACB697E1BCD02E500268E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0ACB697F1BCD02E500268E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0ACB69811BCD02E500268E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Feels/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Feels;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0ACB69821BCD02E500268E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Feels/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Feels;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0ACB69841BCD02E500268E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FeelsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feels.app/Contents/MacOS/Feels";
+			};
+			name = Debug;
+		};
+		0ACB69851BCD02E500268E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FeelsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feels.app/Contents/MacOS/Feels";
+			};
+			name = Release;
+		};
+		0ACB69871BCD02E500268E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FeelsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Feels;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0ACB69881BCD02E500268E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FeelsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Feels;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ACB69541BCD02E500268E8E /* Build configuration list for PBXProject "Feels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACB697E1BCD02E500268E8E /* Debug */,
+				0ACB697F1BCD02E500268E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ACB69801BCD02E500268E8E /* Build configuration list for PBXNativeTarget "Feels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACB69811BCD02E500268E8E /* Debug */,
+				0ACB69821BCD02E500268E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0ACB69831BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACB69841BCD02E500268E8E /* Debug */,
+				0ACB69851BCD02E500268E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0ACB69861BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACB69871BCD02E500268E8E /* Debug */,
+				0ACB69881BCD02E500268E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0ACB69511BCD02E500268E8E /* Project object */;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9058" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9058"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mcl-y9-x7G">
+                    <rect key="frame" x="0.0" y="0.0" width="167" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="Mqe-oS-8GX"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="(っ˘̩╭╮˘̩)っ" id="zQE-Km-6uM">
+                        <font key="font" size="14" name=".AppleSystemUIFont"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="8ci-VU-am2"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Mcl-y9-x7G" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Pjo-Zs-os9"/>
+                <constraint firstAttribute="trailing" secondItem="Mcl-y9-x7G" secondAttribute="trailing" id="SkE-8R-zJ5"/>
+                <constraint firstItem="Mcl-y9-x7G" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="e9f-pD-GxI"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="282.5" y="261"/>
+        </customView>
+        <viewController id="hUM-uu-vU2" customClass="FeelViewItem">
+            <connections>
+                <outlet property="textField" destination="Mcl-y9-x7G" id="wmn-KU-bNH"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="cIR-JH-B80"/>
+            </connections>
+        </viewController>
+    </objects>
+</document>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>feels</key>
+	<array>
+		<dict>
+			<key>emoticon</key>
+			<string>(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)</string>
+			<key>label</key>
+			<string>crying out loud with tears</string>
+		</dict>
+		<dict>
+			<key>emoticon</key>
+			<string>╥﹏╥</string>
+			<key>label</key>
+			<string>angry view</string>
+		</dict>
+		<dict>
+			<key>emoticon</key>
+			<string>(っ˘̩╭╮˘̩)っ</string>
+		</dict>
+		<dict>
+			<key>emoticon</key>
+			<string>o͡͡͡͡͡͡͡͡͡͡͡͡͡͡╮(^ ਊ ^)╭o͡͡͡͡͡͡͡͡͡͡͡͡͡͡</string>
+		</dict>
+	</array>
+</dict>
+</plist>
