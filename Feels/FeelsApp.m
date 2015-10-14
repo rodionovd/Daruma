@@ -24,7 +24,6 @@
     return self;
 }
 
-#warning TODO: copy the default database into Application Support, then use this copy so a user could do changes (add/delete emoticons, assign lables)
 + (NSURL *)defaultFeelsURL
 {
     return [[NSBundle mainBundle] URLForResource: @"Feels" withExtension: @"plist"];

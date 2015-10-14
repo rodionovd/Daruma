@@ -61,8 +61,13 @@
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
     NSString *emoticon = [self.feelsContainer objectAtIndexPath: indexPath].emoticon;
-    // FIXME: why 18?
-    NSSize f = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 18]}];
+    // FIXME: why hardcoded font size?
+    NSSize f = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 23]}];
+    
+    // TODO: sanitize the width: is must be less than the width of the collection view plus left and right section insets:
+    // [(NSCollectionViewFlowLayout *)collectionView.collectionViewLayout sectionInset].left
+    // [(NSCollectionViewFlowLayout *)collectionView.collectionViewLayout sectionInset].right
+    
     // FIXME: why 1.5?
     f.height *= 1.5;
     return f;

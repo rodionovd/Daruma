@@ -21,7 +21,7 @@
 }
 
 
-#pragma mark Selection and Highlighting Support
+#pragma mark Selection and Highlighting
 
 - (void)setHighlightState: (NSCollectionViewItemHighlightState)newHighlightState
 {

@@ -34,8 +34,6 @@
         layout.sectionInset = NSEdgeInsetsMake(10, 10, 10, 10);
         layout;
     });
-    
-    #warning What about this background view?
 }
 
 @end

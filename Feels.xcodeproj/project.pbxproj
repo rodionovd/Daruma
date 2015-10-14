@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0A563B271BCE900E00A34B8D /* FeelEmoticonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelEmoticonView.h; sourceTree = "<group>"; };
 		0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelEmoticonView.m; sourceTree = "<group>"; };
+		0A563B2A1BCEA41A00A34B8D /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = SOURCE_ROOT; };
 		0ACB69591BCD02E500268E8E /* Feels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACB695C1BCD02E500268E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ACB695D1BCD02E500268E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		0ACB695B1BCD02E500268E8E /* Feels */ = {
 			isa = PBXGroup;
 			children = (
+				0A563B2A1BCEA41A00A34B8D /* TODO.md */,
 				0ACB695C1BCD02E500268E8E /* AppDelegate.h */,
 				0ACB695D1BCD02E500268E8E /* AppDelegate.m */,
 				0ACB698C1BCD0A5200268E8E /* FeelsApp.h */,
