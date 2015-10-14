@@ -34,7 +34,7 @@
                 <constraint firstItem="Mcl-y9-x7G" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="e9f-pD-GxI"/>
             </constraints>
             <animations/>
-            <point key="canvasLocation" x="282.5" y="261"/>
+            <point key="canvasLocation" x="196.5" y="349"/>
         </customView>
         <viewController id="hUM-uu-vU2" customClass="FeelViewItem">
             <connections>

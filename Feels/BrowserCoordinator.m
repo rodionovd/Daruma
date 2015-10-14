@@ -8,6 +8,7 @@
 
 #import "BrowserCoordinator.h"
 #import "BrowserWindowController.h"
+#import "Feel.h"
 #import "FeelContainer.h"
 
 @interface BrowserCoordinator()
@@ -19,6 +20,7 @@
 - (instancetype)initWithFeelsContainerURL: (NSURL *)containerURL
 {
     if ((self = [super init])) {
+        // TODO: create a DataSource object
         _feelsContainer = [[FeelContainer alloc] initWithURL: containerURL];
     }
     return self;
@@ -26,7 +28,6 @@
 
 - (void)start
 {
-    NSLog(@"Browser coordinator is here!");
     self.browserWindowController = [BrowserWindowController new];
     self.browserWindowController.coordinator = self;
     [self.browserWindowController showWindow: self];
@@ -46,13 +47,25 @@
     return self.feelsContainer.count;
 }
 
-- (NSCollectionViewItem *)collectionView:(NSCollectionView *)collectionView
-     itemForRepresentedObjectAtIndexPath:(NSIndexPath *)indexPath
+- (NSCollectionViewItem *)collectionView: (NSCollectionView *)collectionView
+     itemForRepresentedObjectAtIndexPath: (NSIndexPath *)indexPath
 {
     NSCollectionViewItem *item = [collectionView makeItemWithIdentifier: @"FeelViewItem"
                                                            forIndexPath: indexPath];
     item.representedObject = [self.feelsContainer objectAtIndexPath: indexPath];
     return item;
+}
+
+- (NSSize)collectionView: (NSCollectionView *)collectionView
+                  layout: (NSCollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath: (NSIndexPath *)indexPath
+{
+    NSString *emoticon = [self.feelsContainer objectAtIndexPath: indexPath].emoticon;
+    // FIXME: why 18?
+    NSSize f = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 18]}];
+    // FIXME: why 1.5?
+    f.height *= 1.5;
+    return f;
 }
 
 @end

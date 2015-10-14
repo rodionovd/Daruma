@@ -35,14 +35,16 @@
 }
 
 #pragma mark - Internal
+
 - (void)setupInternalContainerFromURL: (nonnull NSURL *)url
 {
     NSDictionary *database = [NSDictionary dictionaryWithContentsOfURL: url];
     NSAssert(database != nil, @"Invalid container URL");
     
     NSMutableArray *tmp = [NSMutableArray arrayWithCapacity: [database[@"feels"] count]];
-    [database[@"feels"] enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
-        [tmp addObject: [Feel feelFromDictionary: item]];
+    [database[@"feels"] enumerateObjectsUsingBlock:^(NSDictionary *item, NSUInteger idx, BOOL * stop) {
+        id feel = [Feel feelFromDictionary: item];
+        if (feel) [tmp addObject: feel];
     }];
     self.internalContainer = [NSOrderedSet orderedSetWithArray: tmp];
 }

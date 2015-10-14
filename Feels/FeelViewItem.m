@@ -19,4 +19,23 @@
     // Do view setup here.
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+}
+
+
+#pragma mark Selection and Highlighting Support
+
+- (void)setHighlightState:(NSCollectionViewItemHighlightState)newHighlightState
+{
+    [super setHighlightState:newHighlightState];
+
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+}
+
 @end

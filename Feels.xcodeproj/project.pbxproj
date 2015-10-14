@@ -172,19 +172,27 @@
 		0ACB69921BCD0EC700268E8E /* Browser */ = {
 			isa = PBXGroup;
 			children = (
+				0ACB69A41BCD636900268E8E /* Model */,
 				0ACB69931BCD285D00268E8E /* BrowserCoordinator.h */,
 				0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */,
 				0ACB698F1BCD0B5100268E8E /* BrowserWindowController.h */,
 				0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */,
-				0ACB69971BCD334B00268E8E /* FeelContainer.h */,
-				0ACB69981BCD334B00268E8E /* FeelContainer.m */,
-				0ACB699A1BCD383C00268E8E /* Feel.h */,
-				0ACB699B1BCD383C00268E8E /* Feel.m */,
 				0ACB699D1BCD546E00268E8E /* FeelViewItem.h */,
 				0ACB699E1BCD546E00268E8E /* FeelViewItem.m */,
 				0ACB699F1BCD546E00268E8E /* FeelViewItem.xib */,
 			);
 			name = Browser;
+			sourceTree = "<group>";
+		};
+		0ACB69A41BCD636900268E8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB69971BCD334B00268E8E /* FeelContainer.h */,
+				0ACB69981BCD334B00268E8E /* FeelContainer.m */,
+				0ACB699A1BCD383C00268E8E /* Feel.h */,
+				0ACB699B1BCD383C00268E8E /* Feel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +555,7 @@
 				0ACB69821BCD02E500268E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ACB69831BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +564,7 @@
 				0ACB69851BCD02E500268E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ACB69861BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsUITests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +573,7 @@
 				0ACB69881BCD02E500268E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

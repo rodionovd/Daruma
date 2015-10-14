@@ -24,17 +24,17 @@
 {
     [super windowDidLoad];
     
-    // setup the collection view layout
-    NSCollectionViewFlowLayout *layout = [NSCollectionViewFlowLayout new];
-    layout.itemSize = CGSizeMake(80, 60);
-    layout.minimumInteritemSpacing = 10;
-    layout.minimumLineSpacing = 10;
-    layout.sectionInset = NSEdgeInsetsMake(10, 10, 10, 10);
-    self.collectionView.collectionViewLayout = layout;
-    // assign collection view delegate and data source
     self.collectionView.delegate = self.coordinator;
     self.collectionView.dataSource = self.coordinator;
-    // set a background view for the collection view???
+    
+    self.collectionView.collectionViewLayout = ({
+        NSCollectionViewFlowLayout *layout = [NSCollectionViewFlowLayout new];
+        layout.minimumInteritemSpacing = 10;
+        layout.minimumLineSpacing = 10;
+        layout.sectionInset = NSEdgeInsetsMake(10, 10, 10, 10);
+        layout;
+    });
+    
     #warning What about this background view?
 }
 

@@ -23,6 +23,28 @@
 		<dict>
 			<key>emoticon</key>
 			<string>o͡͡͡͡͡͡͡͡͡͡͡͡͡͡╮(^ ਊ ^)╭o͡͡͡͡͡͡͡͡͡͡͡͡͡͡</string>
+			<key>label</key>
+			<string>pancakes!</string>
+		</dict>
+		<dict>
+			<key>emoticon</key>
+			<string>(( ༎ຶ‿༎ຶ ))</string>
+			<key>label</key>
+			<string>crying smiling</string>
+		</dict>
+		<dict>
+			<key>emoticon</key>
+			<string>┐(‘～`;)┌</string>
+			<key>label</key>
+			<string>meh</string>
+		</dict>
+		<dict>
+			<key>emoticon</key>
+			<string>| ू･᷄ω･᷅)｡oOஇo｡</string>
+		</dict>
+		<dict>
+			<key>emoticon</key>
+			<string>(⊹◕ʖ̯◕)</string>
 		</dict>
 	</array>
 </dict>

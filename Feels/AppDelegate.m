@@ -26,6 +26,6 @@
     // Insert code here to tear down your application
 }
 
-// TODO: user must be able to reopen the browser window once it's closed. So don't terminate after last window is closed.
+#warning TODO: user must be able to reopen the browser window once it's closed. So don't terminate after last window is closed.
 
 @end
