@@ -7,17 +7,13 @@
 //
 
 #import "FeelViewItem.h"
+#import "FeelEmoticonView.h"
 
 @interface FeelViewItem ()
-
 @end
 
 @implementation FeelViewItem
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-}
 
 - (void)prepareForReuse
 {
@@ -27,15 +23,17 @@
 
 #pragma mark Selection and Highlighting Support
 
-- (void)setHighlightState:(NSCollectionViewItemHighlightState)newHighlightState
+- (void)setHighlightState: (NSCollectionViewItemHighlightState)newHighlightState
 {
-    [super setHighlightState:newHighlightState];
+    [super setHighlightState: newHighlightState];
+    [(FeelEmoticonView *)self.view setHighlightState: newHighlightState];
 
 }
 
 - (void)setSelected:(BOOL)selected
 {
-    [super setSelected:selected];
+    [super setSelected: selected];
+    [(FeelEmoticonView *)self.view setSelected: selected];
 }
 
 @end
