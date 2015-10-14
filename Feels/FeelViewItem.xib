@@ -19,7 +19,7 @@
                     </constraints>
                     <animations/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="(っ˘̩╭╮˘̩)っ" id="zQE-Km-6uM">
-                        <font key="font" size="14" name=".AppleSystemUIFont"/>
+                        <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
