@@ -182,6 +182,7 @@
 				0ACB69621BCD02E500268E8E /* Assets.xcassets */,
 				0ACB69641BCD02E500268E8E /* MainMenu.xib */,
 				0ACB69671BCD02E500268E8E /* Info.plist */,
+				0ACB699F1BCD546E00268E8E /* FeelViewItem.xib */,
 				0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */,
 				0ACB69A21BCD564C00268E8E /* Feels.plist */,
 			);
@@ -191,15 +192,14 @@
 		0ACB69921BCD0EC700268E8E /* Browser */ = {
 			isa = PBXGroup;
 			children = (
-				0ACB69A41BCD636900268E8E /* Model */,
 				0ACB69931BCD285D00268E8E /* BrowserCoordinator.h */,
 				0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */,
 				0ACB698F1BCD0B5100268E8E /* BrowserWindowController.h */,
 				0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */,
 				0ACB699D1BCD546E00268E8E /* FeelViewItem.h */,
 				0ACB699E1BCD546E00268E8E /* FeelViewItem.m */,
+				0ACB69A41BCD636900268E8E /* Model */,
 				0A563B261BCE8FD800A34B8D /* View */,
-				0ACB699F1BCD546E00268E8E /* FeelViewItem.xib */,
 			);
 			name = Browser;
 			sourceTree = "<group>";
