@@ -7,6 +7,7 @@
 //
 
 #import "BrowserWindowController.h"
+#import "CollectionViewBrowserLayout.h"
 
 @interface BrowserWindowController ()
 
@@ -26,14 +27,7 @@
     
     self.collectionView.delegate = self.coordinator;
     self.collectionView.dataSource = self.coordinator;
-    
-    self.collectionView.collectionViewLayout = ({
-        NSCollectionViewFlowLayout *layout = [NSCollectionViewFlowLayout new];
-        layout.minimumInteritemSpacing = 10;
-        layout.minimumLineSpacing = 10;
-        layout.sectionInset = NSEdgeInsetsMake(10, 10, 10, 10);
-        layout;
-    });
+    self.collectionView.collectionViewLayout = [CollectionViewBrowserLayout new];
     
     // XXX:
     // Add ourselves to the the responder chain in place of a root view (and just before the window),
