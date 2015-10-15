@@ -14,13 +14,6 @@
 
 @implementation FeelViewItem
 
-
-- (void)prepareForReuse
-{
-    [super prepareForReuse];
-}
-
-
 #pragma mark Selection and Highlighting
 
 - (void)setHighlightState: (NSCollectionViewItemHighlightState)newHighlightState
