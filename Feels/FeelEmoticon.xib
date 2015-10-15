@@ -12,35 +12,35 @@
             <rect key="frame" x="0.0" y="0.0" width="165" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mcl-y9-x7G">
-                    <rect key="frame" x="0.0" y="0.0" width="167" height="66"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MW5-aE-nY6">
+                    <rect key="frame" x="-2" y="0.0" width="169" height="66"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="66" id="Mqe-oS-8GX"/>
+                        <constraint firstAttribute="height" constant="66" id="LR8-vc-ZK1"/>
                     </constraints>
                     <animations/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="(っ˘̩╭╮˘̩)っ" id="zQE-Km-6uM">
-                        <font key="font" metaFont="system" size="20"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="opK-tS-hvM">
+                        <font key="font" size="18" name=".AppleSystemUIFont"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="8ci-VU-am2"/>
+                        <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="ncJ-6T-CRA"/>
                     </connections>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="Mcl-y9-x7G" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Pjo-Zs-os9"/>
-                <constraint firstAttribute="trailing" secondItem="Mcl-y9-x7G" secondAttribute="trailing" id="SkE-8R-zJ5"/>
-                <constraint firstItem="Mcl-y9-x7G" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="e9f-pD-GxI"/>
+                <constraint firstItem="MW5-aE-nY6" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="O33-ai-k8J"/>
+                <constraint firstAttribute="trailing" secondItem="MW5-aE-nY6" secondAttribute="trailing" id="Xxf-V2-5aQ"/>
+                <constraint firstItem="MW5-aE-nY6" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="xTm-dz-mVD"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="196.5" y="349"/>
         </customView>
         <viewController id="hUM-uu-vU2" customClass="FeelViewItem">
             <connections>
-                <outlet property="textField" destination="Mcl-y9-x7G" id="wmn-KU-bNH"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="cIR-JH-B80"/>
             </connections>
         </viewController>
+        <userDefaultsController representsSharedInstance="YES" id="nw3-tX-mfP"/>
     </objects>
 </document>

@@ -64,7 +64,7 @@
 - (NSCollectionViewItem *)collectionView: (NSCollectionView *)collectionView
      itemForRepresentedObjectAtIndexPath: (NSIndexPath *)indexPath
 {
-    NSCollectionViewItem *item = [collectionView makeItemWithIdentifier: @"FeelViewItem"
+    NSCollectionViewItem *item = [collectionView makeItemWithIdentifier: @"FeelEmoticon"
                                                            forIndexPath: indexPath];
     item.representedObject = [self.feelsContainer objectAtIndexPath: indexPath];
     return item;
