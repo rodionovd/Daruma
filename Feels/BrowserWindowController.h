@@ -17,4 +17,6 @@
 
 - (nonnull instancetype)init;
 
+- (IBAction)copy: (nullable id)sender;
+
 @end

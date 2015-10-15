@@ -10,6 +10,7 @@
 #import "BrowserWindowController.h"
 #import "Feel.h"
 #import "FeelContainer.h"
+#import "Functional.h"
 
 @interface BrowserCoordinator()
 @property (strong) FeelContainer *feelsContainer;
@@ -31,6 +32,19 @@
     self.browserWindowController = [BrowserWindowController new];
     self.browserWindowController.coordinator = self;
     [self.browserWindowController showWindow: self];
+}
+
+#pragma mark Pasteboard actions
+
+// browserWindowController calls this from its copy: method
+- (void)copyItemsToPasteboardAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
+{
+    NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
+    NSArray *emoticons = [sortedByItemIndex rd_map: ^NSString *_Nonnull(NSIndexPath *_Nonnull path) {
+        return [[self.feelsContainer objectAtIndexPath: path] emoticon];
+    }];
+    [[NSPasteboard generalPasteboard] clearContents];
+    [[NSPasteboard generalPasteboard] writeObjects: @[[emoticons componentsJoinedByString: @" "]]];
 }
 
 #pragma mark - NSCollectionViewDataSource's

@@ -53,7 +53,6 @@
     if (_highlightState == NSCollectionViewItemHighlightForSelection) {
         // Item is a candidate to become selected: Show an orange border around it.
         // NOTE: tap
-        borderColor = [NSColor orangeColor];
         borderColor = [NSColor selectedControlColor];
     } else if (_selected && _highlightState != NSCollectionViewItemHighlightForDeselection) {
         // Item is selected, and is not indicated for proposed deselection: Show an Aqua border around it.
