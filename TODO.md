@@ -6,3 +6,4 @@
 6. clicking (without any modifier keys pressed) on an already selected item should deselect any other selected items, so only the current item will remain selected
 7. SEARCH
 8. SCROLL LAGS
+9. drag'n'drop emoticons
