@@ -20,7 +20,6 @@
 {
     [super setHighlightState: newHighlightState];
     [(FeelEmoticonView *)self.view setHighlightState: newHighlightState];
-
 }
 
 - (void)setSelected:(BOOL)selected
