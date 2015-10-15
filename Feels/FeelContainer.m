@@ -9,6 +9,7 @@
 #import <AppKit/NSCollectionView.h> // for UIKit-style NSIndexPath accessors (section and item)
 #import "FeelContainer.h"
 #import "Feel.h"
+#import "Functional.h"
 
 @interface FeelContainer()
 @property NSOrderedSet<Feel *>* internalContainer;
@@ -46,7 +47,10 @@
         id feel = [Feel feelFromDictionary: item];
         if (feel) [tmp addObject: feel];
     }];
-    self.internalContainer = [NSOrderedSet orderedSetWithArray: tmp];
+    // FIXME: don't shuffle in Release
+    // NOTE: the seed is hardcoded here for reproducibility
+    srandom(1337);
+    self.internalContainer = [NSOrderedSet orderedSetWithArray: [tmp rd_shuffledArray]];
 }
 
 @end

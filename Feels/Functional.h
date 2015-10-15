@@ -14,4 +14,5 @@
 
 @interface NSArray (Functional)
 - (nonnull NSArray *)rd_map: (nonnull id _Nonnull (^)(id _Nonnull obj))mapper;
+- (nonnull NSArray *)rd_shuffledArray;
 @end
