@@ -14,8 +14,8 @@
     self = [super init];
     if (self) {
 //        [self setItemSize:NSMakeSize(SLIDE_WIDTH, SLIDE_HEIGHT)];
-        [self setMinimumInteritemSpacing: 10];
-        [self setMinimumLineSpacing: 10];
+        [self setMinimumInteritemSpacing: 5];
+        [self setMinimumLineSpacing: 5];
         [self setSectionInset: NSEdgeInsetsMake(10, 10, 10, 10)];
     }
     return self;
