@@ -21,3 +21,7 @@
 14. ADD NEW EMOTICONS
     14.1. via drag’n’drop (into app)?
     14.2. batch mode?
+15. Rounded top corners of the collection view (?)
+16. hotkeys for EVERYTHING HELL YEAH.
+    cmd+n to create a thing, delete to delete, enter to change lables/modify emoticons, etc
+17. Generate OS X Text Replacements for selected emoticons (e.g. "shrugg" -> ¯\_(ツ)_/¯)
