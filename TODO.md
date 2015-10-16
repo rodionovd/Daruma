@@ -12,6 +12,7 @@
     7.1. random search placeholder on every launch for lulz
 8. SCROLL LAGS
     (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
+9. CENTER EMOTICONS VERTICALLY
 10. accessibility? I'heard of a book on the topic @ kickstarter…
 11. gosh, app icon! ヽ( ★ω★)ノ
 ------------------- THE RELEASE LINE ---------------------
