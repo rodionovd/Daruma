@@ -28,6 +28,8 @@
     self.collectionView.delegate = self.coordinator;
     self.collectionView.dataSource = self.coordinator;
     self.collectionView.collectionViewLayout = [CollectionViewBrowserLayout new];
+    // Enable dragging items from the collection view to other apps
+    [self.collectionView setDraggingSourceOperationMask: NSDragOperationEvery forLocal: NO];
     
     // XXX:
     // Add ourselves to the the responder chain in place of a root view (and just before the window),
@@ -41,8 +43,9 @@
 
 - (IBAction)copy:(id)sender
 {
-    SEL selector = NSSelectorFromString(@"copyItemsToPasteboardAtIndexPaths:");
-    (void)[self.coordinator performSelector: selector withObject: self.collectionView.selectionIndexPaths];
+    SEL selector = NSSelectorFromString(@"writeToPasteboardItemsAtIndexPaths:");
+    [self.coordinator performSelector: selector
+                           withObject: self.collectionView.selectionIndexPaths];
 }
 
 - (BOOL)validateMenuItem: (NSMenuItem *)menuItem

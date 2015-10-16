@@ -36,15 +36,34 @@
 
 #pragma mark Pasteboard actions
 
-// browserWindowController calls this from its copy: method
-- (void)copyItemsToPasteboardAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
+#warning TODO: refactor all this stuff into a separate pasteboard manager class
+
+- (NSString *)mergedContentsForItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
 {
     NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
     NSArray *emoticons = [sortedByItemIndex rd_map: ^NSString *_Nonnull(NSIndexPath *_Nonnull path) {
         return [[self.feelsContainer objectAtIndexPath: path] emoticon];
     }];
+    NSString *single_whitespace = @" ";
+    return [emoticons componentsJoinedByString: single_whitespace];
+}
+
+// browserWindowController calls this from its copy: method
+- (void)writeToPasteboardItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
+{
+    NSString *contents = [self mergedContentsForItemsAtIndexPaths: indexPaths];
     [[NSPasteboard generalPasteboard] clearContents];
-    [[NSPasteboard generalPasteboard] writeObjects: @[[emoticons componentsJoinedByString: @" "]]];
+    [[NSPasteboard generalPasteboard] writeObjects: @[contents]];
+}
+// NSCollectionView will call us about this (because we're the delegate)
+- (BOOL)collectionView: (NSCollectionView *)collectionView
+writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
+          toPasteboard: (NSPasteboard *)pasteboard
+{
+    [pasteboard declareTypes: @[NSStringPboardType] owner: nil];
+    [pasteboard setString: [self mergedContentsForItemsAtIndexPaths: indexPaths]
+                  forType: NSStringPboardType];
+    return YES;
 }
 
 #pragma mark - NSCollectionViewDataSource's
@@ -69,6 +88,8 @@
     item.representedObject = [self.feelsContainer objectAtIndexPath: indexPath];
     return item;
 }
+
+#pragma mark - NSCollectionViewDelegateFlowLayout
 
 - (NSSize)collectionView: (NSCollectionView *)collectionView
                   layout: (NSCollectionViewLayout *)collectionViewLayout

@@ -12,9 +12,8 @@
     7.1. random search placeholder on every launch for lulz
 8. SCROLL LAGS
     (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
-9. drag'n'drop emoticons (from the app) as text
 10. accessibility? I'heard of a book on the topic @ kickstarter…
-11. gosh, app icon!
+11. gosh, app icon! ヽ( ★ω★)ノ
 ------------------- THE RELEASE LINE ---------------------
 12. Provide user with a way to assign/change lables to emoticons. Search by these lables as well as by category name.
 13. Double click on emoticon to copy it? With animation? Yes, please!
@@ -22,6 +21,7 @@
     14.1. via drag’n’drop (into app)?
     14.2. batch mode?
 15. Rounded top corners of the collection view (?)
-16. hotkeys for EVERYTHING HELL YEAH.
+16. hotkeys for EVERYTHING HELL YEAH. (۶ꈨຶꎁꈨຶ )۶ʸᵉᵃʰᵎ
     cmd+n to create a thing, delete to delete, enter to change lables/modify emoticons, etc
 17. Generate OS X Text Replacements for selected emoticons (e.g. "shrugg" -> ¯\_(ツ)_/¯)
+18. Shift-driven selections
