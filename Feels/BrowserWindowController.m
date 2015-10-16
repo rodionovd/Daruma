@@ -32,10 +32,10 @@
     [self.collectionView setDraggingSourceOperationMask: NSDragOperationEvery forLocal: NO];
     
     // XXX:
-    // Add ourselves to the the responder chain in place of a root view (and just before the window),
-    // so we'll receive all the missing messages such as copy: or paste:
+    // For some reason, NSWindowControllers aren't in the responder chain, so in order to handle
+    // copy: and paste: actions we manually insert ourselvs at the end of the chain (just after the window)
     NSResponder *responder = self.collectionView.nextResponder;
-    while (responder.nextResponder.class != NSView.class) {
+    while (responder.nextResponder != nil) {
         responder = responder.nextResponder;
     }
     responder.nextResponder = self;
