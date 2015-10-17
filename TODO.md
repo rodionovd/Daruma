@@ -2,7 +2,6 @@
     2.1. CocoaSlideCollection demo has it — why?
 3. copy the default feels database into Application Support, then use this copy so a user could make changes (add/delete emoticons, assign lables, etc)
     3.1. only copy the file if it's not there already
-4. Highlight emoticons on selection. Border or text color?
 5. maybe use custom font for emoticons? Figure out what looks better
 7. SEARCH EVERYTHING
     7.1. random search placeholder on every launch for lulz

@@ -57,16 +57,14 @@
     } else if (_selected && _highlightState != NSCollectionViewItemHighlightForDeselection) {
         // Item is selected, and is not indicated for proposed deselection: Show an Aqua border around it.
         // NOTE: click
-        borderColor = [NSColor colorWithCalibratedRed:0.0 green:0.5 blue:1.0 alpha:1.0]; // Aqua
+        borderColor = [NSColor colorWithCalibratedRed: 0.0 green: 0.5 blue: 1.0 alpha: 1.0]; // Aqua
     } else {
         // Item is either not selected, or is selected but not highlighted for deselection:
         // show no border around it.
         borderColor = nil;
     }
     
-    // FIXME: Don't draw a border, but change the text field font color instead!
-    
-    self.layer.borderColor = borderColor.CGColor ?: [NSColor clearColor].CGColor;
+    self.layer.borderColor = borderColor.CGColor ?: nil;
     self.layer.borderWidth = borderColor.CGColor ? 1.0 : 0.0;
     self.layer.cornerRadius = 3.0;
 }
