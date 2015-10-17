@@ -30,15 +30,6 @@
     self.collectionView.collectionViewLayout = [CollectionViewBrowserLayout new];
     // Enable dragging items from the collection view to other apps
     [self.collectionView setDraggingSourceOperationMask: NSDragOperationEvery forLocal: NO];
-    
-    // XXX:
-    // For some reason, NSWindowControllers aren't in the responder chain, so in order to handle
-    // copy: and paste: actions we manually insert ourselvs at the end of the chain (just after the window)
-    NSResponder *responder = self.collectionView.nextResponder;
-    while (responder.nextResponder != nil) {
-        responder = responder.nextResponder;
-    }
-    responder.nextResponder = self;
 }
 
 - (IBAction)copy:(id)sender
