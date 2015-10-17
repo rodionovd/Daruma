@@ -97,15 +97,19 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 {
     NSString *emoticon = [self.feelsContainer objectAtIndexPath: indexPath].emoticon;
     // FIXME: why hardcoded font size?
-    NSSize f = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 23]}];
+    NSSize proposed = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 23]}];
     
-    // TODO: sanitize the width: is must be less than the width of the collection view plus left and right section insets:
-    // [(NSCollectionViewFlowLayout *)collectionView.collectionViewLayout sectionInset].left
-    // [(NSCollectionViewFlowLayout *)collectionView.collectionViewLayout sectionInset].right
+    // Sanitize the collection view width in flow layout mode
+    if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
+        NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
+        NSEdgeInsets insets = flowLayout.sectionInset;
+        CGFloat maxAllowedWidth = collectionView.bounds.size.width - (insets.left + insets.right);
+        proposed.width = (proposed.width > maxAllowedWidth) ? maxAllowedWidth : proposed.width;
+    }
     
     // FIXME: why 1.5?
-    f.height *= 1.5;
-    return f;
+    proposed.height *= 1.5;
+    return proposed;
 }
 
 @end
