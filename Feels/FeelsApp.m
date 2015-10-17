@@ -29,11 +29,8 @@
     return [[NSBundle mainBundle] URLForResource: @"Feels" withExtension: @"plist"];
 }
 
-
 - (void)run
 {
-    NSLog(@"App is running!");
-    // TODO: setup the coordinator
     [self.browserCoordinator start];
 }
 

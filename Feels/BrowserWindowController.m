@@ -18,7 +18,17 @@
 - (instancetype)init
 {
     self = [super initWithWindowNibName: @"BrowserWindow"];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: @selector(showWindow:)
+                                                     name: @"" object: nil];
+    }
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
 }
 
 - (void)windowDidLoad

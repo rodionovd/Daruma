@@ -1,6 +1,3 @@
-1. user must be able to reopen the browser window once it's closed
-    1.1. don't terminate the app after last window is closed
-    1.2. automatically open a new window when the app has a focus? Yeah, I love cmd+tab so much
 2. collection view background view?
     2.1. CocoaSlideCollection demo has it — why?
 3. copy the default feels database into Application Support, then use this copy so a user could make changes (add/delete emoticons, assign lables, etc)
