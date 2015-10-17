@@ -25,8 +25,7 @@
 {
     if (newHighlightState != _highlightState) {
         _highlightState = newHighlightState;
-        // invokes -updateLayer
-        [self setNeedsDisplay: YES];
+        [self setNeedsDisplay: YES]; // invokes -updateLayer
     }
 }
 
@@ -34,14 +33,13 @@
 {
     if (newSelected != _selected) {
         _selected = newSelected;
-        // invokes -updateLayer
-        [self setNeedsDisplay: YES];
+        [self setNeedsDisplay: YES]; // invokes -updateLayer
     }
 }
 
 - (BOOL)wantsUpdateLayer
 {
-    // We want to receive -updateLayer since we gonna set our backing layer's properties to reflect changes to the state instead of drawing stuff in -drawRect:
+    // We want to receive -updateLayer (see below)
     return YES;
 }
 
@@ -52,11 +50,11 @@
     NSColor *borderColor = nil;
     if (_highlightState == NSCollectionViewItemHighlightForSelection) {
         // Item is a candidate to become selected: Show an orange border around it.
-        // NOTE: tap
+        // NOTE: mouse down
         borderColor = [NSColor selectedControlColor];
     } else if (_selected && _highlightState != NSCollectionViewItemHighlightForDeselection) {
         // Item is selected, and is not indicated for proposed deselection: Show an Aqua border around it.
-        // NOTE: click
+        // NOTE: mouse up
         borderColor = [NSColor colorWithCalibratedRed: 0.0 green: 0.5 blue: 1.0 alpha: 1.0]; // Aqua
     } else {
         // Item is either not selected, or is selected but not highlighted for deselection:
@@ -66,7 +64,7 @@
     
     self.layer.borderColor = borderColor.CGColor ?: nil;
     self.layer.borderWidth = borderColor.CGColor ? 1.0 : 0.0;
-    self.layer.cornerRadius = 3.0;
+    self.layer.cornerRadius = 3.5;
 }
 
 @end

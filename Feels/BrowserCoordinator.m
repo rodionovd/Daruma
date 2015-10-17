@@ -36,8 +36,6 @@
 
 #pragma mark Pasteboard actions
 
-#warning TODO: refactor all this stuff into a separate pasteboard manager class
-
 - (NSString *)mergedContentsForItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
 {
     NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
@@ -99,16 +97,18 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     // FIXME: why hardcoded font size?
     NSSize proposed = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 23]}];
     
-    // Sanitize the collection view width in flow layout mode
+    // Sanitize an item's width in flow layout mode
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
         CGFloat maxAllowedWidth = collectionView.bounds.size.width - (insets.left + insets.right);
         proposed.width = (proposed.width > maxAllowedWidth) ? maxAllowedWidth : proposed.width;
     }
-    
+    // Sanitize an item's height: it should be a bit taller than the default coz emoticons
+    // tend to grow up and down the baseline
     // FIXME: why 1.5?
     proposed.height *= 1.5;
+    
     return proposed;
 }
 
