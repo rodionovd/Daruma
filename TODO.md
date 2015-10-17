@@ -21,3 +21,4 @@
     cmd+n to create a thing, delete to delete, enter to change lables/modify emoticons, etc
 17. Generate OS X Text Replacements for selected emoticons (e.g. "shrugg" -> ¯\_(ツ)_/¯)
 18. Shift-driven selections
+19. Rearrange emoticons? with animation (e.g. Springboard)?
