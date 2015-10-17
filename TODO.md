@@ -6,7 +6,8 @@
 5. maybe use custom font for emoticons? Figure out what looks better
 7. SEARCH EVERYTHING
     7.1. random search placeholder on every launch for lulz
-8. SCROLL LAGS
+    7.2. users enters some text in the search bar, presses "enter": in the collection view are the results and the first item in these results is already selected (and in focus) for copy;
+8. SCROLL LAGS????
     (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
 10. accessibility? I'heard of a book on the topic @ kickstarter…
 11. gosh, app icon! ヽ( ★ω★)ノ
@@ -23,3 +24,4 @@ XX. Get rid of FIXMEs and TODOs in the codebase
 17. Generate OS X Text Replacements for selected emoticons (e.g. "shrugg" -> ¯\_(ツ)_/¯)
 18. Shift-driven selections
 19. Rearrange emoticons? with animation (e.g. Springboard)?
+20. User should be able to change emoticons font size via both menu items and cmd+/cmd-
