@@ -7,7 +7,6 @@
     3.1. only copy the file if it's not there already
 4. Highlight emoticons on selection. Border or text color?
 5. maybe use custom font for emoticons? Figure out what looks better
-6. single clicking (without any modifier keys pressed) on an already selected item should deselect any other selected items, so only the current item will remain selected (like in Finder)
 7. SEARCH EVERYTHING
     7.1. random search placeholder on every launch for lulz
 8. SCROLL LAGS
