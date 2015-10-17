@@ -10,6 +10,7 @@
 		0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */; };
 		0A563B311BCF907000A34B8D /* Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B301BCF907000A34B8D /* Functional.m */; };
 		0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */; };
+		0AA5D0E21BD29880004B9642 /* VerticallyCenteredTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5D0E11BD29880004B9642 /* VerticallyCenteredTextCell.m */; };
 		0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB695D1BCD02E500268E8E /* AppDelegate.m */; };
 		0ACB69611BCD02E500268E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69601BCD02E500268E8E /* main.m */; };
 		0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69621BCD02E500268E8E /* Assets.xcassets */; };
@@ -52,6 +53,8 @@
 		0A563B301BCF907000A34B8D /* Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functional.m; sourceTree = "<group>"; };
 		0A563B351BCFCC3900A34B8D /* CollectionViewBrowserLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewBrowserLayout.h; sourceTree = "<group>"; };
 		0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewBrowserLayout.m; sourceTree = "<group>"; };
+		0AA5D0E01BD29880004B9642 /* VerticallyCenteredTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticallyCenteredTextCell.h; sourceTree = "<group>"; };
+		0AA5D0E11BD29880004B9642 /* VerticallyCenteredTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticallyCenteredTextCell.m; sourceTree = "<group>"; };
 		0ACB69591BCD02E500268E8E /* Feels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACB695C1BCD02E500268E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ACB695D1BCD02E500268E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */,
 				0A563B351BCFCC3900A34B8D /* CollectionViewBrowserLayout.h */,
 				0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */,
+				0AA5D0E01BD29880004B9642 /* VerticallyCenteredTextCell.h */,
+				0AA5D0E11BD29880004B9642 /* VerticallyCenteredTextCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */,
+				0AA5D0E21BD29880004B9642 /* VerticallyCenteredTextCell.m in Sources */,
 				0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */,
 				0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */,
 				0ACB69611BCD02E500268E8E /* main.m in Sources */,
