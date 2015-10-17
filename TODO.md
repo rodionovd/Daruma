@@ -10,6 +10,7 @@
     (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
 10. accessibility? I'heard of a book on the topic @ kickstarter…
 11. gosh, app icon! ヽ( ★ω★)ノ
+XX. Get rid of FIXMEs and TODOs in the codebase
 ------------------- THE RELEASE LINE ---------------------
 12. Provide user with a way to assign/change lables to emoticons. Search by these lables as well as by category name.
 13. Double click on emoticon to copy it? With animation? Yes, please!
