@@ -13,7 +13,6 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-//        [self setItemSize:NSMakeSize(SLIDE_WIDTH, SLIDE_HEIGHT)];
         [self setMinimumInteritemSpacing: 5];
         [self setMinimumLineSpacing: 5];
         [self setSectionInset: NSEdgeInsetsMake(10, 10, 10, 10)];
@@ -21,16 +20,18 @@
     return self;
 }
 
-- (NSCollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSCollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
-    [attributes setZIndex:[indexPath item]];
+- (NSCollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath: (NSIndexPath *)indexPath
+{
+    NSCollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath: indexPath];
+    [attributes setZIndex: [indexPath item]];
     return attributes;
 }
 
-- (NSArray *)layoutAttributesForElementsInRect:(NSRect)rect {
-    NSArray *layoutAttributesArray = [super layoutAttributesForElementsInRect:rect];
+- (NSArray *)layoutAttributesForElementsInRect: (NSRect)rect
+{
+    NSArray *layoutAttributesArray = [super layoutAttributesForElementsInRect: rect];
     for (NSCollectionViewLayoutAttributes *attributes in layoutAttributesArray) {
-        [attributes setZIndex:[[attributes indexPath] item]];
+        [attributes setZIndex: [[attributes indexPath] item]];
     }
     return layoutAttributesArray;
 }

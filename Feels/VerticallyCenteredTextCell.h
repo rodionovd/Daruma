@@ -8,6 +8,6 @@
 
 @import Cocoa;
 
-/// We want our emoticons to be aligned both horizontally and vertically in their cells
+// We want our emoticons to be aligned both horizontally and vertically in their cells
 @interface VerticallyCenteredTextCell : NSTextFieldCell
 @end

@@ -17,9 +17,9 @@
 - (void)mouseDown:(NSEvent *)theEvent
 {
     [super mouseDown: theEvent];
-    
+
     NSEventModifierFlags unwantedMask = (NSShiftKeyMask | NSControlKeyMask | NSCommandKeyMask);
-    
+
     if ([theEvent clickCount] == 1 && (theEvent.modifierFlags & unwantedMask) == 0) {
         // :deselect all other cells if needed
         NSIndexPath *currentPath = [self.collectionView indexPathForItem: self];
