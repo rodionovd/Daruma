@@ -9,11 +9,12 @@
 #import "BrowserCoordinator.h"
 #import "BrowserWindowController.h"
 #import "Feel.h"
-#import "FeelContainer.h"
+#import "DataLense.h"
 #import "Functional.h"
+#import "HeaderView.h"
 
 @interface BrowserCoordinator()
-@property (strong) FeelContainer *feelsContainer;
+@property (strong) DataLense *dataLense;
 @end
 
 @implementation BrowserCoordinator
@@ -21,8 +22,7 @@
 - (instancetype)initWithFeelsContainerURL: (NSURL *)containerURL
 {
     if ((self = [super init])) {
-        // TODO: create a DataSource object
-        _feelsContainer = [[FeelContainer alloc] initWithURL: containerURL];
+        self.dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
     }
     return self;
 }
@@ -40,7 +40,7 @@
 {
     NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
     NSArray *emoticons = [sortedByItemIndex rd_map: ^NSString *_Nonnull(NSIndexPath *_Nonnull path) {
-        return [[self.feelsContainer objectAtIndexPath: path] emoticon];
+        return [[self.dataLense objectAtIndexPath: path] emoticon];
     }];
     NSString *single_whitespace = @" ";
     return [emoticons componentsJoinedByString: single_whitespace];
@@ -68,14 +68,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 
 - (NSInteger)numberOfSectionsInCollectionView:(NSCollectionView *)collectionView
 {
-    // TODO: we don't have any sections *yet*
-    return 1;
+    return self.dataLense.sections.count;
 }
 
-- (NSInteger)collectionView:(NSCollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView: (NSCollectionView *)collectionView numberOfItemsInSection: (NSInteger)idx
 {
-    // TODO: we don't have any sections *yet*
-    return self.feelsContainer.count;
+    return self.dataLense.sections[idx].items.count;
 }
 
 - (NSCollectionViewItem *)collectionView: (NSCollectionView *)collectionView
@@ -83,9 +81,39 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 {
     NSCollectionViewItem *item = [collectionView makeItemWithIdentifier: @"FeelEmoticon"
                                                            forIndexPath: indexPath];
-    item.representedObject = [self.feelsContainer objectAtIndexPath: indexPath];
+    item.representedObject = [self.dataLense objectAtIndexPath: indexPath];
     return item;
 }
+
+- (nonnull NSView *)collectionView:(nonnull NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(nonnull NSString *)kind atIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    NSString *identifier = nil;
+    if ([kind isEqualToString: NSCollectionElementKindSectionHeader]) {
+        identifier = @"HeaderView";
+    } else if ([kind isEqualToString: NSCollectionElementKindSectionFooter]) {
+        // don't want a footer view (yet?)
+    }
+
+    // NOTE: a collection view will ask us about a supplementary view for the selection rectangle,
+    // but we just want to use the default (system) style selection, so leave it right now.
+    if (!identifier) {
+        return nil;
+    }
+    
+    __kindof NSView *view = [collectionView makeSupplementaryViewOfKind: kind
+                                                         withIdentifier: @"HeaderView"
+                                                           forIndexPath: indexPath];
+    if ([kind isEqual: NSCollectionElementKindSectionHeader] && [view isKindOfClass: HeaderView.class]) {
+        [(HeaderView *)view setTitle: self.dataLense.sections[indexPath.section].title];
+    }
+    return view;
+}
+
+- (NSSize)collectionView: (NSCollectionView *)collectionView layout: (NSCollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection: (NSInteger)section
+{
+    return [HeaderView baseSize];
+}
+
 
 #pragma mark - NSCollectionViewDelegateFlowLayout
 
@@ -93,7 +121,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                   layout: (NSCollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-    NSString *emoticon = [self.feelsContainer objectAtIndexPath: indexPath].emoticon;
+    NSString *emoticon = [self.dataLense objectAtIndexPath: indexPath].emoticon;
     // FIXME: why hardcoded font size?
     NSSize proposed = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 23]}];
     

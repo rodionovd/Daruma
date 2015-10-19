@@ -8,6 +8,9 @@
 
 #import "Feel.h"
 
+const static NSString *kFeelLabelKey = @"label";
+const static NSString *kFeelEmoticonKey = @"emoticon";
+
 @implementation Feel
 
 - (nonnull instancetype)initWithEmoticon: (nonnull NSString *)emoticon label: (nullable NSString *)label
@@ -19,10 +22,19 @@
     return self;
 }
 
-+ (nullable instancetype)feelFromDictionary: (nonnull NSDictionary *)dictionary
++ (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
 {
-    NSString *emoticon = dictionary[@"emoticon"];
-    NSString *label = dictionary[@"label"];
+    return !![dictionaryRepresentation objectForKey: kFeelEmoticonKey];
+}
+
++ (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionary
+{
+    if ([self _validateDictionaryRepresentation: dictionary] == NO) {
+        return nil;
+    }
+
+    NSString *emoticon = dictionary[kFeelEmoticonKey];
+    NSString *label = dictionary[kFeelLabelKey];
     if (emoticon == nil) {
         return nil;
     } else {

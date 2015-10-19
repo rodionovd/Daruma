@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A41F5821BD52FEC00363583 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41F5811BD52FEC00363583 /* HeaderView.m */; };
+		0A41F5841BD5312600363583 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A41F5831BD5312600363583 /* HeaderView.xib */; };
+		0A41F5871BD5361900363583 /* DataLense.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41F5861BD5361900363583 /* DataLense.m */; };
+		0A41F58A1BD53CE200363583 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41F5891BD53CE200363583 /* Section.m */; };
 		0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */; };
 		0A563B311BCF907000A34B8D /* Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B301BCF907000A34B8D /* Functional.m */; };
 		0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */; };
@@ -21,7 +25,6 @@
 		0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB698D1BCD0A5200268E8E /* FeelsApp.m */; };
 		0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */; };
 		0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */; };
-		0ACB69991BCD334B00268E8E /* FeelContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69981BCD334B00268E8E /* FeelContainer.m */; };
 		0ACB699C1BCD383C00268E8E /* Feel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB699B1BCD383C00268E8E /* Feel.m */; };
 		0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB699E1BCD546E00268E8E /* FeelViewItem.m */; };
 		0ACB69A11BCD546E00268E8E /* FeelEmoticon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */; };
@@ -46,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A41F5801BD52FEC00363583 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		0A41F5811BD52FEC00363583 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		0A41F5831BD5312600363583 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		0A41F5851BD5361900363583 /* DataLense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLense.h; sourceTree = "<group>"; };
+		0A41F5861BD5361900363583 /* DataLense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLense.m; sourceTree = "<group>"; };
+		0A41F5881BD53CE200363583 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		0A41F5891BD53CE200363583 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
 		0A563B271BCE900E00A34B8D /* FeelEmoticonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelEmoticonView.h; sourceTree = "<group>"; };
 		0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelEmoticonView.m; sourceTree = "<group>"; };
 		0A563B2A1BCEA41A00A34B8D /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = SOURCE_ROOT; };
@@ -75,8 +85,6 @@
 		0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserWindowController.m; sourceTree = "<group>"; };
 		0ACB69931BCD285D00268E8E /* BrowserCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserCoordinator.h; sourceTree = "<group>"; };
 		0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserCoordinator.m; sourceTree = "<group>"; };
-		0ACB69971BCD334B00268E8E /* FeelContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelContainer.h; sourceTree = "<group>"; };
-		0ACB69981BCD334B00268E8E /* FeelContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelContainer.m; sourceTree = "<group>"; };
 		0ACB699A1BCD383C00268E8E /* Feel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feel.h; sourceTree = "<group>"; };
 		0ACB699B1BCD383C00268E8E /* Feel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feel.m; sourceTree = "<group>"; };
 		0ACB699D1BCD546E00268E8E /* FeelViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelViewItem.h; sourceTree = "<group>"; };
@@ -119,6 +127,8 @@
 				0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */,
 				0AA5D0E01BD29880004B9642 /* VerticallyCenteredTextCell.h */,
 				0AA5D0E11BD29880004B9642 /* VerticallyCenteredTextCell.m */,
+				0A41F5801BD52FEC00363583 /* HeaderView.h */,
+				0A41F5811BD52FEC00363583 /* HeaderView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 				0ACB69671BCD02E500268E8E /* Info.plist */,
 				0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */,
 				0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */,
+				0A41F5831BD5312600363583 /* HeaderView.xib */,
 				0ACB69A21BCD564C00268E8E /* Feels.plist */,
 			);
 			name = Resources;
@@ -217,10 +228,12 @@
 		0ACB69A41BCD636900268E8E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0ACB69971BCD334B00268E8E /* FeelContainer.h */,
-				0ACB69981BCD334B00268E8E /* FeelContainer.m */,
 				0ACB699A1BCD383C00268E8E /* Feel.h */,
 				0ACB699B1BCD383C00268E8E /* Feel.m */,
+				0A41F5881BD53CE200363583 /* Section.h */,
+				0A41F5891BD53CE200363583 /* Section.m */,
+				0A41F5851BD5361900363583 /* DataLense.h */,
+				0A41F5861BD5361900363583 /* DataLense.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -331,6 +344,7 @@
 				0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */,
 				0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */,
 				0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */,
+				0A41F5841BD5312600363583 /* HeaderView.xib in Resources */,
 				0ACB69661BCD02E500268E8E /* MainMenu.xib in Resources */,
 				0ACB69A11BCD546E00268E8E /* FeelEmoticon.xib in Resources */,
 			);
@@ -357,16 +371,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A41F5821BD52FEC00363583 /* HeaderView.m in Sources */,
 				0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */,
 				0AA5D0E21BD29880004B9642 /* VerticallyCenteredTextCell.m in Sources */,
 				0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */,
 				0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */,
+				0A41F5871BD5361900363583 /* DataLense.m in Sources */,
 				0ACB69611BCD02E500268E8E /* main.m in Sources */,
 				0A563B311BCF907000A34B8D /* Functional.m in Sources */,
 				0ACB699C1BCD383C00268E8E /* Feel.m in Sources */,
 				0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */,
 				0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */,
-				0ACB69991BCD334B00268E8E /* FeelContainer.m in Sources */,
+				0A41F58A1BD53CE200363583 /* Section.m in Sources */,
 				0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */,
 				0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */,
 			);

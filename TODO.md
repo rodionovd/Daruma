@@ -1,11 +1,4 @@
 1. Fill with actual emoticons
-2. collection view background view?
-    2.1. CocoaSlideCollection demo has it — why?
-3. copy the default feels database into Application Support, then use this copy so a user could make changes (add/delete emoticons, assign lables, etc)
-    3.1. only copy the file if it's not there already
-5. maybe use custom font for emoticons? Figure out what looks better
-6. SECTIONS
-    6.1. header views
 7. SEARCH EVERYTHING
     7.1. random search placeholder on every launch for lulz
     7.2. users enter some text in the search bar, press "enter": in the collection view are the results and the first item in these results is already selected (and in focus) for copy;
@@ -16,6 +9,11 @@
 11. gosh, app icon! ヽ( ★ω★)ノ
 XX. Get rid of FIXMEs and TODOs in the codebase
 ------------------- THE RELEASE LINE ---------------------
+2. collection view background view?
+    2.1. CocoaSlideCollection demo has it — why?
+3. copy the default feels database into Application Support, then use this copy so a user could make changes (add/delete emoticons, assign lables, etc)
+    3.1. only copy the file if it's not there already
+5. maybe use custom font for emoticons? Figure out what looks better
 12. Provide user with a way to assign/change lables to emoticons. Search by these lables as well as by category name.
 13. Double click on emoticon to copy it? With animation? Yes, please!
 14. ADD NEW EMOTICONS

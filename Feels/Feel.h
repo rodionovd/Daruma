@@ -13,7 +13,6 @@
 @property (readonly, nonnull) NSString *emoticon;
 @property (readonly, nullable) NSString *label;
 
-- (nonnull instancetype)initWithEmoticon: (nonnull NSString *)emoticon label: (nullable NSString *)label;
-+ (nullable instancetype)feelFromDictionary: (nonnull NSDictionary *)dictionary;
++ (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionary;
 
 @end
