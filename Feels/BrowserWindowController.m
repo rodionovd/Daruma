@@ -42,7 +42,7 @@
     [self.collectionView setDraggingSourceOperationMask: NSDragOperationEvery forLocal: NO];
 }
 
-- (IBAction)copy:(id)sender
+- (IBAction)copy: (id)sender
 {
     SEL selector = NSSelectorFromString(@"writeToPasteboardItemsAtIndexPaths:");
     [self.coordinator performSelector: selector
