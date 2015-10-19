@@ -13,6 +13,8 @@ XX. Get rid of FIXMEs and TODOs in the codebase
     2.1. CocoaSlideCollection demo has it — why?
 3. copy the default feels database into Application Support, then use this copy so a user could make changes (add/delete emoticons, assign lables, etc)
     3.1. only copy the file if it's not there already
+4. tab order?
+    4.1. pressing arrow key should select the first cell (if there was no selection before)
 5. maybe use custom font for emoticons? Figure out what looks better
 12. Provide user with a way to assign/change lables to emoticons. Search by these lables as well as by category name.
 13. Double click on emoticon to copy it? With animation? Yes, please!
