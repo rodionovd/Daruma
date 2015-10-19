@@ -21,7 +21,7 @@
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver: self
                                                  selector: @selector(showWindow:)
-                                                     name: @"" object: nil];
+                                                     name: @"BrowserWindowShouldAppear" object: nil];
     }
     return self;
 }
