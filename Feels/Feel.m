@@ -8,8 +8,8 @@
 
 #import "Feel.h"
 
-const static NSString *kFeelLabelKey = @"label";
-const static NSString *kFeelEmoticonKey = @"emoticon";
+static NSString * const kFeelLabelKey = @"label";
+static NSString * const kFeelEmoticonKey = @"emoticon";
 
 @implementation Feel
 
