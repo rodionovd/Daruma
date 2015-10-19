@@ -28,9 +28,6 @@
                 <constraint firstItem="17w-9R-fqm" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="xv1-5k-Wug"/>
             </constraints>
             <animations/>
-            <connections>
-                <outlet property="titleTextField" destination="17w-9R-fqm" id="J1G-wr-Rt0"/>
-            </connections>
             <point key="canvasLocation" x="235.5" y="236.5"/>
         </customView>
     </objects>
