@@ -3,9 +3,6 @@
     7.1. random search placeholder on every launch for lulz
     7.2. users enter some text in the search bar, press "enter": in the collection view are the results and the first item in these results is already selected (and in focus) for copy;
     7.3. search by both label and section name
-8. SCROLL LAGS????
-    (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
-10. accessibility? I'heard of a book on the topic @ kickstarter…
 XX. Get rid of FIXMEs and TODOs in the codebase
 ------------------- THE RELEASE LINE ---------------------
 2. collection view background view?
@@ -15,6 +12,9 @@ XX. Get rid of FIXMEs and TODOs in the codebase
 4. tab order?
     4.1. pressing arrow key should select the first cell (if there was no selection before)
 5. maybe use custom font for emoticons? Figure out what looks better
+8. SCROLL LAGS????
+    (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
+10. accessibility? I'heard of a book on the topic @ kickstarter…
 12. Provide user with a way to assign/change lables to emoticons. Search by these lables as well as by category name.
 13. Double click on emoticon to copy it? With animation? Yes, please!
 14. ADD NEW EMOTICONS
