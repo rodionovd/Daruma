@@ -6,7 +6,6 @@
 8. SCROLL LAGS????
     (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
 10. accessibility? I'heard of a book on the topic @ kickstarter…
-11. gosh, app icon! ヽ( ★ω★)ノ
 XX. Get rid of FIXMEs and TODOs in the codebase
 ------------------- THE RELEASE LINE ---------------------
 2. collection view background view?
