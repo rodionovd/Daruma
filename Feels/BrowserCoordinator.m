@@ -53,6 +53,7 @@
     [[NSPasteboard generalPasteboard] clearContents];
     [[NSPasteboard generalPasteboard] writeObjects: @[contents]];
 }
+
 // NSCollectionView will call us about this (because we're the delegate)
 - (BOOL)collectionView: (NSCollectionView *)collectionView
 writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
