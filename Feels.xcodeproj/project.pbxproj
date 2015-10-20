@@ -29,6 +29,7 @@
 		0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB699E1BCD546E00268E8E /* FeelViewItem.m */; };
 		0ACB69A11BCD546E00268E8E /* FeelEmoticon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */; };
 		0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69A21BCD564C00268E8E /* Feels.plist */; };
+		0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD5D411BD667FB00B74C56 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		0ACB699E1BCD546E00268E8E /* FeelViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelViewItem.m; sourceTree = "<group>"; };
 		0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeelEmoticon.xib; sourceTree = "<group>"; };
 		0ACB69A21BCD564C00268E8E /* Feels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feels.plist; sourceTree = "<group>"; };
+		0AFD5D411BD667FB00B74C56 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */,
 				0A41F5831BD5312600363583 /* HeaderView.xib */,
 				0ACB69A21BCD564C00268E8E /* Feels.plist */,
+				0AFD5D411BD667FB00B74C56 /* Credits.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */,
+				0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */,
 				0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */,
 				0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */,
 				0A41F5841BD5312600363583 /* HeaderView.xib in Resources */,
