@@ -13,8 +13,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self setMinimumInteritemSpacing: 5];
-        [self setMinimumLineSpacing: 5];
+        [self setMinimumInteritemSpacing: 2.5];
+        [self setMinimumLineSpacing: 2.5];
         [self setSectionInset: NSEdgeInsetsMake(10, 10, 10, 10)];
     }
     return self;
