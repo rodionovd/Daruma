@@ -35,7 +35,9 @@
     
     NSMutableOrderedSet <Section *> *sections =
         [NSMutableOrderedSet orderedSetWithCapacity: [contents[@"sections"] count]];
-    [contents[@"sections"] enumerateObjectsUsingBlock: ^(NSDictionary *sectionDescription, NSUInteger idx, BOOL *stop) {
+    [contents[@"sections"] enumerateObjectsUsingBlock:
+        ^(NSDictionary *sectionDescription, NSUInteger idx, BOOL *stop)
+    {
         Section *tmp = [Section deserialize: sectionDescription];
         NSAssert(tmp != nil, @"Could not serialize a section [%lu] from dictionary", idx);
         [sections addObject: tmp];
