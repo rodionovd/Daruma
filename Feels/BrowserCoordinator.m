@@ -122,22 +122,31 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
     NSString *emoticon = [self.dataLense objectAtIndexPath: indexPath].emoticon;
-    // FIXME: why hardcoded font size?
-    NSSize proposed = [emoticon sizeWithAttributes: @{NSFontAttributeName: [NSFont systemFontOfSize: 23]}];
-    
+
+    NSCollectionViewItem *viewItem = [collectionView itemAtIndexPath: indexPath];
+    NSFont *emoticonFont = viewItem.textField.font;
+    if (emoticonFont == nil) {
+        emoticonFont = [NSFont systemFontOfSize: 20];
+    }
+    // Make more room for huge emoticons
+    CGFloat fixedFontSize = emoticonFont.pointSize * 1.15;
+    NSSize proposedSize = [emoticon sizeWithAttributes: @{
+        NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName size: fixedFontSize]
+    }];
+
     // Sanitize an item's width in flow layout mode
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
         CGFloat maxAllowedWidth = collectionView.bounds.size.width - (insets.left + insets.right);
-        proposed.width = (proposed.width > maxAllowedWidth) ? maxAllowedWidth : proposed.width;
+        proposedSize.width = (proposedSize.width > maxAllowedWidth) ? maxAllowedWidth : proposedSize.width;
     }
     // Sanitize an item's height: it should be a bit taller than the default coz emoticons
     // tend to grow up and down the baseline
     // FIXME: why 1.5?
-    proposed.height *= 1.5;
+    proposedSize.height *= 1.5;
     
-    return proposed;
+    return proposedSize;
 }
 
 @end
