@@ -14,7 +14,6 @@
 @interface DataLense : NSObject
 
 - (nullable instancetype)initWithContentsOfURL: (nonnull NSURL *)contentsURL;
-//- (void)updateWithData: (NSSet <Feel *> *)newData;
 
 @property (readonly, strong, nonnull) NSOrderedSet <Section *> *allSections;
 @property (copy, null_resettable, nonatomic) NSString *predicate;

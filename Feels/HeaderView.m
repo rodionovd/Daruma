@@ -16,7 +16,7 @@
 + (NSSize)baseSize
 {
     return NSMakeSize(
-        0  /*width will be automatically adjusted by an enclosing collection view */,
+        0  /* width will be automatically adjusted by an enclosing collection view */,
         25
     );
 }

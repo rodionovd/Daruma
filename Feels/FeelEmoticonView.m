@@ -56,6 +56,7 @@
         // Item is selected, and is not indicated for proposed deselection: Show an Aqua border around it.
         // NOTE: mouse up
         borderColor = [NSColor colorWithCalibratedRed: 0.0 green: 0.5 blue: 1.0 alpha: 1.0]; // Aqua
+        // FIXME: this color is too bright for the app
     } else {
         // Item is either not selected, or is selected but not highlighted for deselection:
         // show no border around it.

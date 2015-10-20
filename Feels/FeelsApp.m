@@ -18,8 +18,8 @@
 - (instancetype)init
 {
     if ((self = [super init])) {
-        _browserCoordinator = [[BrowserCoordinator alloc] initWithFeelsContainerURL:
-                               [self.class defaultFeelsURL]];
+        _browserCoordinator =
+            [[BrowserCoordinator alloc] initWithFeelsContainerURL: [self.class defaultFeelsURL]];
     }
     return self;
 }

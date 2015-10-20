@@ -17,8 +17,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithWindowNibName: @"BrowserWindow"];
-    if (self) {
+    if ((self = [super initWithWindowNibName: @"BrowserWindow"])) {
         [[NSNotificationCenter defaultCenter] addObserver: self
                                                  selector: @selector(showWindow:)
                                                      name: @"BrowserWindowShouldAppear" object: nil];

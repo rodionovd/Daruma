@@ -94,13 +94,13 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         // don't want a footer view (yet?)
     }
 
-    // NOTE: a collection view will ask us about a supplementary view for the selection rectangle,
+    // NOTE: a collection view will also ask us about a supplementary view for the selection rectangle,
     // but we just want to use the default (system) style selection, so leave it right now.
     if (!identifier) {
         return nil;
     }
     
-    __kindof NSView *view = [collectionView makeSupplementaryViewOfKind: kind
+    NSView *view = [collectionView makeSupplementaryViewOfKind: kind
                                                          withIdentifier: @"HeaderView"
                                                            forIndexPath: indexPath];
     if ([kind isEqual: NSCollectionElementKindSectionHeader] && [view isKindOfClass: HeaderView.class]) {

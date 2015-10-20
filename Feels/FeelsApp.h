@@ -8,9 +8,6 @@
 
 @import Cocoa;
 
-/**
- * The application coordinator class.
- */
 @interface FeelsApp : NSObject
 
 - (void)run;
