@@ -179,6 +179,19 @@
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>Cocoa developer</string>
+			<key>keywords</key>
+			<string></string>
+			<key>items</key>
+			<array>
+				<dict>
+					<key>emoticon</key>
+					<string>¯\_( ͡ ༎ ͜ʖ ͡༎ )_/¯</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Crying</string>
 			<key>keywords</key>
 			<string></string>
@@ -192,7 +205,27 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
+					<string>(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)</string>
+					<key>label</key>
+					<string>crying out loud with tears</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)</string>
+					<key>label</key>
+					<string>crying out loud with tears</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
 					<string>( ˃̆ૢ௰˂̆ૢഃ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ˃̆ૢ௰˂̆ૢഃ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>癶(癶✺౪✺ )癶</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
