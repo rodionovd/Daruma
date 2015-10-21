@@ -31,6 +31,14 @@ const static NSString *kSectionKeywordsKey = @"keywords";
     return [[self alloc] initWithDictionaryRepresentation: dictionaryRepresentation];
 }
 
++ (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
+{
+    BOOL hasTitleKey = !![dictionaryRepresentation objectForKey: kSectionTitleKey];
+    BOOL hasItems = [(NSArray *)[dictionaryRepresentation objectForKey: @"items"] count] > 0;
+
+    return (hasTitleKey && hasItems);
+}
+
 - (nullable instancetype)initWithDictionaryRepresentation: (nonnull NSDictionary *)dictionary
 {
     if ((self = [super init])) {
@@ -43,12 +51,21 @@ const static NSString *kSectionKeywordsKey = @"keywords";
     return self;
 }
 
-+ (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
+- (BOOL)matchesDescription: (nonnull NSString *)description
 {
-    BOOL hasTitleKey = !![dictionaryRepresentation objectForKey: kSectionTitleKey];
-    BOOL hasItems = [(NSArray *)[dictionaryRepresentation objectForKey: @"items"] count] > 0;
+    return [self.title.lowercaseString containsString: description.lowercaseString];
+}
 
-    return (hasTitleKey && hasItems);
+- (NSString *)description
+{
+    const int kMaxItemsToDisplay = 5;
+    if (self.items.count <= kMaxItemsToDisplay) {
+        return [NSString stringWithFormat: @"<%@: %p, title: '%@', items: %@>",
+                NSStringFromClass(self.class), (void *)self, self.title, self.items];
+    } else {
+        return [NSString stringWithFormat: @"<%@: %p, title: '%@', items: %lu>",
+                NSStringFromClass(self.class), (void *)self, self.title, self.items.count];
+    }
 }
 
 @end

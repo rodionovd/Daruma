@@ -16,5 +16,5 @@
 @property (readonly, nonnull) NSArray <Feel *> *items;
 
 + (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionaryRepresentation;
-
+- (BOOL)matchesDescription: (nonnull NSString *)description;
 @end

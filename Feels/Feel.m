@@ -42,4 +42,15 @@ static NSString * const kFeelEmoticonKey = @"emoticon";
     }
 }
 
+- (NSString *)description
+{
+    if (self.label) {
+        return [NSString stringWithFormat: @"<%@: %p, emoticon: %@, label: '%@'>",
+                NSStringFromClass(self.class), (void *)self, self.emoticon, self.label];
+    } else {
+        return [NSString stringWithFormat: @"<%@: %p, emoticon: %@>",
+                NSStringFromClass(self.class), (void *)self, self.emoticon];
+    }
+}
+
 @end
