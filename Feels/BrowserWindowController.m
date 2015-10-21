@@ -80,8 +80,7 @@
 
 - (void)controlTextDidEndEditing: (NSNotification *)obj
 {
-    if ([[obj.userInfo objectForKey: @"NSTextMovement"] integerValue] == 0) {
-        // The (x) button pressed inside a search field, resetting it's state
+    if ([[obj.userInfo objectForKey: @"NSTextMovement"] integerValue] != NSReturnTextMovement) {
         return;
     }
     // Move focus to the collection view and select the first item in results
