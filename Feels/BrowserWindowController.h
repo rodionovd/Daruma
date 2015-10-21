@@ -8,7 +8,7 @@
 
 @import Cocoa;
 
-@interface BrowserWindowController : NSWindowController
+@interface BrowserWindowController : NSWindowController <NSSearchFieldDelegate>
 // UI
 @property (weak) IBOutlet NSSearchField *searchField;
 @property (weak) IBOutlet NSCollectionView *collectionView;

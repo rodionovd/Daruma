@@ -34,6 +34,20 @@
     [self.browserWindowController showWindow: self];
 }
 
+#pragma mark Search and data filtering
+
+- (void)searchField: (NSSearchField *)searchField didReportPredicate: (NSString *)newPredicate
+{
+//    [self.dataLense performSelectorInBackground: @selector(setPredicate:) withObject: newPredicate];
+    self.dataLense.predicate = newPredicate;
+}
+
+- (void)searchFieldDidCompleteSearch: (NSSearchField *)searchField
+{
+    self.dataLense.predicate = nil;
+//    [self.dataLense performSelectorInBackground: @selector(setPredicate:) withObject: nil];
+}
+
 #pragma mark Pasteboard actions
 
 - (NSString *)mergedContentsForItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths

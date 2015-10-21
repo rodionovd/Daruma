@@ -7,6 +7,7 @@
 //
 
 #import "BrowserWindowController.h"
+#import "ResponsiveCollectionView.h"
 #import "CollectionViewBrowserLayout.h"
 
 @interface BrowserWindowController ()
@@ -33,7 +34,9 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
+
+    self.searchField.delegate = self;
+
     self.collectionView.delegate = self.coordinator;
     self.collectionView.dataSource = self.coordinator;
     self.collectionView.collectionViewLayout = [CollectionViewBrowserLayout new];
@@ -57,5 +60,37 @@
     return [super validateMenuItem: menuItem];
 }
 
+- (void)insertTab: (id)sender
+{
+    [self.window selectNextKeyView: sender];
+}
+- (void)insertBacktab: (id)sender
+{
+    [self.window selectPreviousKeyView: sender];
+}
+
+- (void)controlTextDidChange: (NSNotification *)obj
+{
+    if (self.searchField.stringValue.length == 0) {
+        [self.coordinator performSelector: NSSelectorFromString(@"searchFieldDidCompleteSearch:")
+                               withObject: obj.object];
+    } else {
+        [self.coordinator performSelector: NSSelectorFromString(@"searchField:didReportPredicate:")
+                               withObject: obj.object
+                               withObject: [(NSSearchField *)obj.object stringValue]];
+    }
+    [self.collectionView reloadData];
+}
+
+- (void)controlTextDidEndEditing: (NSNotification *)obj
+{
+    if ([[obj.userInfo objectForKey: @"NSTextMovement"] integerValue] == 0) {
+        // The (x) button pressed inside a search field, resetting it's state
+        return;
+    }
+    // Move focus to the collection view and select the first item in results
+    [(ResponsiveCollectionView *)self.collectionView selectFirstItemAndScrollIfNeeded];
+    [self.window selectNextKeyView: nil];
+}
 
 @end
