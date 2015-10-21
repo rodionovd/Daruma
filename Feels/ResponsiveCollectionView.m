@@ -30,6 +30,12 @@
 {
     [super moveDown: sender];
 
+    [self selectFirstItemAndScrollIfNeeded];
+}
+
+
+- (void)selectFirstItemAndScrollIfNeeded
+{
     if (self.selectionIndexPaths.count != 0) {
         return; // selection is not empty, aborting
     }
