@@ -84,9 +84,11 @@
         return;
     }
     // Move focus to the collection view and select the first item in results
-    [(ResponsiveCollectionView *)self.collectionView selectFirstItemAndScrollIfNeeded];
-    [self.searchField refusesFirstResponder];
-    [self.window selectNextKeyView: nil];
+    if ([(ResponsiveCollectionView *)self.collectionView selectFirstItemAndScrollIfNeeded]) {
+        self.searchField.refusesFirstResponder = YES;
+        [self.window selectNextKeyView: nil];
+        self.searchField.refusesFirstResponder = NO;
+    }
 }
 
 @end
