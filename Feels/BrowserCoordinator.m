@@ -13,7 +13,7 @@
 #import "Functional.h"
 #import "HeaderView.h"
 
-@interface BrowserCoordinator()
+@interface BrowserCoordinator() <BrowserCoordinatorProtocol>
 @property (strong) DataLense *dataLense;
 @end
 
@@ -34,22 +34,6 @@
     [self.browserWindowController showWindow: self];
 }
 
-#pragma mark Search and data filtering
-
-- (void)searchField: (NSSearchField *)searchField didReportPredicate: (NSString *)newPredicate
-{
-//    [self.dataLense performSelectorInBackground: @selector(setPredicate:) withObject: newPredicate];
-    self.dataLense.predicate = newPredicate;
-}
-
-- (void)searchFieldDidCompleteSearch: (NSSearchField *)searchField
-{
-    self.dataLense.predicate = nil;
-//    [self.dataLense performSelectorInBackground: @selector(setPredicate:) withObject: nil];
-}
-
-#pragma mark Pasteboard actions
-
 - (NSString *)mergedContentsForItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
 {
     NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
@@ -60,7 +44,8 @@
     return [emoticons componentsJoinedByString: single_whitespace];
 }
 
-// browserWindowController calls this from its copy: method
+#pragma mark - BrowserCoordinator protocol
+
 - (void)writeToPasteboardItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
 {
     NSString *contents = [self mergedContentsForItemsAtIndexPaths: indexPaths];
@@ -68,7 +53,18 @@
     [[NSPasteboard generalPasteboard] writeObjects: @[contents]];
 }
 
-// NSCollectionView will call us about this (because we're the delegate)
+- (void)searchField: (NSSearchField *)searchField didReportPredicate: (NSString *)newPredicate
+{
+    self.dataLense.predicate = newPredicate;
+}
+
+- (void)searchFieldDidCompleteSearch: (NSSearchField *)searchField
+{
+    self.dataLense.predicate = nil;
+}
+
+#pragma mark - NSCollectionViewDelegate's
+
 - (BOOL)collectionView: (NSCollectionView *)collectionView
 writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
           toPasteboard: (NSPasteboard *)pasteboard

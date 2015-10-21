@@ -46,9 +46,7 @@
 
 - (void)copy: (id)sender
 {
-    SEL selector = NSSelectorFromString(@"writeToPasteboardItemsAtIndexPaths:");
-    [self.coordinator performSelector: selector
-                           withObject: self.collectionView.selectionIndexPaths];
+    [self.coordinator writeToPasteboardItemsAtIndexPaths: self.collectionView.selectionIndexPaths];
 }
 
 - (BOOL)validateMenuItem: (NSMenuItem *)menuItem
@@ -72,12 +70,10 @@
 - (void)controlTextDidChange: (NSNotification *)obj
 {
     if (self.searchField.stringValue.length == 0) {
-        [self.coordinator performSelector: NSSelectorFromString(@"searchFieldDidCompleteSearch:")
-                               withObject: obj.object];
+        [self.coordinator searchFieldDidCompleteSearch: obj.object];
     } else {
-        [self.coordinator performSelector: NSSelectorFromString(@"searchField:didReportPredicate:")
-                               withObject: obj.object
-                               withObject: [(NSSearchField *)obj.object stringValue]];
+        [self.coordinator searchField: obj.object
+                   didReportPredicate: [(NSSearchField *)obj.object stringValue]];
     }
     [self.collectionView reloadData];
 }
