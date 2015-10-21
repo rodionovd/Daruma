@@ -206,14 +206,14 @@
 		0ACB69891BCD097700268E8E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0AFD5D411BD667FB00B74C56 /* Credits.rtf */,
 				0ACB69621BCD02E500268E8E /* Assets.xcassets */,
-				0ACB69641BCD02E500268E8E /* MainMenu.xib */,
 				0ACB69671BCD02E500268E8E /* Info.plist */,
+				0ACB69641BCD02E500268E8E /* MainMenu.xib */,
 				0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */,
 				0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */,
 				0A41F5831BD5312600363583 /* HeaderView.xib */,
 				0ACB69A21BCD564C00268E8E /* Feels.plist */,
-				0AFD5D411BD667FB00B74C56 /* Credits.rtf */,
 				0A5E66611BD8048E002362C2 /* FunnyPlaceholders.plist */,
 			);
 			name = Resources;

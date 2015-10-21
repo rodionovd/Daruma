@@ -23,6 +23,7 @@
         [[NSNotificationCenter defaultCenter] addObserver: self
                                                  selector: @selector(showWindow:)
                                                      name: @"BrowserWindowShouldAppear" object: nil];
+        // Load some (kinda) funny placeholders for the search field
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL *url = [[NSBundle mainBundle] URLForResource: @"FunnyPlaceholders"
                                                  withExtension: @"plist"];
