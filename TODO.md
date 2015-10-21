@@ -1,7 +1,5 @@
 1. Fill with actual emoticons
 7. SEARCH EVERYTHING
-    7.1. random search placeholder on every launch for lulz
-    7.2. users enter some text in the search bar, press "enter": in the collection view are the results and the first item in these results is already selected (and in focus) for copy;
     7.3. search by both label and section name
 XX. Get rid of FIXMEs and TODOs in the codebase
 ------------------- THE RELEASE LINE ---------------------

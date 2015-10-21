@@ -9,9 +9,10 @@
 #import "BrowserWindowController.h"
 #import "ResponsiveCollectionView.h"
 #import "CollectionViewBrowserLayout.h"
+#import "NSArray+Functional.h"
 
 @interface BrowserWindowController ()
-
+@property (strong) NSArray *placeholders;
 @end
 
 @implementation BrowserWindowController
@@ -22,6 +23,11 @@
         [[NSNotificationCenter defaultCenter] addObserver: self
                                                  selector: @selector(showWindow:)
                                                      name: @"BrowserWindowShouldAppear" object: nil];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSURL *url = [[NSBundle mainBundle] URLForResource: @"FunnyPlaceholders"
+                                                 withExtension: @"plist"];
+            self.placeholders = [NSArray arrayWithContentsOfURL: url];
+        });
     }
     return self;
 }
@@ -36,7 +42,7 @@
     [super windowDidLoad];
 
     self.searchField.delegate = self;
-
+    self.searchField.placeholderString = [self.placeholders rd_randomItem];
     // Wait until next (?) run loop iteration; otherwise we'll see no effect
     [self.window performSelector: @selector(makeFirstResponder:)
                       withObject: self.searchField
@@ -86,6 +92,8 @@
 - (void)controlTextDidEndEditing: (NSNotification *)obj
 {
     if ([[obj.userInfo objectForKey: @"NSTextMovement"] integerValue] != NSReturnTextMovement) {
+        // Pick new random placeholder
+        self.searchField.placeholderString = [self.placeholders rd_randomItem];
         return;
     }
     // Move focus to the collection view and select the first item in results
