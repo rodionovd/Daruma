@@ -8,10 +8,6 @@
 
 @import Cocoa;
 
-@interface NSSet (Functional)
-- (nonnull NSSet *)rd_map: (nonnull id _Nonnull (^)(id _Nonnull obj))mapper;
-@end
-
 @interface NSArray (Functional)
 - (nonnull NSArray *)rd_map: (nonnull id _Nonnull (^)(id _Nonnull obj))mapper;
 - (nonnull NSArray *)rd_shuffledArray;
