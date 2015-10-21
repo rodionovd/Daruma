@@ -135,6 +135,10 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName size: fixedFontSize]
     }];
 
+    // Round up
+    proposedSize.width = ceil(proposedSize.width);
+    proposedSize.height = ceil(proposedSize.height);
+
     // Sanitize an item's width in flow layout mode
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
