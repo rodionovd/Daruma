@@ -9,7 +9,7 @@
 #import "BrowserWindowController.h"
 #import "ResponsiveCollectionView.h"
 #import "CollectionViewBrowserLayout.h"
-#import "NSArray+Functional.h"
+#import "NSArray+Stuff.h"
 
 @interface BrowserWindowController ()
 @property (strong) NSArray *placeholders;

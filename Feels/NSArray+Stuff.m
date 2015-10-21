@@ -6,7 +6,7 @@
 //  Copyright © 2015 Internals Exposed. All rights reserved.
 //
 
-#import "NSArray+Functional.h"
+#import "NSArray+Stuff.h"
 
 @implementation NSArray (Functional)
 

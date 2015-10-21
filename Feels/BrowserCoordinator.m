@@ -10,7 +10,7 @@
 #import "BrowserWindowController.h"
 #import "Feel.h"
 #import "DataLense.h"
-#import "NSArray+Functional.h"
+#import "NSArray+Stuff.h"
 #import "HeaderView.h"
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>

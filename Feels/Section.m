@@ -8,7 +8,7 @@
 
 #import "Section.h"
 #import "Feel.h"
-#import "NSArray+Functional.h"
+#import "NSArray+Stuff.h"
 
 const static NSString *kSectionTitleKey = @"title";
 const static NSString *kSectionItemsKey = @"items";
