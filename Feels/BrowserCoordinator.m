@@ -132,6 +132,10 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                   layout: (NSCollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
+
+#define kEmoticonFontSizeMultiplier (1.15)
+#define kItemSizeHeightMultiplier (1.5)
+
     NSString *emoticon = [self.dataLense objectAtIndexPath: indexPath].emoticon;
 
     NSCollectionViewItem *viewItem = [collectionView itemAtIndexPath: indexPath];
@@ -140,7 +144,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         emoticonFont = [NSFont systemFontOfSize: 20];
     }
     // Make more room for huge emoticons
-    CGFloat fixedFontSize = emoticonFont.pointSize * 1.15;
+    CGFloat fixedFontSize = emoticonFont.pointSize * kEmoticonFontSizeMultiplier;
     NSSize proposedSize = [emoticon sizeWithAttributes: @{
         NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName size: fixedFontSize]
     }];
@@ -159,8 +163,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     }
     // Sanitize an item's height: it should be a bit taller than the default coz emoticons
     // tend to grow up and down the baseline
-    // FIXME: why 1.5?
-    proposedSize.height *= 1.5;
+    proposedSize.height *= kItemSizeHeightMultiplier;
 
     return proposedSize;
 }

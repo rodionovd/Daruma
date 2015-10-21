@@ -8,6 +8,11 @@
 
 #import "FeelEmoticonView.h"
 
+#define kSelectionBorderRadius (3.5)
+#define kSelectionBorderWidth (1.0)
+#define kSelectionCandidateBorderColor [NSColor selectedControlColor]
+#define kSelectionBorderColor [NSColor colorWithCalibratedRed: 0.0 green: 0.5 blue: 1.0 alpha: .6]
+
 @implementation FeelEmoticonView
 
 - (instancetype)initWithFrame:(NSRect)frameRect
@@ -45,26 +50,18 @@
 
 - (void)updateLayer
 {
-    // FIXME: I smell some dirty code out here
-    
     NSColor *borderColor = nil;
     if (_highlightState == NSCollectionViewItemHighlightForSelection) {
-        // Item is a candidate to become selected: Show an orange border around it.
-        // NOTE: mouse down
-        borderColor = [NSColor selectedControlColor];
+        borderColor = kSelectionCandidateBorderColor;
     } else if (_selected && _highlightState != NSCollectionViewItemHighlightForDeselection) {
-        // Item is selected, and is not indicated for proposed deselection: Show an Aqua border around it.
-        // NOTE: mouse up
-        borderColor = [NSColor colorWithCalibratedRed: 0.0 green: 0.5 blue: 1.0 alpha: .6]; // Aqua
+        borderColor = kSelectionBorderColor;
     } else {
-        // Item is either not selected, or is selected but not highlighted for deselection:
-        // show no border around it.
         borderColor = nil;
     }
     
     self.layer.borderColor = borderColor.CGColor ?: nil;
-    self.layer.borderWidth = borderColor.CGColor ? 1.0 : 0.0;
-    self.layer.cornerRadius = 3.5;
+    self.layer.borderWidth = borderColor.CGColor ? kSelectionBorderWidth : 0.0;
+    self.layer.cornerRadius = kSelectionBorderRadius;
 }
 
 @end
