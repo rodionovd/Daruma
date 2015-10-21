@@ -15,9 +15,9 @@
 
 - (nullable instancetype)initWithContentsOfURL: (nonnull NSURL *)contentsURL;
 
-@property (readonly, strong, nonnull) NSOrderedSet <Section *> *allSections;
+@property (readonly, strong, nonnull) NSArray <Section *> *allSections;
 @property (copy, null_resettable, nonatomic) NSString *predicate;
-@property (readonly, nullable) NSOrderedSet <Section *> *sections;
+@property (readonly, nullable) NSArray <Section *> *sections;
 
 - (nullable Feel *)objectAtIndexPath: (nonnull NSIndexPath *)indexPath;
 

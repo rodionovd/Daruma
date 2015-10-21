@@ -12,8 +12,8 @@
 #import "Section.h"
 
 @interface DataLense()
-@property (strong) NSOrderedSet <Section *> *allSections;
-@property (strong) NSOrderedSet <Section *> *sections;
+@property (strong) NSArray <Section *> *allSections;
+@property (strong) NSArray <Section *> *sections;
 @end
 
 @implementation DataLense
@@ -33,8 +33,8 @@
     NSDictionary *contents = [NSDictionary dictionaryWithContentsOfURL:fileURL];
     NSAssert(contents != nil, @"Invalid storage resource");
     
-    NSMutableOrderedSet <Section *> *sections =
-        [NSMutableOrderedSet orderedSetWithCapacity: [contents[@"sections"] count]];
+    NSMutableArray <Section *> *sections =
+        [NSMutableArray arrayWithCapacity: [contents[@"sections"] count]];
     [contents[@"sections"] enumerateObjectsUsingBlock:
         ^(NSDictionary *sectionDescription, NSUInteger idx, BOOL *stop)
     {
@@ -53,14 +53,29 @@
     return self.sections[indexPath.section].items[indexPath.item];
 }
 
-- (void)setPredicate: (nullable NSString *)predicate
+- (void)setPredicate: (nullable NSString *)newPredicate
 {
-    if (predicate == nil) {
+    if (newPredicate == nil) {
         _predicate = @"";
-    } else if ([predicate isNotEqualTo: _predicate]) {
-        _predicate = [predicate copy];
-        NSLog(@"Got new predicate: %@", _predicate);
-        // TODO: actually use this predicate to create a lense
+        self.sections = self.allSections;
+    } else if ([newPredicate isNotEqualTo: _predicate]) {
+        // Apply this new predicate to the lense
+        NSArray *source = nil;
+        // TODO: more sophisticated logic here
+        if ([newPredicate hasPrefix: _predicate]) {
+            // Don't bother searching everything then
+            source = self.sections;
+        } else {
+            source = self.allSections;
+        }
+
+        _predicate = [newPredicate copy];
+
+        self.sections = [source filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:
+            ^BOOL(Section *evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings)
+        {
+            return [evaluatedObject matchesDescription: _predicate];
+        }]];        
     }
 }
 @end
