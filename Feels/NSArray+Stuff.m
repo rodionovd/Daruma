@@ -19,9 +19,9 @@
     return result;
 }
 
-- (nonnull id)rd_randomItem
+- (nullable id)rd_randomItem
 {
-    return [self objectAtIndex: arc4random_uniform((uint32_t)self.count)];
+    return self.count == 0 ? nil : [self objectAtIndex: arc4random_uniform((uint32_t)self.count)];
 }
 
 @end
