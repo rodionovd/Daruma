@@ -19,4 +19,9 @@
     return result;
 }
 
+- (nonnull id)rd_randomItem
+{
+    return [self objectAtIndex: arc4random() % [self count]];
+}
+
 @end
