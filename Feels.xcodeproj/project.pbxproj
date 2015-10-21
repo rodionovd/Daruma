@@ -11,6 +11,7 @@
 		0A41F5841BD5312600363583 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A41F5831BD5312600363583 /* HeaderView.xib */; };
 		0A41F5871BD5361900363583 /* DataLense.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41F5861BD5361900363583 /* DataLense.m */; };
 		0A41F58A1BD53CE200363583 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41F5891BD53CE200363583 /* Section.m */; };
+		0A4DE1131BD7A1B20069764F /* ResponsiveCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DE1121BD7A1B20069764F /* ResponsiveCollectionView.m */; };
 		0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */; };
 		0A563B311BCF907000A34B8D /* Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B301BCF907000A34B8D /* Functional.m */; };
 		0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */; };
@@ -57,6 +58,8 @@
 		0A41F5861BD5361900363583 /* DataLense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLense.m; sourceTree = "<group>"; };
 		0A41F5881BD53CE200363583 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 		0A41F5891BD53CE200363583 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		0A4DE1111BD7A1B20069764F /* ResponsiveCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponsiveCollectionView.h; sourceTree = "<group>"; };
+		0A4DE1121BD7A1B20069764F /* ResponsiveCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponsiveCollectionView.m; sourceTree = "<group>"; };
 		0A563B271BCE900E00A34B8D /* FeelEmoticonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelEmoticonView.h; sourceTree = "<group>"; };
 		0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelEmoticonView.m; sourceTree = "<group>"; };
 		0A563B2A1BCEA41A00A34B8D /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = SOURCE_ROOT; };
@@ -131,6 +134,8 @@
 				0AA5D0E11BD29880004B9642 /* VerticallyCenteredTextCell.m */,
 				0A41F5801BD52FEC00363583 /* HeaderView.h */,
 				0A41F5811BD52FEC00363583 /* HeaderView.m */,
+				0A4DE1111BD7A1B20069764F /* ResponsiveCollectionView.h */,
+				0A4DE1121BD7A1B20069764F /* ResponsiveCollectionView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				0ACB699C1BCD383C00268E8E /* Feel.m in Sources */,
 				0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */,
 				0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */,
+				0A4DE1131BD7A1B20069764F /* ResponsiveCollectionView.m in Sources */,
 				0A41F58A1BD53CE200363583 /* Section.m in Sources */,
 				0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */,
 				0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */,
