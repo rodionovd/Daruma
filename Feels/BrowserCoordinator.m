@@ -146,7 +146,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     // tend to grow up and down the baseline
     // FIXME: why 1.5?
     proposedSize.height *= 1.5;
-    
+
     return proposedSize;
 }
 
