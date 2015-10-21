@@ -36,7 +36,7 @@ const static NSString *kSectionKeywordsKey = @"keywords";
     if ((self = [super init])) {
         self.title = dictionary[kSectionTitleKey];
         self.keywords = dictionary[kSectionKeywordsKey] ?: @"";
-        self.items = [(NSArray *)dictionary[kSectionItemsKey] rd_map: ^Feel *_Nonnull(NSDictionary *item) {
+        self.items = [(NSArray *)dictionary[kSectionItemsKey] rd_map: ^Feel *(NSDictionary *item) {
             return [Feel deserialize: item];
         }];
     }
