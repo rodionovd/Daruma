@@ -171,8 +171,6 @@
 				0ACB69921BCD0EC700268E8E /* Browser */,
 				0ACB69891BCD097700268E8E /* Resources */,
 				0ACB695F1BCD02E500268E8E /* Supporting Files */,
-				0A563B2F1BCF907000A34B8D /* Functional.h */,
-				0A563B301BCF907000A34B8D /* Functional.m */,
 			);
 			path = Feels;
 			sourceTree = "<group>";
@@ -229,6 +227,8 @@
 				0ACB699E1BCD546E00268E8E /* FeelViewItem.m */,
 				0ACB69A41BCD636900268E8E /* Model */,
 				0A563B261BCE8FD800A34B8D /* View */,
+				0A563B2F1BCF907000A34B8D /* Functional.h */,
+				0A563B301BCF907000A34B8D /* Functional.m */,
 			);
 			name = Browser;
 			sourceTree = "<group>";
