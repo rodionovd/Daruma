@@ -37,6 +37,11 @@
 
     self.searchField.delegate = self;
 
+    // Wait until next (?) run loop iteration; otherwise we'll see no effect
+    [self.window performSelector: @selector(makeFirstResponder:)
+                      withObject: self.searchField
+                      afterDelay: 0.0];
+
     self.collectionView.delegate = self.coordinator;
     self.collectionView.dataSource = self.coordinator;
     self.collectionView.collectionViewLayout = [CollectionViewBrowserLayout new];
