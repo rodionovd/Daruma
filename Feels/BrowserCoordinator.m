@@ -149,7 +149,8 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName size: fixedFontSize]
     }];
 
-    // Round up
+    // Round up since we don't neeed all the precision CGFloat has
+    // (it actually causes items popping, so just remove everything after the point)
     proposedSize.width = ceil(proposedSize.width);
     proposedSize.height = ceil(proposedSize.height);
 
