@@ -13,7 +13,7 @@
 		0A41F58A1BD53CE200363583 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41F5891BD53CE200363583 /* Section.m */; };
 		0A4DE1131BD7A1B20069764F /* ResponsiveCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DE1121BD7A1B20069764F /* ResponsiveCollectionView.m */; };
 		0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */; };
-		0A563B311BCF907000A34B8D /* Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B301BCF907000A34B8D /* Functional.m */; };
+		0A563B311BCF907000A34B8D /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B301BCF907000A34B8D /* NSArray+Functional.m */; };
 		0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */; };
 		0AA5D0E21BD29880004B9642 /* VerticallyCenteredTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5D0E11BD29880004B9642 /* VerticallyCenteredTextCell.m */; };
 		0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB695D1BCD02E500268E8E /* AppDelegate.m */; };
@@ -63,8 +63,8 @@
 		0A563B271BCE900E00A34B8D /* FeelEmoticonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelEmoticonView.h; sourceTree = "<group>"; };
 		0A563B281BCE900E00A34B8D /* FeelEmoticonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelEmoticonView.m; sourceTree = "<group>"; };
 		0A563B2A1BCEA41A00A34B8D /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = SOURCE_ROOT; };
-		0A563B2F1BCF907000A34B8D /* Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functional.h; sourceTree = "<group>"; };
-		0A563B301BCF907000A34B8D /* Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functional.m; sourceTree = "<group>"; };
+		0A563B2F1BCF907000A34B8D /* NSArray+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Functional.h"; sourceTree = "<group>"; };
+		0A563B301BCF907000A34B8D /* NSArray+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
 		0A563B351BCFCC3900A34B8D /* CollectionViewBrowserLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewBrowserLayout.h; sourceTree = "<group>"; };
 		0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewBrowserLayout.m; sourceTree = "<group>"; };
 		0AA5D0E01BD29880004B9642 /* VerticallyCenteredTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticallyCenteredTextCell.h; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 				0ACB699E1BCD546E00268E8E /* FeelViewItem.m */,
 				0ACB69A41BCD636900268E8E /* Model */,
 				0A563B261BCE8FD800A34B8D /* View */,
-				0A563B2F1BCF907000A34B8D /* Functional.h */,
-				0A563B301BCF907000A34B8D /* Functional.m */,
+				0A563B2F1BCF907000A34B8D /* NSArray+Functional.h */,
+				0A563B301BCF907000A34B8D /* NSArray+Functional.m */,
 			);
 			name = Browser;
 			sourceTree = "<group>";
@@ -387,7 +387,7 @@
 				0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */,
 				0A41F5871BD5361900363583 /* DataLense.m in Sources */,
 				0ACB69611BCD02E500268E8E /* main.m in Sources */,
-				0A563B311BCF907000A34B8D /* Functional.m in Sources */,
+				0A563B311BCF907000A34B8D /* NSArray+Functional.m in Sources */,
 				0ACB699C1BCD383C00268E8E /* Feel.m in Sources */,
 				0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */,
 				0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */,
