@@ -21,7 +21,7 @@
 
 - (nonnull id)rd_randomItem
 {
-    return [self objectAtIndex: arc4random() % [self count]];
+    return [self objectAtIndex: arc4random_uniform((uint32_t)self.count)];
 }
 
 @end
