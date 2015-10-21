@@ -10,6 +10,6 @@
 
 @interface ResponsiveCollectionView : NSCollectionView
 
-- (void)selectFirstItemAndScrollIfNeeded;
+- (BOOL)selectFirstItemAndScrollIfNeeded;
 
 @end

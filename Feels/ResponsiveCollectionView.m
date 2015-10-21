@@ -29,18 +29,17 @@
 - (void)moveDown: (id)sender
 {
     [super moveDown: sender];
-
     [self selectFirstItemAndScrollIfNeeded];
 }
 
 
-- (void)selectFirstItemAndScrollIfNeeded
+- (BOOL)selectFirstItemAndScrollIfNeeded
 {
     if (self.selectionIndexPaths.count != 0) {
-        return; // selection is not empty, aborting
+        return NO; // selection is not empty, aborting
     }
     if (self.indexPathsForVisibleItems.count == 0) {
-        return; // have nothing to show and select
+        return NO; // have nothing to show and select
     }
 
     NSSet *firstItem = [NSSet setWithObject: [NSIndexPath indexPathForItem: 0 inSection: 0]];
@@ -52,6 +51,7 @@
     }
 
     [self selectItemsAtIndexPaths: firstItem scrollPosition: scrollPosition];
+    return YES;
 }
 
 @end
