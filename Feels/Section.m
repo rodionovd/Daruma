@@ -35,7 +35,7 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 }
 
 + (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
-{    
+{
     id rawTitle = [dictionaryRepresentation objectForKey: kSectionTitleKey];
     BOOL titleIsValid = [rawTitle isKindOfClass: [NSString class]];
 
