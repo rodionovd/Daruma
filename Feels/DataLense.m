@@ -61,7 +61,7 @@
     } else if ([newPredicate isNotEqualTo: _predicate]) {
         // Apply this new predicate to the lense
         NSArray *source = nil;
-        // TODO: use more sophisticated logic here?
+        // TODO: use even more sophisticated logic here?
         if ([newPredicate hasPrefix: _predicate]) {
             // Search in previous results
             source = self.sections;
