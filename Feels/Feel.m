@@ -13,6 +13,35 @@ static NSString * const kFeelEmoticonKey = @"emoticon";
 
 @implementation Feel
 
++ (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionaryRepresentation
+{
+    if ([self _validateDictionaryRepresentation: dictionaryRepresentation] == NO) {
+        [NSException exceptionWithName: @"Invalid dictionary representation for Feel object"
+                                reason: [dictionaryRepresentation descriptionInStringsFileFormat]
+                              userInfo:nil];
+        return nil;
+    }
+
+    NSString *emoticon = dictionaryRepresentation[kFeelEmoticonKey];
+    NSString *label = dictionaryRepresentation[kFeelLabelKey];
+    if (emoticon == nil) {
+        return nil;
+    } else {
+        return [[[self class] alloc] initWithEmoticon: emoticon label: label];
+    }
+}
+
++ (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
+{
+    id rawEmoticon = [dictionaryRepresentation objectForKey: kFeelEmoticonKey];
+    BOOL emoticonIsValid = [rawEmoticon isKindOfClass: [NSString class]] && [rawEmoticon length] > 0;
+
+    id rawLabel = [dictionaryRepresentation objectForKey: kFeelLabelKey];
+    BOOL labelIsValid = (rawLabel == nil) ? YES : [rawLabel isKindOfClass: [NSString class]];
+
+    return (emoticonIsValid && labelIsValid);
+}
+
 - (nonnull instancetype)initWithEmoticon: (nonnull NSString *)emoticon label: (nullable NSString *)label
 {
     if ((self = [super init])) {
@@ -20,26 +49,6 @@ static NSString * const kFeelEmoticonKey = @"emoticon";
         _label = [label copy];
     }
     return self;
-}
-
-+ (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
-{
-    return !![dictionaryRepresentation objectForKey: kFeelEmoticonKey];
-}
-
-+ (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionary
-{
-    if ([self _validateDictionaryRepresentation: dictionary] == NO) {
-        return nil;
-    }
-
-    NSString *emoticon = dictionary[kFeelEmoticonKey];
-    NSString *label = dictionary[kFeelLabelKey];
-    if (emoticon == nil) {
-        return nil;
-    } else {
-        return [[[self class] alloc] initWithEmoticon: emoticon label: label];
-    }
 }
 
 - (NSString *)description

@@ -26,17 +26,26 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 + (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionaryRepresentation
 {
     if ([self.class _validateDictionaryRepresentation: dictionaryRepresentation] == NO) {
+        [NSException exceptionWithName: @"Invalid dictionary representation for Section object"
+                                reason: [dictionaryRepresentation descriptionInStringsFileFormat]
+                              userInfo:nil];
         return nil;
     }
     return [[self alloc] initWithDictionaryRepresentation: dictionaryRepresentation];
 }
 
 + (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
-{
-    BOOL hasTitleKey = !![dictionaryRepresentation objectForKey: kSectionTitleKey];
-    BOOL hasItems = [(NSArray *)[dictionaryRepresentation objectForKey: @"items"] count] > 0;
+{    
+    id rawTitle = [dictionaryRepresentation objectForKey: kSectionTitleKey];
+    BOOL titleIsValid = [rawTitle isKindOfClass: [NSString class]];
 
-    return (hasTitleKey && hasItems);
+    id rawKeywords = [dictionaryRepresentation objectForKey: kSectionKeywordsKey];
+    BOOL keywordsAreValid = (rawKeywords == nil) ? YES : [rawKeywords isKindOfClass: [NSArray class]];
+
+    id rawItems = [dictionaryRepresentation objectForKey: @"items"];
+    BOOL itemsAreValid = [rawItems isKindOfClass: [NSArray class]] && [rawItems count] > 0;
+
+    return (titleIsValid && keywordsAreValid && itemsAreValid);
 }
 
 - (nullable instancetype)initWithDictionaryRepresentation: (nonnull NSDictionary *)dictionary
