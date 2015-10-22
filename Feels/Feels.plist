@@ -10,7 +10,7 @@
 			<key>title</key>
 			<string>Happy</string>
 			<key>keywords</key>
-			<string></string>
+			<array></array>
 			<key>items</key>
 			<array>
 				<dict>
@@ -73,7 +73,7 @@
 			<key>title</key>
 			<string>Love</string>
 			<key>keywords</key>
-			<string></string>
+			<array></array>
 			<key>items</key>
 			<array>
 				<dict>
@@ -128,7 +128,7 @@
 			<key>title</key>
 			<string>Excited</string>
 			<key>keywords</key>
-			<string></string>
+			<array></array>
 			<key>items</key>
 			<array>
 				<dict>
@@ -181,7 +181,7 @@
 			<key>title</key>
 			<string>Cocoa developer</string>
 			<key>keywords</key>
-			<string></string>
+			<array></array>
 			<key>items</key>
 			<array>
 				<dict>
@@ -194,7 +194,7 @@
 			<key>title</key>
 			<string>Crying</string>
 			<key>keywords</key>
-			<string></string>
+			<array></array>
 			<key>items</key>
 			<array>
 				<dict>
