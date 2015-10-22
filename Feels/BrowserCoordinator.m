@@ -158,7 +158,11 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
-        CGFloat maxAllowedWidth = collectionView.bounds.size.width - (insets.left + insets.right);
+
+        CGFloat scrollerWidth = [NSScroller scrollerWidthForControlSize: NSRegularControlSize
+                                                          scrollerStyle: [NSScroller preferredScrollerStyle]];
+
+        CGFloat maxAllowedWidth = collectionView.window.minSize.width - scrollerWidth - (insets.left + insets.right);
         proposedSize.width = (proposedSize.width > maxAllowedWidth) ? maxAllowedWidth : proposedSize.width;
     }
     // Sanitize an item's height: it should be a bit taller than the default coz emoticons

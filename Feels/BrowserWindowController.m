@@ -12,6 +12,7 @@
 #import "NSArray+Stuff.h"
 
 @interface BrowserWindowController ()
+@property (strong) CollectionViewBrowserLayout *collectionViewLayout;
 @property (strong) NSArray *placeholders;
 @end
 
@@ -20,21 +21,35 @@
 - (instancetype)init
 {
     if ((self = [super initWithWindowNibName: @"BrowserWindow"])) {
-        [[NSNotificationCenter defaultCenter] addObserver: self
-                                                 selector: @selector(showWindow:)
-                                                     name: @"BrowserWindowShouldAppear" object: nil];
+
+        self.collectionViewLayout = [CollectionViewBrowserLayout new];
+
         // Load some (kinda) funny placeholders for the search field
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL *url = [[NSBundle mainBundle] URLForResource: @"FunnyPlaceholders"
                                                  withExtension: @"plist"];
             self.placeholders = [NSArray arrayWithContentsOfURL: url];
         });
+
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: @selector(showWindow:)
+                                                     name: @"BrowserWindowShouldAppear"
+                                                   object: nil];
+
+        // Update the collection view layout on a system-wide scroller style change:
+        // a legacy-styled scrollers take a few pixels from a scroll view width for a slot view
+        // (and thus reducing this scroll view's contents frame) while overlay-styled ones don't
+        [[NSNotificationCenter defaultCenter] addObserver: self.collectionViewLayout
+                                                 selector: @selector(invalidateLayoutUponNotification:)
+                                                     name: NSPreferredScrollerStyleDidChangeNotification
+                                                   object: nil];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver: self.collectionViewLayout];
     [[NSNotificationCenter defaultCenter] removeObserver: self];
 }
 
@@ -51,7 +66,7 @@
 
     self.collectionView.delegate = self.coordinator;
     self.collectionView.dataSource = self.coordinator;
-    self.collectionView.collectionViewLayout = [CollectionViewBrowserLayout new];
+    self.collectionView.collectionViewLayout = self.collectionViewLayout;
     // Enable dragging items from the collection view to other apps
     [self.collectionView setDraggingSourceOperationMask: NSDragOperationEvery forLocal: NO];
 }

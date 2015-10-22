@@ -40,5 +40,10 @@
     return layoutAttributesArray;
 }
 
+- (void)invalidateLayoutUponNotification: (NSNotification *)notification
+{
+    [self invalidateLayout];
+}
+
 
 @end

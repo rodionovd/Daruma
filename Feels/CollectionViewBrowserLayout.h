@@ -9,4 +9,7 @@
 @import Cocoa;
 
 @interface CollectionViewBrowserLayout : NSCollectionViewFlowLayout
+
+- (void)invalidateLayoutUponNotification: (NSNotification *)notification;
+
 @end
