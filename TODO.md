@@ -1,7 +1,6 @@
 1. Fill with actual emoticons
 7. SEARCH EVERYTHING
     7.3. search by both label and section name
-XX. Get rid of FIXMEs and TODOs in the codebase
 ------------------- THE RELEASE LINE ---------------------
 2. collection view background view?
     2.1. CocoaSlideCollection demo has it — why?
@@ -26,3 +25,4 @@ XX. Get rid of FIXMEs and TODOs in the codebase
 19. Rearrange emoticons? with animation (e.g. Springboard)?
 20. User should be able to change emoticons font size via both menu items and cmd+/cmd-
     20.1. Oh-oh-oh, we can also use a «magnification» gesture on the collection view for this!
+21. Support scripting (via AppleScript?)
