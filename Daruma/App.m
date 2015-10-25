@@ -6,14 +6,14 @@
 //  Copyright © 2015 Internals Exposed. All rights reserved.
 //
 
-#import "FeelsApp.h"
+#import "App.h"
 #import "BrowserCoordinator.h"
 
-@interface FeelsApp()
+@interface App()
 @property (strong) BrowserCoordinator *browserCoordinator;
 @end
 
-@implementation FeelsApp
+@implementation App
 
 - (instancetype)init
 {

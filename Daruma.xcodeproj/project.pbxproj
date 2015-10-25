@@ -22,7 +22,7 @@
 		0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69621BCD02E500268E8E /* Assets.xcassets */; };
 		0ACB69661BCD02E500268E8E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69641BCD02E500268E8E /* MainMenu.xib */; };
 		0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */; };
-		0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB698D1BCD0A5200268E8E /* FeelsApp.m */; };
+		0ACB698E1BCD0A5200268E8E /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB698D1BCD0A5200268E8E /* App.m */; };
 		0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */; };
 		0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69941BCD285D00268E8E /* BrowserCoordinator.m */; };
 		0ACB699C1BCD383C00268E8E /* Feel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB699B1BCD383C00268E8E /* Feel.m */; };
@@ -60,8 +60,8 @@
 		0ACB69651BCD02E500268E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0ACB69671BCD02E500268E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserWindow.xib; sourceTree = "<group>"; };
-		0ACB698C1BCD0A5200268E8E /* FeelsApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelsApp.h; sourceTree = "<group>"; };
-		0ACB698D1BCD0A5200268E8E /* FeelsApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelsApp.m; sourceTree = "<group>"; };
+		0ACB698C1BCD0A5200268E8E /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		0ACB698D1BCD0A5200268E8E /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		0ACB698F1BCD0B5100268E8E /* BrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserWindowController.h; sourceTree = "<group>"; };
 		0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserWindowController.m; sourceTree = "<group>"; };
 		0ACB69931BCD285D00268E8E /* BrowserCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserCoordinator.h; sourceTree = "<group>"; };
@@ -125,8 +125,8 @@
 				0A563B2A1BCEA41A00A34B8D /* TODO.txt */,
 				0ACB695C1BCD02E500268E8E /* AppDelegate.h */,
 				0ACB695D1BCD02E500268E8E /* AppDelegate.m */,
-				0ACB698C1BCD0A5200268E8E /* FeelsApp.h */,
-				0ACB698D1BCD0A5200268E8E /* FeelsApp.m */,
+				0ACB698C1BCD0A5200268E8E /* App.h */,
+				0ACB698D1BCD0A5200268E8E /* App.m */,
 				0ACB69921BCD0EC700268E8E /* Browser */,
 				0ACB69891BCD097700268E8E /* Resources */,
 				0ACB695F1BCD02E500268E8E /* Supporting Files */,
@@ -267,7 +267,7 @@
 				0A41F5821BD52FEC00363583 /* HeaderView.m in Sources */,
 				0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */,
 				0AA5D0E21BD29880004B9642 /* VerticallyCenteredTextCell.m in Sources */,
-				0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */,
+				0ACB698E1BCD0A5200268E8E /* App.m in Sources */,
 				0A563B291BCE900E00A34B8D /* FeelEmoticonView.m in Sources */,
 				0A41F5871BD5361900363583 /* DataLense.m in Sources */,
 				0ACB69611BCD02E500268E8E /* main.m in Sources */,

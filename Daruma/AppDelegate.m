@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "FeelsApp.h"
+#import "App.h"
 
 @interface AppDelegate ()
-@property (strong) FeelsApp *app;
+@property (strong) App *app;
 @end
 
 @implementation AppDelegate
@@ -23,7 +23,7 @@
 
 - (void)applicationDidFinishLaunching: (NSNotification *)aNotification
 {
-    self.app = [FeelsApp new];
+    self.app = [App new];
     [self.app run];
 }
 

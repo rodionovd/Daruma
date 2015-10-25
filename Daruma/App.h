@@ -8,7 +8,7 @@
 
 @import Cocoa;
 
-@interface FeelsApp : NSObject
+@interface App : NSObject
 
 - (void)run;
 
