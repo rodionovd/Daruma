@@ -1,6 +1,4 @@
 1. Fill with actual emoticons
-7. SEARCH EVERYTHING
-    7.3. search by both label and section name
 ------------------- THE RELEASE LINE ---------------------
 2. collection view background view?
     2.1. CocoaSlideCollection demo has it — why?
