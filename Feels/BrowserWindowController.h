@@ -28,5 +28,6 @@
 - (nonnull instancetype)init;
 
 - (IBAction)copy: (nullable id)sender;
+- (void)reloadCollectionView: (nullable id)sender;
 
 @end

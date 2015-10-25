@@ -76,6 +76,11 @@
     [self.coordinator writeToPasteboardItemsAtIndexPaths: self.collectionView.selectionIndexPaths];
 }
 
+- (void)reloadCollectionView: (nullable id)sender
+{
+    [self.collectionView reloadData];
+}
+
 - (BOOL)validateMenuItem: (NSMenuItem *)menuItem
 {
     // Disable the Copy menu item if the current selection is empty
@@ -102,7 +107,6 @@
         [self.coordinator searchField: obj.object
                    didReportPredicate: [(NSSearchField *)obj.object stringValue]];
     }
-    [self.collectionView reloadData];
 }
 
 - (void)controlTextDidEndEditing: (NSNotification *)obj

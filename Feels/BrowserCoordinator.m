@@ -23,6 +23,11 @@
 {
     if ((self = [super init])) {
         self.dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
+
+        [self.dataLense addObserver: self
+                         forKeyPath: @"sections"
+                            options: NSKeyValueObservingOptionOld
+                            context: NULL];
     }
     return self;
 }
@@ -42,6 +47,18 @@
     }];
     NSString *single_whitespace = @" ";
     return [emoticons componentsJoinedByString: single_whitespace];
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath: (NSString *)keyPath
+                      ofObject: (id)object
+                        change: (NSDictionary<NSString *,id> *)change
+                       context: (void *)context
+{
+    if (object == self.dataLense && [keyPath isEqualToString: @"sections"]) {
+        [self.browserWindowController reloadCollectionView: self];
+    }
 }
 
 #pragma mark - BrowserCoordinator protocol
