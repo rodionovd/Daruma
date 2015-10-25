@@ -36,10 +36,10 @@
 - (BOOL)selectFirstItemAndScrollIfNeeded
 {
     if (self.selectionIndexPaths.count != 0) {
-        return NO; // selection is not empty, aborting
+        return NO; // selection is not empty, so aborting
     }
     if (self.indexPathsForVisibleItems.count == 0) {
-        return NO; // have nothing to show and select
+        return NO; // have nothing to show and thus select
     }
 
     NSSet *firstItem = [NSSet setWithObject: [NSIndexPath indexPathForItem: 0 inSection: 0]];
