@@ -21,8 +21,6 @@
 		0ACB69611BCD02E500268E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69601BCD02E500268E8E /* main.m */; };
 		0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69621BCD02E500268E8E /* Assets.xcassets */; };
 		0ACB69661BCD02E500268E8E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69641BCD02E500268E8E /* MainMenu.xib */; };
-		0ACB69711BCD02E500268E8E /* FeelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69701BCD02E500268E8E /* FeelsTests.m */; };
-		0ACB697C1BCD02E500268E8E /* FeelsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB697B1BCD02E500268E8E /* FeelsUITests.m */; };
 		0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */; };
 		0ACB698E1BCD0A5200268E8E /* FeelsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB698D1BCD0A5200268E8E /* FeelsApp.m */; };
 		0ACB69911BCD0B5100268E8E /* BrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69901BCD0B5100268E8E /* BrowserWindowController.m */; };
@@ -33,23 +31,6 @@
 		0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69A21BCD564C00268E8E /* Feels.plist */; };
 		0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD5D411BD667FB00B74C56 /* Credits.rtf */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0ACB696D1BCD02E500268E8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ACB69511BCD02E500268E8E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0ACB69581BCD02E500268E8E;
-			remoteInfo = Feels;
-		};
-		0ACB69781BCD02E500268E8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ACB69511BCD02E500268E8E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0ACB69581BCD02E500268E8E;
-			remoteInfo = Feels;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0A41F5801BD52FEC00363583 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
@@ -71,19 +52,13 @@
 		0A5E66611BD8048E002362C2 /* FunnyPlaceholders.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FunnyPlaceholders.plist; sourceTree = "<group>"; };
 		0AA5D0E01BD29880004B9642 /* VerticallyCenteredTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticallyCenteredTextCell.h; sourceTree = "<group>"; };
 		0AA5D0E11BD29880004B9642 /* VerticallyCenteredTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticallyCenteredTextCell.m; sourceTree = "<group>"; };
-		0ACB69591BCD02E500268E8E /* Feels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACB69591BCD02E500268E8E /* Daruma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daruma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACB695C1BCD02E500268E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ACB695D1BCD02E500268E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0ACB69601BCD02E500268E8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0ACB69621BCD02E500268E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ACB69651BCD02E500268E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0ACB69671BCD02E500268E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ACB696C1BCD02E500268E8E /* FeelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ACB69701BCD02E500268E8E /* FeelsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeelsTests.m; sourceTree = "<group>"; };
-		0ACB69721BCD02E500268E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ACB69771BCD02E500268E8E /* FeelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ACB697B1BCD02E500268E8E /* FeelsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeelsUITests.m; sourceTree = "<group>"; };
-		0ACB697D1BCD02E500268E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACB698A1BCD099D00268E8E /* BrowserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserWindow.xib; sourceTree = "<group>"; };
 		0ACB698C1BCD0A5200268E8E /* FeelsApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeelsApp.h; sourceTree = "<group>"; };
 		0ACB698D1BCD0A5200268E8E /* FeelsApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelsApp.m; sourceTree = "<group>"; };
@@ -102,20 +77,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		0ACB69561BCD02E500268E8E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0ACB69691BCD02E500268E8E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0ACB69741BCD02E500268E8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,9 +106,7 @@
 		0ACB69501BCD02E500268E8E = {
 			isa = PBXGroup;
 			children = (
-				0ACB695B1BCD02E500268E8E /* Feels */,
-				0ACB696F1BCD02E500268E8E /* FeelsTests */,
-				0ACB697A1BCD02E500268E8E /* FeelsUITests */,
+				0ACB695B1BCD02E500268E8E /* Sources */,
 				0ACB695A1BCD02E500268E8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,14 +114,12 @@
 		0ACB695A1BCD02E500268E8E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0ACB69591BCD02E500268E8E /* Feels.app */,
-				0ACB696C1BCD02E500268E8E /* FeelsTests.xctest */,
-				0ACB69771BCD02E500268E8E /* FeelsUITests.xctest */,
+				0ACB69591BCD02E500268E8E /* Daruma.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0ACB695B1BCD02E500268E8E /* Feels */ = {
+		0ACB695B1BCD02E500268E8E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				0A563B2A1BCEA41A00A34B8D /* TODO.md */,
@@ -174,6 +131,7 @@
 				0ACB69891BCD097700268E8E /* Resources */,
 				0ACB695F1BCD02E500268E8E /* Supporting Files */,
 			);
+			name = Sources;
 			path = Feels;
 			sourceTree = "<group>";
 		};
@@ -183,24 +141,6 @@
 				0ACB69601BCD02E500268E8E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0ACB696F1BCD02E500268E8E /* FeelsTests */ = {
-			isa = PBXGroup;
-			children = (
-				0ACB69701BCD02E500268E8E /* FeelsTests.m */,
-				0ACB69721BCD02E500268E8E /* Info.plist */,
-			);
-			path = FeelsTests;
-			sourceTree = "<group>";
-		};
-		0ACB697A1BCD02E500268E8E /* FeelsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0ACB697B1BCD02E500268E8E /* FeelsUITests.m */,
-				0ACB697D1BCD02E500268E8E /* Info.plist */,
-			);
-			path = FeelsUITests;
 			sourceTree = "<group>";
 		};
 		0ACB69891BCD097700268E8E /* Resources */ = {
@@ -252,9 +192,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0ACB69581BCD02E500268E8E /* Feels */ = {
+		0ACB69581BCD02E500268E8E /* Daruma */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ACB69801BCD02E500268E8E /* Build configuration list for PBXNativeTarget "Feels" */;
+			buildConfigurationList = 0ACB69801BCD02E500268E8E /* Build configuration list for PBXNativeTarget "Daruma" */;
 			buildPhases = (
 				0ACB69551BCD02E500268E8E /* Sources */,
 				0ACB69561BCD02E500268E8E /* Frameworks */,
@@ -264,46 +204,10 @@
 			);
 			dependencies = (
 			);
-			name = Feels;
+			name = Daruma;
 			productName = Feels;
-			productReference = 0ACB69591BCD02E500268E8E /* Feels.app */;
+			productReference = 0ACB69591BCD02E500268E8E /* Daruma.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0ACB696B1BCD02E500268E8E /* FeelsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0ACB69831BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsTests" */;
-			buildPhases = (
-				0ACB69681BCD02E500268E8E /* Sources */,
-				0ACB69691BCD02E500268E8E /* Frameworks */,
-				0ACB696A1BCD02E500268E8E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0ACB696E1BCD02E500268E8E /* PBXTargetDependency */,
-			);
-			name = FeelsTests;
-			productName = FeelsTests;
-			productReference = 0ACB696C1BCD02E500268E8E /* FeelsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0ACB69761BCD02E500268E8E /* FeelsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0ACB69861BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsUITests" */;
-			buildPhases = (
-				0ACB69731BCD02E500268E8E /* Sources */,
-				0ACB69741BCD02E500268E8E /* Frameworks */,
-				0ACB69751BCD02E500268E8E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0ACB69791BCD02E500268E8E /* PBXTargetDependency */,
-			);
-			name = FeelsUITests;
-			productName = FeelsUITests;
-			productReference = 0ACB69771BCD02E500268E8E /* FeelsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -317,17 +221,9 @@
 					0ACB69581BCD02E500268E8E = {
 						CreatedOnToolsVersion = 7.1;
 					};
-					0ACB696B1BCD02E500268E8E = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = 0ACB69581BCD02E500268E8E;
-					};
-					0ACB69761BCD02E500268E8E = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = 0ACB69581BCD02E500268E8E;
-					};
 				};
 			};
-			buildConfigurationList = 0ACB69541BCD02E500268E8E /* Build configuration list for PBXProject "Feels" */;
+			buildConfigurationList = 0ACB69541BCD02E500268E8E /* Build configuration list for PBXProject "Daruma" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -340,9 +236,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0ACB69581BCD02E500268E8E /* Feels */,
-				0ACB696B1BCD02E500268E8E /* FeelsTests */,
-				0ACB69761BCD02E500268E8E /* FeelsUITests */,
+				0ACB69581BCD02E500268E8E /* Daruma */,
 			);
 		};
 /* End PBXProject section */
@@ -360,20 +254,6 @@
 				0ACB69661BCD02E500268E8E /* MainMenu.xib in Resources */,
 				0ACB69A11BCD546E00268E8E /* FeelEmoticon.xib in Resources */,
 				0A5E66621BD8048E002362C2 /* FunnyPlaceholders.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0ACB696A1BCD02E500268E8E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0ACB69751BCD02E500268E8E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,36 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0ACB69681BCD02E500268E8E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0ACB69711BCD02E500268E8E /* FeelsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0ACB69731BCD02E500268E8E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0ACB697C1BCD02E500268E8E /* FeelsUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0ACB696E1BCD02E500268E8E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0ACB69581BCD02E500268E8E /* Feels */;
-			targetProxy = 0ACB696D1BCD02E500268E8E /* PBXContainerItemProxy */;
-		};
-		0ACB69791BCD02E500268E8E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0ACB69581BCD02E500268E8E /* Feels */;
-			targetProxy = 0ACB69781BCD02E500268E8E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0ACB69641BCD02E500268E8E /* MainMenu.xib */ = {
@@ -532,7 +383,7 @@
 				INFOPLIST_FILE = Feels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Feels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Daruma;
 			};
 			name = Debug;
 		};
@@ -544,66 +395,14 @@
 				INFOPLIST_FILE = Feels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Feels;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		0ACB69841BCD02E500268E8E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FeelsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feels.app/Contents/MacOS/Feels";
-			};
-			name = Debug;
-		};
-		0ACB69851BCD02E500268E8E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FeelsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feels.app/Contents/MacOS/Feels";
-			};
-			name = Release;
-		};
-		0ACB69871BCD02E500268E8E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FeelsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Feels;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		0ACB69881BCD02E500268E8E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FeelsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.FeelsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Feels;
-				USES_XCTRUNNER = YES;
+				PRODUCT_NAME = Daruma;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0ACB69541BCD02E500268E8E /* Build configuration list for PBXProject "Feels" */ = {
+		0ACB69541BCD02E500268E8E /* Build configuration list for PBXProject "Daruma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ACB697E1BCD02E500268E8E /* Debug */,
@@ -612,29 +411,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ACB69801BCD02E500268E8E /* Build configuration list for PBXNativeTarget "Feels" */ = {
+		0ACB69801BCD02E500268E8E /* Build configuration list for PBXNativeTarget "Daruma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ACB69811BCD02E500268E8E /* Debug */,
 				0ACB69821BCD02E500268E8E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0ACB69831BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0ACB69841BCD02E500268E8E /* Debug */,
-				0ACB69851BCD02E500268E8E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0ACB69861BCD02E500268E8E /* Build configuration list for PBXNativeTarget "FeelsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0ACB69871BCD02E500268E8E /* Debug */,
-				0ACB69881BCD02E500268E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
