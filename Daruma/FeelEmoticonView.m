@@ -51,9 +51,9 @@
 - (void)updateLayer
 {
     NSColor *borderColor = nil;
-    if (_highlightState == NSCollectionViewItemHighlightForSelection) {
+    if (self.highlightState == NSCollectionViewItemHighlightForSelection) {
         borderColor = kSelectionCandidateBorderColor;
-    } else if (_selected && _highlightState != NSCollectionViewItemHighlightForDeselection) {
+    } else if (self.selected && self.highlightState != NSCollectionViewItemHighlightForDeselection) {
         borderColor = kSelectionBorderColor;
     } else {
         borderColor = nil;
