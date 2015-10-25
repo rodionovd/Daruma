@@ -24,22 +24,6 @@
     return self;
 }
 
-- (NSCollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath: (NSIndexPath *)indexPath
-{
-    NSCollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath: indexPath];
-    [attributes setZIndex: [indexPath item]];
-    return attributes;
-}
-
-- (NSArray *)layoutAttributesForElementsInRect: (NSRect)rect
-{
-    NSArray *layoutAttributesArray = [super layoutAttributesForElementsInRect: rect];
-    for (NSCollectionViewLayoutAttributes *attributes in layoutAttributesArray) {
-        [attributes setZIndex: [[attributes indexPath] item]];
-    }
-    return layoutAttributesArray;
-}
-
 - (void)invalidateLayoutUponNotification: (NSNotification *)notification
 {
     [self invalidateLayout];
