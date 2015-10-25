@@ -20,7 +20,7 @@
 
 - (instancetype)init
 {
-    if ((self = [super initWithWindowNibName: @"BrowserWindow"])) {
+    if ((self = [super init])) {
 
         self.collectionViewLayout = [CollectionViewBrowserLayout new];
 
@@ -45,6 +45,11 @@
                                                    object: nil];
     }
     return self;
+}
+
+- (NSString *)windowNibName
+{
+    return @"BrowserWindow";
 }
 
 - (void)dealloc
