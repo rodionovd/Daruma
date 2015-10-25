@@ -12,7 +12,7 @@
 @interface Section : NSObject
 
 @property (readonly, nonnull) NSString *title;
-@property (readonly, nonnull) NSArray *keywords;
+@property (readonly, nonnull) NSSet *keywords;
 @property (readonly, nonnull) NSArray <Feel *> *items;
 
 + (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionaryRepresentation;

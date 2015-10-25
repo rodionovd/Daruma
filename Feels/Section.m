@@ -17,7 +17,7 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 
 @interface Section()
 @property (strong, readwrite) NSString *title;
-@property (strong, readwrite) NSArray *keywords;
+@property (strong, readwrite) NSSet *keywords;
 @property (strong, readwrite) NSArray <Feel *> *items;
 @end
 
@@ -52,7 +52,7 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 {
     if ((self = [super init])) {
         self.title = dictionary[kSectionTitleKey];
-        self.keywords = dictionary[kSectionKeywordsKey] ?: @[];
+        self.keywords = [NSSet setWithArray: dictionary[kSectionKeywordsKey] ?: @[]];
         self.items = [(NSArray *)dictionary[kSectionItemsKey] rd_map: ^Feel *(NSDictionary *item) {
             return [Feel deserialize: item];
         }];
