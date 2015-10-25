@@ -4,8 +4,6 @@
     2.1. CocoaSlideCollection demo has it — why?
 3. copy the default feels database into Application Support, then use this copy so a user could make changes (add/delete emoticons, assign lables, etc)
     3.1. only copy the file if it's not there already
-4. tab order?
-    4.1. pressing arrow key should select the first cell (if there was no selection before)
 5. maybe use custom font for emoticons? Figure out what looks better
 8. SCROLL LAGS????
     (Seems like it's not my fault, but I'd better optimize things before shipping into a wild)
@@ -23,4 +21,4 @@
 19. Rearrange emoticons? with animation (e.g. Springboard)?
 20. User should be able to change emoticons font size via both menu items and cmd+/cmd-
     20.1. Oh-oh-oh, we can also use a «magnification» gesture on the collection view for this!
-21. Support scripting (via AppleScript?)
+21. Support scripting (via AppleScript?) THIS IS COOL BUT WHAT FOR?
