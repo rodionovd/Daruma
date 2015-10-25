@@ -72,11 +72,17 @@
 
         _predicate = [newPredicate copy];
 
-        self.sections = [source filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:
+        NSArray *searchResults =  [source filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:
             ^BOOL(Section *evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings)
         {
             return [evaluatedObject matchesDescription: _predicate];
-        }]];        
+        }]];
+
+        if ([searchResults isNotEqualTo: self.sections]) {
+            [self willChangeValueForKey: @"sections"];
+            self.sections = searchResults;
+            [self didChangeValueForKey: @"sections"];
+        }
     }
 }
 @end
