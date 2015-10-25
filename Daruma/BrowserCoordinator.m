@@ -150,6 +150,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
 
+// Emoticons are huge, so we have to deal with it
 #define kEmoticonFontSizeMultiplier (1.15)
 #define kItemSizeHeightMultiplier (1.5)
 
