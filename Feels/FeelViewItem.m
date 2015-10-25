@@ -14,6 +14,8 @@
 
 @implementation FeelViewItem
 
+#pragma mark - Mouse Events
+
 - (void)mouseDown:(NSEvent *)theEvent
 {
     [super mouseDown: theEvent];
