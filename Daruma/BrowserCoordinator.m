@@ -129,8 +129,8 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     }
     
     NSView *view = [collectionView makeSupplementaryViewOfKind: kind
-                                                         withIdentifier: @"HeaderView"
-                                                           forIndexPath: indexPath];
+                                                withIdentifier: identifier
+                                                  forIndexPath: indexPath];
     if ([kind isEqual: NSCollectionElementKindSectionHeader] && [view isKindOfClass: HeaderView.class]) {
         [(HeaderView *)view setTitle: self.dataLense.sections[indexPath.section].title];
     }
