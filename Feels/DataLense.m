@@ -85,4 +85,16 @@
         }
     }
 }
+
+- (NSString *)description
+{
+    const int kMaxItemsToDisplay = 10;
+    if (self.sections.count <= kMaxItemsToDisplay) {
+        return [NSString stringWithFormat: @"<%@: %p, predicate: '%@', view: %@>",
+                NSStringFromClass(self.class), (void *)self, self.predicate, self.sections];
+    } else {
+        return [NSString stringWithFormat: @"<%@: %p, predicate: '%@', view size: %lu>",
+                NSStringFromClass(self.class), (void *)self, self.predicate, self.sections.count];
+    }
+}
 @end
