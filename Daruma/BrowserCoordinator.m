@@ -10,8 +10,9 @@
 #import "BrowserWindowController.h"
 #import "Feel.h"
 #import "DataLense.h"
-#import "NSArray+Stuff.h"
 #import "HeaderView.h"
+#import "FeelViewItem.h"
+#import "EmoticonValueTransformer.h"
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
 @property (strong) DataLense *dataLense;
@@ -39,16 +40,6 @@
     [self.browserWindowController showWindow: self];
 }
 
-- (NSString *)mergedContentsForItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
-{
-    NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
-    NSArray *emoticons = [sortedByItemIndex rd_map: ^NSString *_Nonnull(NSIndexPath *_Nonnull path) {
-        return [[self.dataLense objectAtIndexPath: path] emoticon];
-    }];
-    NSString *single_whitespace = @" ";
-    return [emoticons componentsJoinedByString: single_whitespace];
-}
-
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath: (NSString *)keyPath
@@ -63,9 +54,9 @@
 
 #pragma mark - BrowserCoordinator protocol
 
-- (void)writeToPasteboardItemsAtIndexPaths: (NSSet <NSIndexPath *> *)indexPaths
+- (void)writeItemsToPasteboard: (NSSet <NSIndexPath *> *)indexPaths
 {
-    NSString *contents = [self mergedContentsForItemsAtIndexPaths: indexPaths];
+    NSString *contents = [self.dataLense contentsForItemsAtIndexPaths: indexPaths];
     [[NSPasteboard generalPasteboard] clearContents];
     [[NSPasteboard generalPasteboard] writeObjects: @[contents]];
 }
@@ -82,19 +73,20 @@
 
 #pragma mark - NSCollectionViewDelegate's
 
+// Enable drag’n’drop
 - (BOOL)collectionView: (NSCollectionView *)collectionView
 writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
           toPasteboard: (NSPasteboard *)pasteboard
 {
     [pasteboard declareTypes: @[NSStringPboardType] owner: nil];
-    [pasteboard setString: [self mergedContentsForItemsAtIndexPaths: indexPaths]
+    [pasteboard setString: [self.dataLense contentsForItemsAtIndexPaths: indexPaths]
                   forType: NSStringPboardType];
     return YES;
 }
 
 #pragma mark - NSCollectionViewDataSource's
 
-- (NSInteger)numberOfSectionsInCollectionView:(NSCollectionView *)collectionView
+- (NSInteger)numberOfSectionsInCollectionView: (NSCollectionView *)collectionView
 {
     return self.dataLense.sections.count;
 }
@@ -109,11 +101,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 {
     NSCollectionViewItem *item = [collectionView makeItemWithIdentifier: @"FeelEmoticon"
                                                            forIndexPath: indexPath];
+    // see FeelEmoticon.xib for bindings
     item.representedObject = [self.dataLense objectAtIndexPath: indexPath];
     return item;
 }
 
-- (nonnull NSView *)collectionView:(nonnull NSCollectionView *)collectionView viewForSupplementaryElementOfKind:(nonnull NSString *)kind atIndexPath:(nonnull NSIndexPath *)indexPath
+- (nonnull NSView *)collectionView: (nonnull NSCollectionView *)collectionView viewForSupplementaryElementOfKind: (nonnull NSString *)kind atIndexPath: (nonnull NSIndexPath *)indexPath
 {
     NSString *identifier = nil;
     if ([kind isEqualToString: NSCollectionElementKindSectionHeader]) {
@@ -149,26 +142,27 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                   layout: (NSCollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-
 // Emoticons are huge, so we have to deal with it
 #define kEmoticonFontSizeMultiplier (1.15)
-#define kItemSizeHeightMultiplier (1.5)
+#define kItemSizeHeightMultiplier (1.3)
 
-    NSString *emoticon = [self.dataLense objectAtIndexPath: indexPath].emoticon;
+    NSString *emoticon = [[EmoticonValueTransformer new] transformedValue:
+                          [self.dataLense objectAtIndexPath: indexPath].emoticon];
 
-    NSCollectionViewItem *viewItem = [collectionView itemAtIndexPath: indexPath];
-    NSFont *emoticonFont = viewItem.textField.font;
-    if (emoticonFont == nil) {
-        emoticonFont = [NSFont systemFontOfSize: 20];
-    }
-    // Make more room for huge emoticons
-    CGFloat fixedFontSize = emoticonFont.pointSize * kEmoticonFontSizeMultiplier;
-    NSSize proposedSize = [emoticon sizeWithAttributes: @{
-        NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName size: fixedFontSize]
-    }];
+    NSFont *emoticonFont = [FeelViewItem emoticonFont];
+    NSDictionary *fontAttributes = @{
+         NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName
+                                              // Make more room for huge emoticons
+                                              size: emoticonFont.pointSize * kEmoticonFontSizeMultiplier]
+    };
+    NSStringDrawingOptions drawingOptions =
+        NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics;
+    NSSize proposedSize = [emoticon boundingRectWithSize: NSZeroSize
+                                                 options: drawingOptions
+                                              attributes: fontAttributes].size;
 
     // Round up since we don't neeed all the precision CGFloat has
-    // (it actually causes items popping, so just remove everything after the point)
+    // (it actually causes items popping, so just remove everything after the decimal point/comma)
     proposedSize.width = ceil(proposedSize.width);
     proposedSize.height = ceil(proposedSize.height);
 
@@ -177,6 +171,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
 
+        // TODO: we don't need this if srollers aren't visible (aka overlay)
         CGFloat scrollerWidth = [NSScroller scrollerWidthForControlSize: NSRegularControlSize
                                                           scrollerStyle: [NSScroller preferredScrollerStyle]];
 

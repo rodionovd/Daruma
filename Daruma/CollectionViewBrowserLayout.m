@@ -8,8 +8,8 @@
 
 #import "CollectionViewBrowserLayout.h"
 
-#define kMinimumInteritemSpacing (3)
-#define kMinimumLineSpacing (3)
+#define kMinimumInteritemSpacing (15)
+#define kMinimumLineSpacing (15)
 #define kSectionInset NSEdgeInsetsMake(10, 10, 10, 10)
 
 @implementation CollectionViewBrowserLayout

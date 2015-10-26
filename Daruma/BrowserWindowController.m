@@ -78,7 +78,7 @@
 
 - (void)copy: (id)sender
 {
-    [self.coordinator writeToPasteboardItemsAtIndexPaths: self.collectionView.selectionIndexPaths];
+    [self.coordinator writeItemsToPasteboard: self.collectionView.selectionIndexPaths];
 }
 
 - (void)reloadCollectionView: (nullable id)sender

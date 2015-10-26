@@ -20,5 +20,6 @@
 @property (readonly, nullable) NSArray <Section *> *sections;
 
 - (nullable Feel *)objectAtIndexPath: (nonnull NSIndexPath *)indexPath;
+- (nonnull NSString *)contentsForItemsAtIndexPaths: (nonnull NSSet <NSIndexPath *> *)indexPaths;
 
 @end

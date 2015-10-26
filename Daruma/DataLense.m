@@ -10,6 +10,7 @@
 #import "DataLense.h"
 #import "Feel.h"
 #import "Section.h"
+#import "NSArray+Stuff.h"
 
 @interface DataLense()
 @property (strong) NSArray <Section *> *allSections;
@@ -51,6 +52,17 @@
     NSParameterAssert(indexPath.item < self.sections[indexPath.section].items.count);
     
     return self.sections[indexPath.section].items[indexPath.item];
+}
+
+- (NSString *)contentsForItemsAtIndexPaths: (nonnull NSSet <NSIndexPath *> *)indexPaths
+{
+    NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
+    NSArray *emoticons = [sortedByItemIndex rd_map: ^NSString *_Nonnull(NSIndexPath *_Nonnull path) {
+        return [[self objectAtIndexPath: path] emoticon];
+    }];
+    
+    NSString *single_whitespace = @" ";
+    return [emoticons componentsJoinedByString: single_whitespace];
 }
 
 - (void)setPredicate: (nullable NSString *)newPredicate

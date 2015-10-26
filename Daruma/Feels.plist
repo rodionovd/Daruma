@@ -10,7 +10,7 @@
 			<key>title</key>
 			<string>Happy</string>
 			<key>keywords</key>
-			<array></array>
+			<array/>
 			<key>items</key>
 			<array>
 				<dict>
@@ -65,7 +65,11 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>o͡͡͡͡͡͡͡͡͡͡͡͡͡͡╮(｡❛ᴗ❛｡)╭o͡͡͡͡͡͡͡͡͡͡͡͡͡͡</string>
+					<string>&lt;!nl!&gt;o͡͡͡͡͡͡͡͡͡͡͡͡͡͡╮(｡❛ᴗ❛｡)╭o͡͡͡͡͡͡͡͡͡͡͡͡͡͡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>&lt;!nl!&gt;o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
 				</dict>
 			</array>
 		</dict>
@@ -73,7 +77,7 @@
 			<key>title</key>
 			<string>Love</string>
 			<key>keywords</key>
-			<array></array>
+			<array/>
 			<key>items</key>
 			<array>
 				<dict>
@@ -128,7 +132,7 @@
 			<key>title</key>
 			<string>Excited</string>
 			<key>keywords</key>
-			<array></array>
+			<array/>
 			<key>items</key>
 			<array>
 				<dict>
@@ -181,7 +185,7 @@
 			<key>title</key>
 			<string>Cocoa developer</string>
 			<key>keywords</key>
-			<array></array>
+			<array/>
 			<key>items</key>
 			<array>
 				<dict>
@@ -194,24 +198,12 @@
 			<key>title</key>
 			<string>Crying</string>
 			<key>keywords</key>
-			<array></array>
+			<array/>
 			<key>items</key>
 			<array>
 				<dict>
 					<key>emoticon</key>
-					<string>(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)</string>
-					<key>label</key>
-					<string>crying out loud with tears</string>
-				</dict>
-				<dict>
-					<key>emoticon</key>
-					<string>(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)</string>
-					<key>label</key>
-					<string>crying out loud with tears</string>
-				</dict>
-				<dict>
-					<key>emoticon</key>
-					<string>(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)</string>
+					<string>(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)&lt;!nl!&gt;</string>
 					<key>label</key>
 					<string>crying out loud with tears</string>
 				</dict>

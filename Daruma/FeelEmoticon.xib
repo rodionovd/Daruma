@@ -16,21 +16,31 @@
                     <rect key="frame" x="0.0" y="0.0" width="169" height="66"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="( ˃̆ૢ௰˂̆ૢഃ )" id="opK-tS-hvM" customClass="VerticallyCenteredTextCell">
-                        <font key="font" size="18" name=".AppleSystemUIFont"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="opK-tS-hvM">
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                        <string key="title">
+o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <connections>
+                            <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="odK-nC-MwH">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">EmoticonValueTransformer</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
                     </textFieldCell>
                     <connections>
-                        <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="ncJ-6T-CRA"/>
+                        <binding destination="hUM-uu-vU2" name="font" keyPath="class.emoticonFont" id="JcU-GL-K6I"/>
                     </connections>
                 </textField>
             </subviews>
             <animations/>
-            <point key="canvasLocation" x="98.5" y="260"/>
+            <point key="canvasLocation" x="-628.5" y="238"/>
         </customView>
         <viewController id="hUM-uu-vU2" customClass="FeelViewItem">
             <connections>
+                <outlet property="textField" destination="MW5-aE-nY6" id="Oga-Xt-s4E"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="cIR-JH-B80"/>
             </connections>
         </viewController>
