@@ -11,6 +11,7 @@
 #import "Feel.h"
 #import "Section.h"
 #import "NSArray+Stuff.h"
+#import "EmoticonValueTransformer.h"
 
 @interface DataLense()
 @property (strong) NSArray <Section *> *allSections;
@@ -58,8 +59,9 @@
 - (NSString *)contentsForItemsAtIndexPaths: (nonnull NSSet <NSIndexPath *> *)indexPaths
 {
     NSArray *sortedByItemIndex = [indexPaths.allObjects sortedArrayUsingSelector: @selector(compare:)];
+    EmoticonValueTransformer *transformer = [EmoticonValueTransformer new];
     NSArray *emoticons = [sortedByItemIndex rd_map: ^NSString *_Nonnull(NSIndexPath *_Nonnull path) {
-        return [[self objectAtIndexPath: path] emoticon];
+        return [transformer transformedValueForCopying: [[self objectAtIndexPath: path] emoticon]];
     }];
     
     NSString *single_whitespace = @" ";
