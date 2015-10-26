@@ -17,21 +17,17 @@
 - (NSSize)rd_emoticonSize
 {
 // Emoticons could be huge and we have to deal with it
-#define kEmoticonFontSizeMultiplier (1.15)
 #define kItemSizeHeightMultiplier (1.3)
 
-    NSFont *emoticonFont = [NSFont rd_emoticonFont];
-    NSDictionary *fontAttributes = @{
-        NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName
-                                             // Make more room for huge emoticons
-                                             size: emoticonFont.pointSize * kEmoticonFontSizeMultiplier]
-    };
+    NSFont *emoticonFont = [NSFont rd_emoticonFontForMeasurements];
+
     NSStringDrawingOptions drawingOptions =
-    NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics;
+        NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics;
+    NSDictionary *attributes = @{NSFontAttributeName: emoticonFont};
     NSSize proposedSize = [self boundingRectWithSize: NSZeroSize
-                                                 options: drawingOptions
-                                              attributes: fontAttributes
-                                                 context: nil].size;
+                                             options: drawingOptions
+                                          attributes: attributes
+                                             context: nil].size;
 
     // Round up since we don't neeed all the precision CGFloat has
     // (it actually causes items popping, so just remove everything after the decimal point/comma)
