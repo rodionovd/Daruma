@@ -115,8 +115,7 @@
     if (self.searchField.stringValue.length == 0) {
         [self.coordinator searchFieldDidCompleteSearch: obj.object];
     } else {
-        [self.coordinator searchField: obj.object
-                   didReportPredicate: [(NSSearchField *)obj.object stringValue]];
+        [self.coordinator searchFieldDidReportPredicate: [(NSSearchField *)obj.object stringValue]];
     }
 }
 

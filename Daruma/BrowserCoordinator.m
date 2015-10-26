@@ -62,7 +62,7 @@
     [[NSPasteboard generalPasteboard] writeObjects: @[contents]];
 }
 
-- (void)searchField: (NSSearchField *)searchField didReportPredicate: (NSString *)newPredicate
+- (void)searchFieldDidReportPredicate: (NSString *)newPredicate
 {
     self.dataLense.predicate = newPredicate;
 }

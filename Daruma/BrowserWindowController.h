@@ -13,7 +13,7 @@
 
 - (void)writeItemsToPasteboard: (nonnull NSSet <NSIndexPath *> *)indexPaths;
 
-- (void)searchField: (nonnull NSSearchField *)searchField didReportPredicate: (nonnull NSString *)newPredicate;
+- (void)searchFieldDidReportPredicate: (nonnull NSString *)newPredicate;
 - (void)searchFieldDidCompleteSearch: (nonnull NSSearchField *)searchField;
 
 @end
