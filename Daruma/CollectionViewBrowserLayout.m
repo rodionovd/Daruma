@@ -16,8 +16,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
+    if ((self = [super init])) {
         [self setMinimumInteritemSpacing: kMinimumInteritemSpacing];
         [self setMinimumLineSpacing: kMinimumLineSpacing];
         [self setSectionInset: kSectionInset];
