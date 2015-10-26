@@ -9,6 +9,8 @@
 @import Cocoa;
 
 @interface NSArray <ObjectType> (Functional)
+
 - (nonnull NSArray *)rd_map: (nonnull id _Nonnull (^)(id _Nonnull obj))mapper;
 - (nullable ObjectType)rd_randomItem;
+
 @end

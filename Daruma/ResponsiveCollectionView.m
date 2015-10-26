@@ -32,7 +32,6 @@
     [self selectFirstItemAndScrollIfNeeded];
 }
 
-
 - (BOOL)selectFirstItemAndScrollIfNeeded
 {
     if (self.selectionIndexPaths.count != 0) {

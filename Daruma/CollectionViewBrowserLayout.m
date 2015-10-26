@@ -30,5 +30,4 @@
     [self invalidateLayout];
 }
 
-
 @end
