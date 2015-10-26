@@ -89,7 +89,9 @@
 
 - (void)reloadCollectionView: (nullable id)sender
 {
-    [self.collectionView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionView reloadData];
+    });
 }
 
 - (BOOL)validateMenuItem: (NSMenuItem *)menuItem
