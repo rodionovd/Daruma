@@ -6,7 +6,7 @@
 //  Copyright © 2015 Internals Exposed. All rights reserved.
 //
 
-#import "NSFont+Emoticons.h"
+#import "NSFont+EmoticonFont.h"
 
 @implementation NSFont (Emoticons)
 

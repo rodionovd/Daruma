@@ -7,7 +7,7 @@
 //
 
 #import "NSString+EmoticonSize.h"
-#import "NSFont+Emoticons.h"
+#import "NSFont+EmoticonFont.h"
 
 @implementation NSString (EmoticonSize)
 
