@@ -17,6 +17,7 @@
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
 @property (strong) DataLense *dataLense;
 @property (strong, nullable) BrowserWindowController *browserWindowController;
+@property (strong) NSCache *itemSizesCache;
 @end
 
 @implementation BrowserCoordinator
@@ -30,6 +31,8 @@
                          forKeyPath: @"sections"
                             options: NSKeyValueObservingOptionOld
                             context: NULL];
+
+        self.itemSizesCache = [NSCache new];
     }
     return self;
 }
@@ -143,15 +146,21 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                   layout: (NSCollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-
     NSString *emoticon = [[EmoticonValueTransformer new] transformedValue:
                           [self.dataLense objectAtIndexPath: indexPath].emoticon];
-    NSSize proposedSize = [emoticon rd_emoticonSize];
+    // Have we already calculated a size for this emoticon?
+    NSString *sizeString = [self.itemSizesCache objectForKey: emoticon];
+    if (sizeString != nil) {
+        return NSSizeFromString(sizeString);
+    }
 
+    // Otherwise do the math!
+    NSSize proposedSize = [emoticon rd_emoticonSize];
     // Sanitize an item's width in the flow layout mode
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
+        CGFloat collectionViewMinWidth = collectionView.window.minSize.width;
 
         // Assume NSScrollerStyleOverlay by default so scrollers don't take any additional place
         CGFloat scrollerWidth = 0.0f;
@@ -159,10 +168,13 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
             scrollerWidth = [NSScroller scrollerWidthForControlSize: NSRegularControlSize
                                                       scrollerStyle: [NSScroller preferredScrollerStyle]];
         }
-        CGFloat collectionViewMinWidth = collectionView.window.minSize.width;
         CGFloat maxAllowedWidth = collectionViewMinWidth - scrollerWidth - (insets.left + insets.right);
         proposedSize.width = (proposedSize.width > maxAllowedWidth) ? maxAllowedWidth : proposedSize.width;
     }
+
+    // Cache the calcuated size
+    [self.itemSizesCache setObject: NSStringFromSize(proposedSize) forKey: emoticon];
+
     return proposedSize;
 }
 
