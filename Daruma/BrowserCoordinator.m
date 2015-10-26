@@ -171,9 +171,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
 
-        // TODO: we don't need this if srollers aren't visible (aka overlay)
-        CGFloat scrollerWidth = [NSScroller scrollerWidthForControlSize: NSRegularControlSize
-                                                          scrollerStyle: [NSScroller preferredScrollerStyle]];
+        // Assume NSScrollerStyleOverlay by default so scrollers don't take any additional place
+        CGFloat scrollerWidth = 0.0f;
+        if ([NSScroller preferredScrollerStyle] == NSScrollerStyleLegacy) {
+            scrollerWidth = [NSScroller scrollerWidthForControlSize: NSRegularControlSize
+                                                      scrollerStyle: [NSScroller preferredScrollerStyle]];
+        }
 
         CGFloat maxAllowedWidth = collectionView.window.minSize.width - scrollerWidth - (insets.left + insets.right);
         proposedSize.width = (proposedSize.width > maxAllowedWidth) ? maxAllowedWidth : proposedSize.width;
