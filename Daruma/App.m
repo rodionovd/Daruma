@@ -11,7 +11,6 @@
 
 @interface App()
 @property (strong) BrowserCoordinator *browserCoordinator;
-// Internal logic
 + (NSURL *)_defaultFeelsURL;
 + (void)_sendBrowserWindowShouldAppearNotification;
 @end
