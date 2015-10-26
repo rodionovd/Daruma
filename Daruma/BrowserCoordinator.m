@@ -142,7 +142,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                   layout: (NSCollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-// Emoticons are huge, so we have to deal with it
+
+    // Welcome to a font nightmare, stranger.
+    // The code below is responsible for calculating a size of an emoticon inside
+    // a text field, so this textfield's bounds can be adjusted by the collection view layout later on.
+
+// Emoticons could be huge and we have to deal with it
 #define kEmoticonFontSizeMultiplier (1.15)
 #define kItemSizeHeightMultiplier (1.3)
 
@@ -159,7 +164,8 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics;
     NSSize proposedSize = [emoticon boundingRectWithSize: NSZeroSize
                                                  options: drawingOptions
-                                              attributes: fontAttributes].size;
+                                              attributes: fontAttributes
+                                                 context: nil].size;
 
     // Round up since we don't neeed all the precision CGFloat has
     // (it actually causes items popping, so just remove everything after the decimal point/comma)
