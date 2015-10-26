@@ -67,7 +67,7 @@ const static NSString *kSectionKeywordsKey = @"keywords";
     }
     __block BOOL matches = NO;
     [self.keywords enumerateObjectsUsingBlock: ^(NSString *keyword, BOOL *stop) {
-        if ([keyword containsString: description]) {
+        if ([keyword hasPrefix: description]) {
             matches = YES;
             *stop = YES;
         }
