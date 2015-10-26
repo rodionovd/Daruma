@@ -13,8 +13,6 @@
 @interface BrowserCoordinator : NSObject
 <NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout>
 
-@property (strong, nullable) BrowserWindowController *browserWindowController;
-
 - (nullable instancetype)initWithFeelsContainerURL: (nonnull NSURL *)containerURL;
 - (void)start;
 @end

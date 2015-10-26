@@ -16,6 +16,7 @@
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
 @property (strong) DataLense *dataLense;
+@property (strong, nullable) BrowserWindowController *browserWindowController;
 @end
 
 @implementation BrowserCoordinator
