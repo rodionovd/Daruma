@@ -12,7 +12,7 @@
 
 + (NSFont *)rd_emoticonFont
 {
-    return [NSFont systemFontOfSize: 20 weight: NSFontWeightRegular];
+    return [NSFont systemFontOfSize: 17 weight: NSFontWeightRegular];
 }
 
 @end
