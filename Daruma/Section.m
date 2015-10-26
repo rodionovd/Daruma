@@ -62,8 +62,17 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 
 - (BOOL)matchesDescription: (nonnull NSString *)description
 {
-    return [self.title.lowercaseString containsString: description.lowercaseString]
-        || [self.keywords intersectsSet: [NSSet setWithArray: [description componentsSeparatedByString: @""]]];
+    if ([self.title.lowercaseString containsString: description.lowercaseString]) {
+        return YES;
+    }
+    __block BOOL matches = NO;
+    [self.keywords enumerateObjectsUsingBlock: ^(NSString *keyword, BOOL *stop) {
+        if ([keyword containsString: description]) {
+            matches = YES;
+            *stop = YES;
+        }
+    }];
+    return matches;
 }
 
 - (NSString *)description
