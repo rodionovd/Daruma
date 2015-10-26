@@ -30,7 +30,7 @@
 {
     if (newHighlightState != _highlightState) {
         _highlightState = newHighlightState;
-        [self setNeedsDisplay: YES]; // invokes -updateLayer
+        [self setNeedsDisplay: YES];
     }
 }
 
@@ -38,13 +38,13 @@
 {
     if (newSelected != _selected) {
         _selected = newSelected;
-        [self setNeedsDisplay: YES]; // invokes -updateLayer
+        [self setNeedsDisplay: YES];
     }
 }
 
+// We want to receive -updateLayer (see below)
 - (BOOL)wantsUpdateLayer
 {
-    // We want to receive -updateLayer (see below)
     return YES;
 }
 

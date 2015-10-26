@@ -40,7 +40,7 @@
         ^(NSDictionary *sectionDescription, NSUInteger idx, BOOL *stop)
     {
         Section *tmp = [Section deserialize: sectionDescription];
-        NSAssert(tmp != nil, @"Could not deserialize a section [%lu] from dictionary", idx);
+        NSAssert(tmp != nil, @"Could not deserialize the section no. %lu from a dictionary", idx);
         [sections addObject: tmp];
     }];
     self.allSections = sections;
