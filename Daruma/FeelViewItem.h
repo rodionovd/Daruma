@@ -9,7 +9,4 @@
 @import Cocoa;
 
 @interface FeelViewItem : NSCollectionViewItem
-
-+ (NSFont *)emoticonFont;
-
 @end

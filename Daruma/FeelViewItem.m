@@ -14,11 +14,6 @@
 
 @implementation FeelViewItem
 
-+ (NSFont *)emoticonFont
-{
-    return [NSFont systemFontOfSize: 20 weight: NSFontWeightRegular];
-}
-
 #pragma mark - Mouse Events
 
 - (void)mouseDown:(NSEvent *)theEvent

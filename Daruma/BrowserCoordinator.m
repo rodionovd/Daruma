@@ -11,7 +11,7 @@
 #import "Feel.h"
 #import "DataLense.h"
 #import "HeaderView.h"
-#import "FeelViewItem.h"
+#import "NSFont+Emoticons.h"
 #import "EmoticonValueTransformer.h"
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
@@ -155,7 +155,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     NSString *emoticon = [[EmoticonValueTransformer new] transformedValue:
                           [self.dataLense objectAtIndexPath: indexPath].emoticon];
 
-    NSFont *emoticonFont = [FeelViewItem emoticonFont];
+    NSFont *emoticonFont = [NSFont rd_emoticonFont];
     NSDictionary *fontAttributes = @{
          NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName
                                               // Make more room for huge emoticons

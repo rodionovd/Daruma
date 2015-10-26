@@ -24,7 +24,7 @@ o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="hUM-uu-vU2" name="font" keyPath="class.emoticonFont" id="JcU-GL-K6I"/>
+                        <binding destination="Mxr-62-q4M" name="font" keyPath="class.rd_emoticonFont" id="FOj-9e-ZzH"/>
                         <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="n4i-sp-0hC">
                             <dictionary key="options">
                                 <string key="NSValueTransformerName">EmoticonValueTransformer</string>
@@ -34,7 +34,7 @@ o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
                 </textField>
             </subviews>
             <animations/>
-            <point key="canvasLocation" x="-628.5" y="238"/>
+            <point key="canvasLocation" x="-841.5" y="371"/>
         </customView>
         <viewController id="hUM-uu-vU2" customClass="FeelViewItem">
             <connections>
@@ -43,5 +43,6 @@ o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
             </connections>
         </viewController>
         <userDefaultsController representsSharedInstance="YES" id="nw3-tX-mfP"/>
+        <customObject id="Mxr-62-q4M" customClass="NSFont"/>
     </objects>
 </document>
