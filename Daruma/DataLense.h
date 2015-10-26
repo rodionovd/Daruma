@@ -17,7 +17,7 @@
 
 @property (readonly, strong, nonnull) NSArray <Section *> *allSections;
 @property (copy, null_resettable, nonatomic) NSString *predicate;
-@property (readonly, nullable) NSArray <Section *> *sections;
+@property (readonly, nullable, nonatomic) NSArray <Section *> *sections;
 
 - (nullable Feel *)objectAtIndexPath: (nonnull NSIndexPath *)indexPath;
 - (nonnull NSString *)contentsForItemsAtIndexPaths: (nonnull NSSet <NSIndexPath *> *)indexPaths;

@@ -15,6 +15,7 @@
 @interface DataLense()
 @property (strong) NSArray <Section *> *allSections;
 @property (strong) NSArray <Section *> *sections;
+@property (strong) NSArray *searchDomain;
 @end
 
 @implementation DataLense
@@ -67,35 +68,42 @@
 
 - (void)setPredicate: (nullable NSString *)newPredicate
 {
-    if (newPredicate == nil) {
+    if (newPredicate == nil && [_predicate isNotEqualTo: @""]) {
         _predicate = @"";
+        [self willChangeValueForKey: @"sections"];
         self.sections = self.allSections;
+        [self didChangeValueForKey: @"sections"];
     } else if ([newPredicate isNotEqualTo: _predicate]) {
-        // Apply this new predicate to the lense
-        NSArray *source = nil;
         // TODO: use even more sophisticated logic here?
         if ([newPredicate hasPrefix: _predicate]) {
             // Search in previous results
-            source = self.sections;
+            self.searchDomain = self.sections;
         } else {
             // Search everywhere
-            source = self.allSections;
+            self.searchDomain = self.allSections;
         }
-
         _predicate = [newPredicate copy];
-
-        NSArray *searchResults =  [source filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:
-            ^BOOL(Section *evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings)
-        {
-            return [evaluatedObject matchesDescription: _predicate];
-        }]];
-
-        if ([searchResults isNotEqualTo: self.sections]) {
-            [self willChangeValueForKey: @"sections"];
-            self.sections = searchResults;
-            [self didChangeValueForKey: @"sections"];
-        }
+        self.sections = nil;
+        // Get ready!
+        [self willChangeValueForKey: @"sections"];
+        [self didChangeValueForKey: @"sections"];
     }
+}
+
+- (NSArray <Section *> *)sections
+{
+    if (_sections != nil) {
+        return _sections;
+    }
+
+    NSArray *searchResults =  [self.searchDomain filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:
+    ^BOOL(Section *evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings)
+    {
+        return [evaluatedObject matchesDescription: _predicate];
+    }]];
+    _sections = [searchResults copy];
+
+    return _sections;
 }
 
 - (NSString *)description
