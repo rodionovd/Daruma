@@ -149,9 +149,9 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     NSString *emoticon = [[EmoticonValueTransformer new] transformedValue:
                           [self.dataLense objectAtIndexPath: indexPath].emoticon];
     // Have we already calculated a size for this emoticon?
-    NSString *sizeString = [self.itemSizesCache objectForKey: emoticon];
-    if (sizeString != nil) {
-        return NSSizeFromString(sizeString);
+    NSValue *sizeWrapper = [self.itemSizesCache objectForKey: emoticon];
+    if (sizeWrapper != nil) {
+        return [sizeWrapper sizeValue];
     }
 
     // Otherwise do the math!
@@ -173,7 +173,8 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     }
 
     // Cache the calcuated size
-    [self.itemSizesCache setObject: NSStringFromSize(proposedSize) forKey: emoticon];
+    [self.itemSizesCache setObject: [NSValue valueWithSize: proposedSize]
+                            forKey: emoticon];
 
     return proposedSize;
 }
