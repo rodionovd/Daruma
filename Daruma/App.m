@@ -12,7 +12,9 @@
 @interface App()
 @property (strong) BrowserCoordinator *browserCoordinator;
 + (NSURL *)_defaultFeelsURL;
+
 + (void)_sendBrowserWindowShouldAppearNotification;
++ (void)_sendBrowserWindowActivateSearchFieldNotification;
 @end
 
 @implementation App
@@ -38,8 +40,12 @@
 
 - (void)activate
 {
-    // Make the browser window appear
     [self.class _sendBrowserWindowShouldAppearNotification];
+}
+
+- (void)toggleSearch
+{
+    [self.class _sendBrowserWindowActivateSearchFieldNotification];
 }
 
 - (void)showAboutPanel
@@ -76,6 +82,12 @@
 {
     // TOOD: make this string a constant in a separate header file maybe?
     [[NSNotificationCenter defaultCenter] postNotificationName: @"BrowserWindowShouldAppear" object: nil];
+}
+
++ (void)_sendBrowserWindowActivateSearchFieldNotification
+{
+    // TOOD: make this string a constant in a separate header file maybe?
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"BrowserWindowActivateSearchField" object: nil];
 }
 
 @end

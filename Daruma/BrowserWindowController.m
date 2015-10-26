@@ -14,6 +14,8 @@
 @interface BrowserWindowController ()
 @property (strong) CollectionViewBrowserLayout *collectionViewLayout;
 @property (strong) NSArray *placeholders;
+
+- (void)_activateSearchField: (NSNotification *)notification;
 @end
 
 @implementation BrowserWindowController
@@ -34,6 +36,10 @@
         [[NSNotificationCenter defaultCenter] addObserver: self
                                                  selector: @selector(showWindow:)
                                                      name: @"BrowserWindowShouldAppear"
+                                                   object: nil];
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: @selector(_activateSearchField:)
+                                                     name: @"BrowserWindowActivateSearchField"
                                                    object: nil];
 
         // Update the collection view layout on a system-wide scroller style change:
@@ -127,6 +133,15 @@
         [self.window selectNextKeyView: nil];
         self.searchField.refusesFirstResponder = NO;
     }
+}
+
+#pragma mark - Internal
+
+- (void)_activateSearchField: (NSNotification *)notification
+{
+    [self.window performSelector: @selector(makeFirstResponder:)
+                      withObject: self.searchField
+                      afterDelay: 0.0];
 }
 
 @end

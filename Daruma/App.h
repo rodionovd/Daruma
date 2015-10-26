@@ -11,7 +11,11 @@
 @interface App : NSObject
 
 - (void)run;
+/// Shows the About panel with custom Credits inside
 - (void)showAboutPanel;
+/// Makes the browser window appear
 - (void)activate;
+/// Moves focus to the search bar
+- (void)toggleSearch;
 
 @end

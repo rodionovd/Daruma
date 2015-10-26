@@ -44,4 +44,10 @@
     [self.app showAboutPanel];
 }
 
+// CMD+F action handler
+- (IBAction)performFindPanelAction:(id)sender
+{
+    [self.app toggleSearch];
+}
+
 @end
