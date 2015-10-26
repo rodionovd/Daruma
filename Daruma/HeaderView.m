@@ -17,7 +17,7 @@
 {
     return NSMakeSize(
         0  /* this width will be automatically adjusted by an enclosing collection view's layout */,
-        26
+        34
     );
 }
 
@@ -39,11 +39,11 @@
 - (void)drawRect: (NSRect)dirtyRect
 {
     // Fill with semitransparent white.
-    [[NSColor colorWithCalibratedWhite:0.95 alpha: .4] set];
+    [[NSColor colorWithCalibratedWhite:0.95 alpha: .7] set];
     NSRectFillUsingOperation(dirtyRect, NSCompositeSourceOver);
 
     // Fill bottom and top edges with semitransparent gray.
-    [[NSColor colorWithCalibratedWhite:0.75 alpha: .4] set];
+    [[NSColor colorWithCalibratedWhite:0.75 alpha: .7] set];
 
     NSRect bottomEdgeRect = self.bounds;
     bottomEdgeRect.size.height = .5f;
