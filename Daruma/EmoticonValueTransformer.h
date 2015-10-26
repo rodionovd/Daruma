@@ -8,6 +8,7 @@
 
 @import Foundation;
 
-/// Inserts newlines as appropriate for the better look
+/// Inserts newlines as appropriate for the better look.
+/// This tranformer is utilized by the FeelEmoticon.xib's TextField <-> model binding
 @interface EmoticonValueTransformer : NSValueTransformer
 @end

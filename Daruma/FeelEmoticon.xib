@@ -22,16 +22,14 @@
 o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        <connections>
-                            <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="odK-nC-MwH">
-                                <dictionary key="options">
-                                    <string key="NSValueTransformerName">EmoticonValueTransformer</string>
-                                </dictionary>
-                            </binding>
-                        </connections>
                     </textFieldCell>
                     <connections>
                         <binding destination="hUM-uu-vU2" name="font" keyPath="class.emoticonFont" id="JcU-GL-K6I"/>
+                        <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="n4i-sp-0hC">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">EmoticonValueTransformer</string>
+                            </dictionary>
+                        </binding>
                     </connections>
                 </textField>
             </subviews>
