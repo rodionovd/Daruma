@@ -11,7 +11,7 @@
 #import "Feel.h"
 #import "DataLense.h"
 #import "HeaderView.h"
-#import "NSFont+Emoticons.h"
+#import "NSString+EmoticonSize.h"
 #import "EmoticonValueTransformer.h"
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
@@ -144,36 +144,11 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
 
-    // Welcome to a font nightmare, stranger.
-    // The code below is responsible for calculating a size of an emoticon inside
-    // a text field, so this textfield's bounds can be adjusted by the collection view layout later on.
-
-// Emoticons could be huge and we have to deal with it
-#define kEmoticonFontSizeMultiplier (1.15)
-#define kItemSizeHeightMultiplier (1.3)
-
     NSString *emoticon = [[EmoticonValueTransformer new] transformedValue:
                           [self.dataLense objectAtIndexPath: indexPath].emoticon];
+    NSSize proposedSize = [emoticon rd_emoticonSize];
 
-    NSFont *emoticonFont = [NSFont rd_emoticonFont];
-    NSDictionary *fontAttributes = @{
-         NSFontAttributeName: [NSFont fontWithName: emoticonFont.fontName
-                                              // Make more room for huge emoticons
-                                              size: emoticonFont.pointSize * kEmoticonFontSizeMultiplier]
-    };
-    NSStringDrawingOptions drawingOptions =
-        NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesDeviceMetrics;
-    NSSize proposedSize = [emoticon boundingRectWithSize: NSZeroSize
-                                                 options: drawingOptions
-                                              attributes: fontAttributes
-                                                 context: nil].size;
-
-    // Round up since we don't neeed all the precision CGFloat has
-    // (it actually causes items popping, so just remove everything after the decimal point/comma)
-    proposedSize.width = ceil(proposedSize.width);
-    proposedSize.height = ceil(proposedSize.height);
-
-    // Sanitize an item's width in flow layout mode
+    // Sanitize an item's width in the flow layout mode
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
@@ -184,14 +159,10 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
             scrollerWidth = [NSScroller scrollerWidthForControlSize: NSRegularControlSize
                                                       scrollerStyle: [NSScroller preferredScrollerStyle]];
         }
-
-        CGFloat maxAllowedWidth = collectionView.window.minSize.width - scrollerWidth - (insets.left + insets.right);
+        CGFloat collectionViewMinWidth = collectionView.window.minSize.width;
+        CGFloat maxAllowedWidth = collectionViewMinWidth - scrollerWidth - (insets.left + insets.right);
         proposedSize.width = (proposedSize.width > maxAllowedWidth) ? maxAllowedWidth : proposedSize.width;
     }
-    // Sanitize an item's height: it should be a bit taller than the default coz emoticons
-    // tend to grow up and down the baseline
-    proposedSize.height *= kItemSizeHeightMultiplier;
-
     return proposedSize;
 }
 
