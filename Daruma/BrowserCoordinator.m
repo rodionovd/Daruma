@@ -148,14 +148,19 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 {
     NSString *emoticon = [[EmoticonValueTransformer new] transformedValue:
                           [self.dataLense objectAtIndexPath: indexPath].emoticon];
+    NSSize proposedSize = NSZeroSize;
+
     // Have we already calculated a size for this emoticon?
     NSValue *sizeWrapper = [self.itemSizesCache objectForKey: emoticon];
     if (sizeWrapper != nil) {
-        return [sizeWrapper sizeValue];
+        proposedSize = [sizeWrapper sizeValue];
+    } else {
+        // Otherwise do the math!
+        proposedSize = [emoticon rd_emoticonSize];
+        // and cache the results
+        [self.itemSizesCache setObject: [NSValue valueWithSize: proposedSize]
+                                forKey: emoticon];
     }
-
-    // Otherwise do the math!
-    NSSize proposedSize = [emoticon rd_emoticonSize];
     // Sanitize an item's width in the flow layout mode
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
@@ -171,10 +176,6 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         CGFloat maxAllowedWidth = collectionViewMinWidth - scrollerWidth - (insets.left + insets.right);
         proposedSize.width = (proposedSize.width > maxAllowedWidth) ? maxAllowedWidth : proposedSize.width;
     }
-
-    // Cache the calcuated size
-    [self.itemSizesCache setObject: [NSValue valueWithSize: proposedSize]
-                            forKey: emoticon];
 
     return proposedSize;
 }
