@@ -11,6 +11,9 @@
 
 @interface App()
 @property (strong) BrowserCoordinator *browserCoordinator;
+// Internal logic
++ (NSURL *)_defaultFeelsURL;
++ (void)_sendBrowserWindowShouldAppearNotification;
 @end
 
 @implementation App
@@ -19,19 +22,25 @@
 {
     if ((self = [super init])) {
         _browserCoordinator =
-            [[BrowserCoordinator alloc] initWithFeelsContainerURL: [self.class defaultFeelsURL]];
+            [[BrowserCoordinator alloc] initWithFeelsContainerURL: [self.class _defaultFeelsURL]];
     }
     return self;
 }
 
-+ (NSURL *)defaultFeelsURL
-{
-    return [[NSBundle mainBundle] URLForResource: @"Feels" withExtension: @"plist"];
-}
+#pragma mark - Public actions
 
 - (void)run
 {
-    [self.browserCoordinator start];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self.browserCoordinator start];
+    });
+}
+
+- (void)activate
+{
+    // Make the browser window appear
+    [self.class _sendBrowserWindowShouldAppearNotification];
 }
 
 - (void)showAboutPanel
@@ -55,6 +64,19 @@
     // and show the default about panel
     NSDictionary *options = @{@"Credits" : credits};
     [[NSApplication sharedApplication] orderFrontStandardAboutPanelWithOptions: options];
+}
+
+#pragma mark - Internal
+
++ (NSURL *)_defaultFeelsURL
+{
+    return [[NSBundle mainBundle] URLForResource: @"Feels" withExtension: @"plist"];
+}
+
++ (void)_sendBrowserWindowShouldAppearNotification
+{
+    // TOOD: make this string a constant in a separate header file maybe?
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"BrowserWindowShouldAppear" object: nil];
 }
 
 @end

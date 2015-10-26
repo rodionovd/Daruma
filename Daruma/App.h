@@ -12,5 +12,6 @@
 
 - (void)run;
 - (void)showAboutPanel;
+- (void)activate;
 
 @end

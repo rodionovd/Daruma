@@ -15,12 +15,6 @@
 
 @implementation AppDelegate
 
-- (void)sendBrowserWindowShouldAppearNotification
-{
-    // TOOD: make this string a constant in a separate header file maybe?
-    [[NSNotificationCenter defaultCenter] postNotificationName: @"BrowserWindowShouldAppear" object: nil];
-}
-
 - (void)applicationDidFinishLaunching: (NSNotification *)aNotification
 {
     self.app = [App new];
@@ -29,15 +23,13 @@
 
 - (BOOL)applicationShouldHandleReopen: (NSApplication *)sender hasVisibleWindows: (BOOL)flag
 {
-    // Make the browser window appear when user clicks on the app's icon in Dock
-    [self sendBrowserWindowShouldAppearNotification];
+    [self.app activate];
     return YES;
 }
 
 - (void)applicationDidBecomeActive: (NSNotification *)notification
 {
-    // Make the browser window appear when the app gets focus
-    [self sendBrowserWindowShouldAppearNotification];
+    [self.app activate];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed: (NSApplication *)sender
