@@ -11,5 +11,6 @@
 @interface App : NSObject
 
 - (void)run;
+- (void)showAboutPanel;
 
 @end
