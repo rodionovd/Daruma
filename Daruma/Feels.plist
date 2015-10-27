@@ -1262,10 +1262,6 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>❤⃛῍̻̩✧(´͈ ૢᐜ `͈ૢ)</string>
-				</dict>
-				<dict>
-					<key>emoticon</key>
 					<string>♡( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ♡</string>
 				</dict>
 				<dict>
@@ -2319,6 +2315,559 @@
 				<dict>
 					<key>emoticon</key>
 					<string>Ⓦⓗⓐⓣ(☉൧ ಠ ꐦ)</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Angry</string>
+			<key>keywords</key>
+			<array>
+				<string>fuck</string>
+				<string>hell</string>
+				<string>shit</string>
+			</array>
+			<key>items</key>
+			<array>
+				<dict>
+					<key>emoticon</key>
+					<string>（；¬＿¬)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(｡+･`ω･´)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(;¬_¬)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(　ﾟДﾟ)＜!!</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>（;≧皿≦）</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(╬ﾟ◥益◤ﾟ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(╬⓪益⓪)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⁎˃ᆺ˂)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ꐦ°᷄д°᷅)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( &gt;д&lt;)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(╬ Ò ‸ Ó)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(*｀益´*)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>&lt;(｀^´)&gt;</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ꐦ ಠ皿ಠ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ு⁎ு)྆྆</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(╬⓪益⓪)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>=͟͟͞͞( •̀д•́)))</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>༼ つ ͠° ͟ ͟ʖ ͡° ༽つ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ꀯ(‴ꑒ᷅⺫ꑒ᷄)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string> (ﾒﾟ皿ﾟ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( •̀ω•́ )σ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>o(-`д´- ｡)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ू˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ू)&lt;!nl!&gt;</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ू˃̣̣̣̣̣̣o˂̣̣̣̣̣̣ ू)⁼³₌₃&lt;!nl!&gt;</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>（▼へ▼メ）</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>｢(#Φ益 Φo)∩</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>s(・｀ヘ´・;)ゞ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>Σ(-`Д´-ﾉ；)ﾉ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>Σ(▼□▼メ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>๛∙᷅῞ॄ∙᷄</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(°ㅂ° ╬)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ｰ̀εｰ́ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(눈_눈)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ʘ言ʘ╬)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(-̀◞८̯◟-́)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ͒˃⌂˂ ͒)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>┌(▀Ĺ̯ ▀-͠ )┐</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>☜(`o´)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(-̀◞▥◟-́)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(&gt;人&lt;)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>-`д´-</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(#ಠQಠ#)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(¬､¬)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ಠ ಠ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⋋▂⋌)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>૮(ꂧ᷆⺫ꂧ᷇)ა</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>૮( ᵒ̌ૢཪᵒ̌ૢ )ა</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>꒰╬•᷅д•᷄╬꒱</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ఠ్ఠ ˓̭ ఠ్ఠ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string> (*´罒`*)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ఠ ͟ಠ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>（｡ò ∀ ó｡）</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(｡ì _ í｡)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string> (⑉･̆⌓･̆⑉)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>₍₍ ◝(•̀ㅂ•́)◟ ⁾⁾</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string> ૮( ᵒ̌皿ᵒ̌ )ა</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ‾᷅⚰‾᷄ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(∘⁼̴⃙̀˘︷˘⁼̴⃙́∘)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string> ⋋_⋌</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ʕ •̀ o •́ ʔ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>˃ʍ˂</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ▀ 益 ▀ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ಠ ∩ಠ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>⋌༼ •̀ ⌂ •́ ༽⋋</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヽ༼ ಠ益ಠ ༽ﾉ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>└(&gt;o&lt; )┘</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>＼(・｀(ｪ)・)/</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヾ( ･`⌓´･)ﾉﾞ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヾ(｀◇´)ﾉ彡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ﾚ(◣益◢#)ﾍ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヾ( ˃̶⺫˂̶｡)ノ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string> ヽ(｀⌒´)ﾉ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(☝’益’☝)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>＼`•̀益•́´／</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>╰༼=ಠਊಠ=༽╯</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヾ(ﾒ｀･д･´)ﾉﾞ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヾ(o｀ε´o)ﾉ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヾ(o｀ｪ´)ﾉ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>٩(╬ʘ益ʘ╬)۶</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>٩(๑`ȏ´๑)۶</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ｏ( &gt;&lt;)o</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>o(&gt;&lt; )o</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ᕙ(⇀‸↼‶)ᕗ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ᕦ(ò_óˇ)ᕤ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>٩(╬ఠ༬ఠ)و</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>٩(๑`^´๑)۶</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>p( Ò ‸ Ó)q </string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>\\٩(๑`ȏ´๑)۶//</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>୧ʕ ⇀ ⌂ ↼ ʔ୨</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>＼＼\\٩(๑`^´๑)۶//／／</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>୧▒ •̀ o •́ ▒୨</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>୧༼ಠ益ಠ༽୨</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ೕ(Ò⺫ Ó )೨</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(･｀ｪ´･)つ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(； ｀ｪ´ ；)b三b</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ꈨຶꎁꈨຶ)۶”</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>θ＼(；￢_￢)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ヾﾉ•᷅ ༬•᷄ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ⓞ⃘ ⺫ ⓞ⃘۶)۶ ੭ྀ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ര̀⍨ര́)و ̑̑༉</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(☢益☢t)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>໒( ᓀ ‸ ᓂ )७</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>໒( : ͡° д °͡ : )७</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>щ(ಠ益ಠщ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ლ(ಠ_ಠლ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ლ (#｀ﾛ＾;)&gt;</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ノಠ ∩ಠ)ノ彡( o°o)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(╯°□°）╯︵ ┻━┻</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(۶ૈ ۜ ᵒ̌▱๋ᵒ̌ )۶ૈ=͟͟͞͞ ⌨</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ﾉಥ益ಥ）ﾉ ┻━┻</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(╯°Д°）╯︵/(.□ . )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( #`⌂´)/┌┛</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヽ(#ﾟДﾟ)ﾉ┌┛</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>‾͟͟͞(((ꎤ ✧曲✧)̂—̳͟͞͞o</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(((ꎤ๑‾᷅༬‾᷄๑)̂—̳͟͞͞o</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(૭ ఠ༬ఠ)૭</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>~‾͟͟͞(((ꎤ &gt;ㅿ&lt;)̂—̳͟͞͞o</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(૭ ◉༬◉)૭⁾⁾⁾⁾</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ᕙ( ︡’︡益’︠)ง</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ი⁽͑˙˚̀༡̇˚́˙⁾̉ჟ ˒˒⁼³</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>⁽͑ʺ˚̀˙̪̺˚́ʺ⁾̉ ˃͐</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>⁽͑˙˚̀བ̇˚́˙⁾̉</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ฅ⁽͑ ˚̀ ˙̭ ˚́ ⁾̉ฅ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ˁ⁽͑˙˚̀ˆ̇˚́˙⁾̉ˀ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>⁽͑˙˚̀⚐˚́˙⁾̉</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ˁ⁽͑ ˚̀˙̭˚́ ⁾̉ˀ ⁼³</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>((╬ಠิ﹏ಠิ))</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⁎ૢ⚈ै೧⚈ै⁎ૢ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>⁽ƈ ͡ (ुŏ̥̥̥̥םŏ̥̥̥̥) ु</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(๑•ิཬ•ั๑)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ृ　ु*`ω´)ु</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>⁽⁽(੭ꐦ •̀Д•́ )੭*⁾⁾ ᑦᵒᔿᵉ ᵒᐢᵎᵎ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>&lt;!nl!&gt;o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>&lt;!nl!&gt;o͡͡͡͡͡͡╮(｡&gt;口&lt;｡)╭o͡͡͡͡͡͡ ᵑ৹!</string>
 				</dict>
 			</array>
 		</dict>
