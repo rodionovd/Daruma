@@ -158,12 +158,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                   layout: (NSCollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-    NSString *emoticon = [[EmoticonValueTransformer new] transformedValue:
-                          [self.dataLense objectAtIndexPath: indexPath].emoticon];
-    NSSize proposedSize = NSZeroSize;
+    Feel *modelObject = [self.dataLense objectAtIndexPath: indexPath];
+    NSString *emoticon = [[EmoticonValueTransformer new] transformedValue: modelObject.emoticon];
 
     // Have we already calculated a size for this emoticon?
-    NSValue *sizeWrapper = [self.itemSizesCache objectForKey: emoticon];
+    NSValue *sizeWrapper = [self.itemSizesCache objectForKey: modelObject];
+    NSSize proposedSize = NSZeroSize;
     if (sizeWrapper != nil) {
         proposedSize = [sizeWrapper sizeValue];
     } else {
@@ -171,7 +171,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         proposedSize = [emoticon rd_emoticonSize];
         // and cache the results
         [self.itemSizesCache setObject: [NSValue valueWithSize: proposedSize]
-                                forKey: emoticon];
+                                forKey: modelObject];
     }
     // Sanitize an item's width in the flow layout mode
     if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
