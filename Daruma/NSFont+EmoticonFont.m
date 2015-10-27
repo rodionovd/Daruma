@@ -18,7 +18,7 @@
     static NSFont *chosenFont = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        // Well. If we try to use [NSFont systemFontOfSize: 25 weight: NSFontWeightLight] here
+        // Well. If we try to use -[NSFont systemFontOfSize:weight:] here
         // we'll got *so many* leaks when trying to calculate an emoticon size with
         // -[NSString boundingRectWithSize:options:attributes:context:], because for some reason it
         // creates a new font on every call if we pass -systemFontOfSize:weight: as a value to the
