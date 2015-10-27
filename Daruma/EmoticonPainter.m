@@ -26,7 +26,6 @@
         _textStorage = [[NSTextStorage alloc] initWithString: emoticon
                                                   attributes: attrs];
         NSLayoutManager *layoutManager = [NSLayoutManager new];
-        layoutManager.allowsNonContiguousLayout = YES;
         NSTextContainer *textContainer = [NSTextContainer new];
         [layoutManager addTextContainer: textContainer];
         [_textStorage addLayoutManager: layoutManager];
