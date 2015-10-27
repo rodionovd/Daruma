@@ -8,16 +8,19 @@
 
 #import "BrowserCoordinator.h"
 #import "BrowserWindowController.h"
-#import "Feel.h"
 #import "DataLense.h"
+#import "Feel.h"
 #import "HeaderView.h"
 #import "NSString+EmoticonSize.h"
 #import "EmoticonValueTransformer.h"
+#import "EmoticonPainter.h"
+#import "FeelEmoticonView.h"
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
 @property (strong) DataLense *dataLense;
 @property (strong, nullable) BrowserWindowController *browserWindowController;
 @property (strong) NSCache *itemSizesCache;
+@property (strong) NSCache *paintersCache;
 @end
 
 @implementation BrowserCoordinator
@@ -33,6 +36,7 @@
                             context: NULL];
 
         self.itemSizesCache = [NSCache new];
+        self.paintersCache = [NSCache new];
     }
     return self;
 }
@@ -105,8 +109,16 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 {
     NSCollectionViewItem *item = [collectionView makeItemWithIdentifier: @"FeelEmoticon"
                                                            forIndexPath: indexPath];
-    // see FeelEmoticon.xib for bindings
-    item.representedObject = [self.dataLense objectAtIndexPath: indexPath];
+
+    Feel *modelObject = [self.dataLense objectAtIndexPath: indexPath];
+
+    EmoticonPainter *painter = [self.paintersCache objectForKey: modelObject];
+    if (painter == nil) {
+        NSString *emoticon = [[EmoticonValueTransformer new] transformedValue: modelObject.emoticon];
+        painter = [EmoticonPainter painterForEmoticon: emoticon];
+        [self.paintersCache setObject: painter forKey: modelObject];
+    }
+    [(FeelEmoticonView *)item.view setPainter: painter];
     return item;
 }
 

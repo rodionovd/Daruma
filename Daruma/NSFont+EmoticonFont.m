@@ -23,7 +23,7 @@
         // -[NSString boundingRectWithSize:options:attributes:context:], because for some reason it
         // creates a new font on every call if we pass -systemFontOfSize:weight: as a value to the
         // NSFontAttributeName attribute ¯\_(ツ)_/¯
-        chosenFont = [NSFont fontWithName: @".SFNSText-Light" size: 25];
+        chosenFont = [NSFont fontWithName: @".SFNSText-Light" size: 27];
         // We could also fallback to Helvetica or something else, but I don't care since
         // Daruma requires 10.11+ anyway
         NSAssert(chosenFont != nil, @"oops, where's my San Francisco?!");
