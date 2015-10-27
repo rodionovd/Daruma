@@ -8,7 +8,7 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>Positive feelings</string>
+			<string>Happy</string>
 			<key>keywords</key>
 			<array>
 				<string>happy</string>
@@ -162,7 +162,7 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>(̂ ˃̥̥̥ ˑ̫ ˂̥̥̥ )̂&lt;!nl!&gt;</string>
+					<string>(̂ ˃̥̥̥ ˑ̫ ˂̥̥̥ )̂</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
@@ -806,7 +806,224 @@
 			<key>title</key>
 			<string>Love</string>
 			<key>keywords</key>
-			<array/>
+			<array>
+				<string>feel</string>
+				<string>date</string>
+				<string>hugs</string>
+				<string>kiss</string>
+				<string>heart</string>
+				<string>intimacy</string>
+				<string>affinity</string>
+				<string>affection</string>
+				<string>wedding</string>
+				<string>warm</string>
+				<string>passion</string>
+				<string>i love you</string>
+				<string>i like you</string>
+				<string>luv</string>
+				<string>I heart u</string>
+				<string>любовь</string>
+				<string>amour</string>
+				<string>liebe</string>
+				<string>lief</string>
+				<string>dashuri</string>
+				<string>الحب</string>
+				<string>Սեր</string>
+				<string>sevgi</string>
+				<string>maite</string>
+				<string>каханне</string>
+				<string>প্রেম</string>
+				<string>voljeti</string>
+				<string>любов</string>
+				<string>estimar</string>
+				<string>amour</string>
+				<string>amar</string>
+				<string>paghigugma</string>
+				<string>gugma</string>
+				<string>爱</string>
+				<string>爱情</string>
+				<string>愛</string>
+				<string>喜歡</string>
+				<string>voljeti</string>
+				<string>ljubav</string>
+				<string>pasija</string>
+				<string>láska</string>
+				<string>milý</string>
+				<string>miláček</string>
+				<string>zlato</string>
+				<string>elsker</string>
+				<string>kærlighed</string>
+				<string>elskov</string>
+				<string>liefde</string>
+				<string>geliefde</string>
+				<string>liefste</string>
+				<string>liefje</string>
+				<string>lieveling</string>
+				<string>minne</string>
+				<string>armastus</string>
+				<string>armastatu</string>
+				<string>kallike</string>
+				<string>pag-ibig</string>
+				<string>pagmamahal</string>
+				<string>mahal</string>
+				<string>pagsinta</string>
+				<string>rakkaus</string>
+				<string>rakas</string>
+				<string>rakastettu</string>
+				<string>kulta</string>
+				<string>lempi</string>
+				<string>მიყვარს</string>
+				<string>სიყვარული</string>
+				<string>Liebe</string>
+				<string>Liebling</string>
+				<string>αγάπη</string>
+				<string>έρωτας</string>
+				<string>έρως</string>
+				<string>પ્રેમ</string>
+				<string>આસક્તિ</string>
+				<string>renmen</string>
+				<string>ƙauna</string>
+				<string>so</string>
+				<string>אַהֲבָה</string>
+				<string>אַהַב</string>
+				<string>אֲהוּבָה</string>
+				<string>דוֹדִים</string>
+				<string>חִבּוּב</string>
+				<string>प्यार</string>
+				<string>प्रेम</string>
+				<string>प्रीति</string>
+				<string>मुहब्बत</string>
+				<string>प्रणय</string>
+				<string>कामा</string>
+				<string>hlub</string>
+				<string>szeretet</string>
+				<string>szerelem</string>
+				<string>elska</string>
+				<string>ihunaanya</string>
+				<string>n&apos;anya</string>
+				<string>cinta</string>
+				<string>kasih</string>
+				<string>sayang</string>
+				<string>grá</string>
+				<string>searc</string>
+				<string>gean</string>
+				<string>amore</string>
+				<string>愛</string>
+				<string>好き</string>
+				<string>恋愛</string>
+				<string>tresna</string>
+				<string>ಪ್ರಿಯೆ</string>
+				<string>ಪ್ರೀತಿ</string>
+				<string>махаббат</string>
+				<string>រសលាញ់</string>
+				<string>사랑</string>
+				<string>연애</string>
+				<string>ຮັກ</string>
+				<string>ປອງຮັກ</string>
+				<string>ardor</string>
+				<string>caritas</string>
+				<string>mīlestība</string>
+				<string>mīla</string>
+				<string>meilė</string>
+				<string>љубов</string>
+				<string>fitiavana</string>
+				<string>cinta</string>
+				<string>സ്നേഹം</string>
+				<string>ħabb</string>
+				<string>mħabba</string>
+				<string>aroha</string>
+				<string>प्रेम</string>
+				<string>प्रीती</string>
+				<string>хайртай</string>
+				<string>хайр дурлал</string>
+				<string>хайрлах</string>
+				<string>ချစ်ခင်</string>
+				<string>मायाप्रीति</string>
+				<string>प्रेम</string>
+				<string>kjærlighet</string>
+				<string>elske</string>
+				<string>عشق</string>
+				<string>محبت</string>
+				<string>miłość</string>
+				<string>serce</string>
+				<string>ukochany</string>
+				<string>paixão</string>
+				<string>ਪਸੰਦ ਹੈ</string>
+				<string>dragoste</string>
+				<string>iubire</string>
+				<string>dragă</string>
+				<string>страсть</string>
+				<string>љубав</string>
+				<string>rata</string>
+				<string>ආදරය</string>
+				<string>láska</string>
+				<string>záľuba</string>
+				<string>obľuba</string>
+				<string>milá</string>
+				<string>milý</string>
+				<string>ľúbiť</string>
+				<string>ljubezen</string>
+				<string>jecel</string>
+				<string>amado</string>
+				<string>bogoh</string>
+				<string>mpenzi</string>
+				<string>kärlek</string>
+				<string>förälskelse</string>
+				<string>ишщ</string>
+				<string>அன்பு</string>
+				<string>நேசம்</string>
+				<string>ప్రేమ</string>
+				<string>romance</string>
+				<string>romantic</string>
+				<string>รติ</string>
+				<string>มโนช</string>
+				<string>aşk</string>
+				<string>sevgi</string>
+				<string>любов</string>
+				<string>кохана</string>
+				<string>коханий</string>
+				<string>кохання</string>
+				<string>закоханість</string>
+				<string>кохати</string>
+				<string>любити</string>
+				<string>влюбленість</string>
+				<string>پیار</string>
+				<string>sevgi</string>
+				<string>muhabbat</string>
+				<string>yêu</string>
+				<string>ái tình</string>
+				<string>cariad</string>
+				<string>gariad</string>
+				<string>chariad</string>
+				<string>ליבע</string>
+				<string>ifẹ</string>
+				<string>uthando</string>
+				<string>ukuthanda</string>
+				<string>❤️</string>
+				<string>💔</string>
+				<string>💌</string>
+				<string>💕</string>
+				<string>💞</string>
+				<string>💓</string>
+				<string>💗</string>
+				<string>💖</string>
+				<string>💘</string>
+				<string>💝</string>
+				<string>💟</string>
+				<string>♥️</string>
+				<string>😍</string>
+				<string>👫</string>
+				<string>👬</string>
+				<string>👭</string>
+				<string>💑</string>
+				<string>👩‍❤️‍👩</string>
+				<string>👨‍❤️‍👨</string>
+				<string>💏</string>
+				<string>👩‍❤️‍💋‍👩</string>
+				<string>👨‍❤️‍💋‍👨</string>
+				<string>👄</string>
+				<string>💋</string>
+			</array>
 			<key>items</key>
 			<array>
 				<dict>
@@ -817,7 +1034,115 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>(♡ &gt;ω&lt; ♡)</string>
+					<string>(｡♥‿♥｡)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(♥ω♥ ) ~♪</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(♥ω♥*)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>٩(♡ε♡ )۶</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>໒( ♥ ◡ ♥ )७</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(●♡∀♡))ヾ☆*。</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(灬♥ω♥灬)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>༼♥ل͜♥༽</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(°◡°♡).:｡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>◟(◔ั₀◔ั )◞ ༘♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ʸ(ᴖ́◡ु⚈᷉)♡⃛</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(｡･ω･｡)ﾉ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>₍₍ ( ๑॔˃̶◡ ˂̶๑॓)◞♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(๑・ω-)～♥”</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>～(^з^)-♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(๑°꒵°๑)･*♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ෆ ͒•∘̬• ͒)◞</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(♡´͈༝`͈)ฅ˒˒</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(•‾⌣‾•)و ̑̑♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⁎⁍̴̛͂▿⁍̴̛͂⁎)*✲ﾟ*｡⋆♡ོ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ღゝ◡╹)ノ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(∗ᵒ̶̶̷̀ω˂̶́∗)੭₎₎̊₊♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(๑╹ڡ╹)╭ ～ ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(♡ ὅ ◡ ὅ )ʃ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(๑ Ỡ ◡͐ Ỡ๑)ﾉ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⁎⁍̴̀﹃ ⁍̴́⁎)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡´･ᴗ･`♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡〜٩(^▿^)۶〜♡</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
@@ -825,7 +1150,67 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
+					<string>(◍•ڡ•◍)❤</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>-ω(´•ω•｀)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(♡´౪`♡)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡〜ლ(๑癶ᴗ癶๑)ლ〜♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ˊᵕˋ )♡.°⑅</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(´∩｡• ᵕ •｡∩`) ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(♡ &gt;ω&lt; ♡)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ๑ ❛ ڡ ❛ ๑ )❤</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(´,,•ω•,,)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>❤\(⸝⸝⸝°⁻̫° ⸝⸝⸝)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
 					<string>（〃・ω・〃）</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>❣╰(⸝⸝⸝´꒳`⸝⸝⸝)╯❣</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⺣◡⺣)♡*</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(灬ºωº灬)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ⌯◞◟⌯)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヽ(o♡o)/</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
@@ -833,11 +1218,19 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>꒰⑅ᵕ༚ᵕ꒱˖♡</string>
+					<string>٩(๑ơలơ)۶♡</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>(*ˊૢᵕˋૢ*)</string>
+					<string>٩(๑∂▿∂๑)۶♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>\(-ㅂ-)/ ♥ ♥ ♥</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ヾ(◍’౪`◍)ﾉﾞ♡</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
@@ -845,15 +1238,211 @@
 				</dict>
 				<dict>
 					<key>emoticon</key>
+					<string>╰(✿´⌣`✿)╯♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(´▽`ʃƪ)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ღ˘⌣˘ღ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>（人´∀`*）</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♥～(‘▽^人)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>꒰⑅ᵕ༚ᵕ꒱˖♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡˖꒰ᵕ༚ᵕ⑅꒱</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>&lt;!nl!&gt;(‾̴̴͡͡▿•‾̴̴͡͡ʃƪ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>´͈ ᵕ `͈ ♡°◌̊</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(*´ ˘ `*).｡oO ( ♡ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(人 •͈ᴗ•͈)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(*ˊૢᵕˋૢ*)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>❤⃛῍̻̩✧(´͈ ૢᐜ `͈ૢ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡( ૢ⁼̴̤̆ ꇴ ⁼̴̤̆ ૢ)~ෆ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
 					<string>°₊·ˈ∗♡( ˃̶᷇ ‧̫ ˂̶᷆ )♡∗ˈ‧₊°</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>(´⌣`ʃƪ)</string>
+					<string>( ∩ˇωˇ∩)♡</string>
 				</dict>
 				<dict>
 					<key>emoticon</key>
-					<string>( ＾◡＾)っ✂❤</string>
+					<string>( ˘ ³˘)♥</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>（*＾3＾）/～♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡(˃͈ દ ˂͈ ༶ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>٩꒰ ˘ ³˘꒱۶~♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ƪ(♥ﻬ♥)ʃ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(/ ᵒ̴̵̶̷౩ᵒ̴̵̶̷ )/ ᵏᴵˢઽ ❤⃛</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ˊσ̴̶̷̤ ₋̮̑ σ̴̶̷̤ˋ)₊ෆ⃛⁺˚</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(/^-^(^ ^*)/</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(&gt;^_^)&gt;&lt;(^o^&lt;)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(っ˘з(˘⌣˘ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(っ˘з(˘⌣˘ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡(*´･ω･)(･ω･`*)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>⁽ ¨̮⁾⁽¨̮ ⁾*˚‧♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ღƪ(ˆ◡ˆ)ʃ♡ƪ(ˆ◡ˆ)ʃ♪</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(◦˘ З(◦’ںˉ◦)♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⋆◗̑◡◗̑)⸝♡⃛⸜(◖̑◡◖̑⋆)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ᵕ̤ɜ)ᵕ̤ૢᴗᵕ̤ૢ )</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ° ᴗ°)~ð (/❛o❛\)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(≚ᄌ≚)ℒℴѵℯ❤</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ฅ ̳͒•ˑ̫• ̳͒ฅ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>ˁ̡̡̡∗⁎⃙ ̫⁎⃙ˀ̡̡̡ ̩˳♡⃝</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>•ू(ᵒ̴̶̷ωᵒ̴̶̷*•ू) ​ )੭ु⁾</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ી(΄◞ิ౪◟ิ‵)ʃ)♥</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>❤⃛(*ૂ❛ัᴗ❛ั*ૂ)</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>❤(ꈍॢ ⁻̫ ꈍॢ)ʸº</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>( ﾟ∀ﾟ)ﾉ【LOVE】</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(⑅ ॣ•͈ᴗ•͈ ॣ)∟ᵒᵛᵉ૫૦∪</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>٩(๑•◡-๑)۶ⒽⓤⒼ❤</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>♡ℒฺℴฺνℯฺ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>꒒ ০ ⌵ ୧ ♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(୨୧•͈ᴗ•͈)◞ᵗʱᵃᵑᵏઽ*♡</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ෆ`꒳´ෆ) ˡºᵛᵉ❤⃛</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>✨Lᵒᵛᵉᵧₒᵤ</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>(ღˇ◡ˇ)♥ℒᵒᵛᵉᵧₒᵤ♥</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>꒰๑͒•௰•๑͒꒱ℒℴѵℯ❤</string>
+				</dict>
+				<dict>
+					<key>emoticon</key>
+					<string>*.･｡ヾ(◍ᄏᴗ))ﾉﾟ+.β੨ყ♡ β੨ყ+.°</string>
 				</dict>
 			</array>
 		</dict>
