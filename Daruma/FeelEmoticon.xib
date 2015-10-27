@@ -11,38 +11,14 @@
         <customView id="Hz6-mo-xeY" customClass="FeelEmoticonView">
             <rect key="frame" x="0.0" y="0.0" width="165" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="MW5-aE-nY6">
-                    <rect key="frame" x="0.0" y="0.0" width="169" height="66"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="opK-tS-hvM">
-                        <font key="font" size="9" name=".AppleSystemUIFont"/>
-                        <string key="title">
-o͡͡͡͡͡͡╮(ꐦ ꈨຶ皿ꈨຶ)╭o͡͡͡͡͡͡</string>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <binding destination="Mxr-62-q4M" name="font" keyPath="class.rd_emoticonFont" id="FOj-9e-ZzH"/>
-                        <binding destination="hUM-uu-vU2" name="value" keyPath="representedObject.emoticon" id="n4i-sp-0hC">
-                            <dictionary key="options">
-                                <string key="NSValueTransformerName">EmoticonValueTransformer</string>
-                            </dictionary>
-                        </binding>
-                    </connections>
-                </textField>
-            </subviews>
             <animations/>
             <point key="canvasLocation" x="-841.5" y="371"/>
         </customView>
         <viewController id="hUM-uu-vU2" customClass="FeelViewItem">
             <connections>
-                <outlet property="textField" destination="MW5-aE-nY6" id="Oga-Xt-s4E"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="cIR-JH-B80"/>
             </connections>
         </viewController>
         <userDefaultsController representsSharedInstance="YES" id="nw3-tX-mfP"/>
-        <customObject id="Mxr-62-q4M" customClass="NSFont"/>
     </objects>
 </document>

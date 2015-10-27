@@ -7,6 +7,7 @@
 //
 
 #import "FeelEmoticonView.h"
+#import "EmoticonPainter.h"
 
 #define kSelectionBorderRadius (3.5)
 #define kSelectionBorderWidth (1.0)
@@ -30,7 +31,7 @@
 {
     if (newHighlightState != _highlightState) {
         _highlightState = newHighlightState;
-        [self setNeedsDisplay: YES];
+        [self.layer setNeedsDisplay];
     }
 }
 
@@ -38,18 +39,21 @@
 {
     if (newSelected != _selected) {
         _selected = newSelected;
-        [self setNeedsDisplay: YES];
+        [self.layer setNeedsDisplay];
     }
 }
 
-// We want to receive -updateLayer (see below)
-- (BOOL)wantsUpdateLayer
+- (BOOL)isFlipped
 {
     return YES;
 }
 
-- (void)updateLayer
+- (void)drawRect: (NSRect)dirtyRect
 {
+    [self lockFocus];
+    [self.painter drawEmoticonInRect: dirtyRect];
+    [self unlockFocus];
+
     NSColor *borderColor = nil;
     if (self.highlightState == NSCollectionViewItemHighlightForSelection) {
         borderColor = kSelectionCandidateBorderColor;

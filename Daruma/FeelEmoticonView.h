@@ -8,9 +8,14 @@
 
 @import Cocoa;
 
+@class EmoticonPainter;
+
 @interface FeelEmoticonView : NSView
 
 @property (nonatomic) NSCollectionViewItemHighlightState highlightState;
 @property (nonatomic, getter=isSelected) BOOL selected;
+
+//
+@property (weak) EmoticonPainter *painter;
 
 @end
