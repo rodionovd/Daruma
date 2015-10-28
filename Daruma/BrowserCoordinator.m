@@ -13,7 +13,7 @@
 #import "HeaderView.h"
 #import "NSString+EmoticonSize.h"
 #import "EmoticonValueTransformer.h"
-#import "EmoticonPainter.h"
+#import "EmoticonRenderer.h"
 #import "FeelEmoticonView.h"
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
@@ -112,13 +112,13 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 
     Feel *modelObject = [self.dataLense objectAtIndexPath: indexPath];
 
-    EmoticonPainter *painter = [self.paintersCache objectForKey: modelObject];
+    EmoticonRenderer *painter = [self.paintersCache objectForKey: modelObject];
     if (painter == nil) {
         NSString *emoticon = [[EmoticonValueTransformer new] transformedValue: modelObject.emoticon];
-        painter = [EmoticonPainter painterForEmoticon: emoticon];
+        painter = [EmoticonRenderer rendererForEmoticon: emoticon];
         [self.paintersCache setObject: painter forKey: modelObject];
     }
-    [(FeelEmoticonView *)item.view setPainter: painter];
+    [(FeelEmoticonView *)item.view setRenderer: painter];
     return item;
 }
 

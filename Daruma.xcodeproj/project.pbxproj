@@ -19,7 +19,7 @@
 		0AC67BC21BDDF8AD00D549F2 /* EmoticonValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BC11BDDF8AD00D549F2 /* EmoticonValueTransformer.m */; };
 		0AC67BC81BDE360D00D549F2 /* NSFont+EmoticonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BC71BDE360D00D549F2 /* NSFont+EmoticonFont.m */; };
 		0AC67BCB1BDE372C00D549F2 /* NSString+EmoticonSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BCA1BDE372C00D549F2 /* NSString+EmoticonSize.m */; };
-		0AC67BD41BDF89D400D549F2 /* EmoticonPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BD31BDF89D400D549F2 /* EmoticonPainter.m */; };
+		0AC67BD41BDF89D400D549F2 /* EmoticonRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BD31BDF89D400D549F2 /* EmoticonRenderer.m */; };
 		0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB695D1BCD02E500268E8E /* AppDelegate.m */; };
 		0ACB69611BCD02E500268E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB69601BCD02E500268E8E /* main.m */; };
 		0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69621BCD02E500268E8E /* Assets.xcassets */; };
@@ -59,8 +59,8 @@
 		0AC67BC71BDE360D00D549F2 /* NSFont+EmoticonFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont+EmoticonFont.m"; sourceTree = "<group>"; };
 		0AC67BC91BDE372C00D549F2 /* NSString+EmoticonSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EmoticonSize.h"; sourceTree = "<group>"; };
 		0AC67BCA1BDE372C00D549F2 /* NSString+EmoticonSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EmoticonSize.m"; sourceTree = "<group>"; };
-		0AC67BD21BDF89D400D549F2 /* EmoticonPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonPainter.h; sourceTree = "<group>"; };
-		0AC67BD31BDF89D400D549F2 /* EmoticonPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonPainter.m; sourceTree = "<group>"; };
+		0AC67BD21BDF89D400D549F2 /* EmoticonRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonRenderer.h; sourceTree = "<group>"; };
+		0AC67BD31BDF89D400D549F2 /* EmoticonRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonRenderer.m; sourceTree = "<group>"; };
 		0ACB69591BCD02E500268E8E /* Daruma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daruma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACB695C1BCD02E500268E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ACB695D1BCD02E500268E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +108,19 @@
 				0A4DE1121BD7A1B20069764F /* ResponsiveCollectionView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		0A8FE5FE1BE0A07100355ECD /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				0AC67BD21BDF89D400D549F2 /* EmoticonRenderer.h */,
+				0AC67BD31BDF89D400D549F2 /* EmoticonRenderer.m */,
+				0AC67BC61BDE360D00D549F2 /* NSFont+EmoticonFont.h */,
+				0AC67BC71BDE360D00D549F2 /* NSFont+EmoticonFont.m */,
+				0AC67BC91BDE372C00D549F2 /* NSString+EmoticonSize.h */,
+				0AC67BCA1BDE372C00D549F2 /* NSString+EmoticonSize.m */,
+			);
+			name = Rendering;
 			sourceTree = "<group>";
 		};
 		0ACB69501BCD02E500268E8E = {
@@ -177,16 +190,11 @@
 				0ACB699E1BCD546E00268E8E /* FeelViewItem.m */,
 				0AC67BC01BDDF8AD00D549F2 /* EmoticonValueTransformer.h */,
 				0AC67BC11BDDF8AD00D549F2 /* EmoticonValueTransformer.m */,
+				0A8FE5FE1BE0A07100355ECD /* Rendering */,
 				0ACB69A41BCD636900268E8E /* Model */,
-				0AC67BD21BDF89D400D549F2 /* EmoticonPainter.h */,
-				0AC67BD31BDF89D400D549F2 /* EmoticonPainter.m */,
 				0A563B261BCE8FD800A34B8D /* View */,
 				0A563B2F1BCF907000A34B8D /* NSArray+Stuff.h */,
 				0A563B301BCF907000A34B8D /* NSArray+Stuff.m */,
-				0AC67BC61BDE360D00D549F2 /* NSFont+EmoticonFont.h */,
-				0AC67BC71BDE360D00D549F2 /* NSFont+EmoticonFont.m */,
-				0AC67BC91BDE372C00D549F2 /* NSString+EmoticonSize.h */,
-				0AC67BCA1BDE372C00D549F2 /* NSString+EmoticonSize.m */,
 			);
 			name = Browser;
 			sourceTree = "<group>";
@@ -292,7 +300,7 @@
 				0ACB699C1BCD383C00268E8E /* Feel.m in Sources */,
 				0ACB69951BCD285D00268E8E /* BrowserCoordinator.m in Sources */,
 				0ACB695E1BCD02E500268E8E /* AppDelegate.m in Sources */,
-				0AC67BD41BDF89D400D549F2 /* EmoticonPainter.m in Sources */,
+				0AC67BD41BDF89D400D549F2 /* EmoticonRenderer.m in Sources */,
 				0A4DE1131BD7A1B20069764F /* ResponsiveCollectionView.m in Sources */,
 				0A41F58A1BD53CE200363583 /* Section.m in Sources */,
 				0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */,

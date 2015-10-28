@@ -6,15 +6,15 @@
 //  Copyright © 2015 Internals Exposed. All rights reserved.
 //
 
-#import "EmoticonPainter.h"
+#import "EmoticonRenderer.h"
 #import "NSFont+EmoticonFont.h"
 
-@interface EmoticonPainter()
+@interface EmoticonRenderer()
 @property (strong) NSTextStorage *textStorage;
 @property (assign) NSRange glyphRange;
 @end
 
-@implementation EmoticonPainter
+@implementation EmoticonRenderer
 
 - (instancetype)initWithEmoticon: (NSString *)emoticon
 {
@@ -36,7 +36,7 @@
     return self;
 }
 
-+ (instancetype)painterForEmoticon: (NSString *)emoticon
++ (instancetype)rendererForEmoticon: (NSString *)emoticon
 {
     return [[self alloc] initWithEmoticon: emoticon];
 }

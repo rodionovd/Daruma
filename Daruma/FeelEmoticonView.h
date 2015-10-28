@@ -8,7 +8,7 @@
 
 @import Cocoa;
 
-@class EmoticonPainter;
+@class EmoticonRenderer;
 
 @interface FeelEmoticonView : NSView
 
@@ -16,6 +16,6 @@
 @property (nonatomic, getter=isSelected) BOOL selected;
 
 //
-@property (weak) EmoticonPainter *painter;
+@property (weak) EmoticonRenderer *renderer;
 
 @end

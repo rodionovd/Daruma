@@ -7,7 +7,7 @@
 //
 
 #import "FeelEmoticonView.h"
-#import "EmoticonPainter.h"
+#import "EmoticonRenderer.h"
 
 #define kSelectionBorderRadius (3.5)
 #define kSelectionBorderWidth (1.0)
@@ -51,7 +51,7 @@
 - (void)drawRect: (NSRect)dirtyRect
 {
     [self lockFocus];
-    [self.painter drawEmoticonInRect: dirtyRect];
+    [self.renderer drawEmoticonInRect: dirtyRect];
     [self unlockFocus];
 
     NSColor *borderColor = nil;

@@ -8,10 +8,10 @@
 
 @import Cocoa;
 
-@interface EmoticonPainter : NSObject
+@interface EmoticonRenderer : NSObject
 
 - (instancetype)initWithEmoticon: (NSString *)emoticon;
-+ (instancetype)painterForEmoticon: (NSString *)emoticon;
++ (instancetype)rendererForEmoticon: (NSString *)emoticon;
 
 - (void)drawEmoticonInRect: (NSRect)rect;
 
