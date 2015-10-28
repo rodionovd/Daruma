@@ -48,6 +48,8 @@
     self.allSections = sections;
 }
 
+#pragma mark - Data Access
+
 - (Feel *)objectAtIndexPath: (NSIndexPath *)indexPath
 {
     NSParameterAssert(indexPath.section < self.view.count);
@@ -67,6 +69,8 @@
     NSString *single_whitespace = @" ";
     return [emoticons componentsJoinedByString: single_whitespace];
 }
+
+#pragma mark - Filtering
 
 - (void)setPredicate: (nullable NSString *)newPredicate
 {
@@ -103,17 +107,21 @@
     return _view;
 }
 
-#define KVOSelfCheckAndReturn(key) ([(DataLense *)nil key], @#key)
+#pragma mark - KVC helpers
+
+#define KVOKeyFromSelectorName(key) ([(DataLense *)nil key], @#key)
 
 + (nonnull NSString *)observableContentsKey
 {
-    return KVOSelfCheckAndReturn(view);
+    return KVOKeyFromSelectorName(view);
 }
 
 + (nonnull NSString *)observablePredicateKey
 {
-    return KVOSelfCheckAndReturn(predicate);
+    return KVOKeyFromSelectorName(predicate);
 }
+
+#pragma mark - Description
 
 - (NSString *)description
 {
