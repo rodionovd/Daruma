@@ -22,4 +22,7 @@
 - (nullable Feel *)objectAtIndexPath: (nonnull NSIndexPath *)indexPath;
 - (nonnull NSString *)contentsForItemsAtIndexPaths: (nonnull NSSet <NSIndexPath *> *)indexPaths;
 
+// KVO helpers
++ (nonnull NSString *)observableContentsKey;
+
 @end

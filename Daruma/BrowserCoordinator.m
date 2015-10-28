@@ -31,7 +31,7 @@
         self.dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
 
         [self.dataLense addObserver: self
-                         forKeyPath: @"view"
+                         forKeyPath: DataLense.observableContentsKey
                             options: NSKeyValueObservingOptionOld
                             context: NULL];
 
@@ -55,7 +55,7 @@
                         change: (NSDictionary<NSString *,id> *)change
                        context: (void *)context
 {
-    if (object == self.dataLense && [keyPath isEqualToString: @"view"]) {
+    if (object == self.dataLense && [keyPath isEqualToString: DataLense.observableContentsKey]) {
         [self.browserWindowController reloadCollectionView: self];
     }
 }
