@@ -72,9 +72,7 @@
 {
     if (newPredicate == nil && [_predicate isNotEqualTo: @""]) {
         _predicate = @"";
-        [self willChangeValueForKey: self.class.observableContentsKey];
         self.view = self.allSections;
-        [self didChangeValueForKey: self.class.observableContentsKey];
     } else if ([newPredicate isNotEqualTo: _predicate]) {
         // TODO: use even more sophisticated logic here?
         if ([newPredicate hasPrefix: _predicate]) {
@@ -86,9 +84,6 @@
         }
         _predicate = [newPredicate copy];
         self.view = nil;
-        // Get ready!
-        [self willChangeValueForKey: self.class.observableContentsKey];
-        [self didChangeValueForKey: self.class.observableContentsKey];
     }
 }
 
