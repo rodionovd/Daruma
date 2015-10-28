@@ -103,10 +103,16 @@
     return _view;
 }
 
+#define KVOSelfCheckAndReturn(key) ([(DataLense *)nil key], @#key)
+
 + (nonnull NSString *)observableContentsKey
 {
-#define KVOSelfCheckAndReturn(key) ([(DataLense *)nil key], @#key)
     return KVOSelfCheckAndReturn(view);
+}
+
++ (nonnull NSString *)observablePredicateKey
+{
+    return KVOSelfCheckAndReturn(predicate);
 }
 
 - (NSString *)description

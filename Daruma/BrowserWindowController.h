@@ -11,10 +11,9 @@
 
 @protocol BrowserCoordinatorProtocol <NSCollectionViewDataSource, NSCollectionViewDelegate>
 
+@required
 - (void)writeItemsToPasteboard: (nonnull NSSet <NSIndexPath *> *)indexPaths;
-
-- (void)searchFieldDidReportPredicate: (nonnull NSString *)newPredicate;
-- (void)searchFieldDidCompleteSearch: (nonnull NSSearchField *)searchField;
+- (void)setupSearchFieldBindings: (nonnull NSSearchField *)searchField;
 
 @end
 

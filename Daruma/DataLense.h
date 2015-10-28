@@ -24,5 +24,6 @@
 
 // KVO helpers
 + (nonnull NSString *)observableContentsKey;
++ (nonnull NSString *)observablePredicateKey;
 
 @end
