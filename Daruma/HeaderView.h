@@ -12,5 +12,5 @@
 
 @property (copy, nonatomic) NSString *title;
 
-+ (NSSize)baseSize;
++ (NSSize)genericSize;
 @end

@@ -126,7 +126,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 {
     NSString *identifier = nil;
     if ([kind isEqualToString: NSCollectionElementKindSectionHeader]) {
-        identifier = @"HeaderView";
+        identifier = NSStringFromClass([HeaderView class]);
     } else if ([kind isEqualToString: NSCollectionElementKindSectionFooter]) {
         // don't want a footer view (yet?)
     }
@@ -146,9 +146,10 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     return view;
 }
 
-- (NSSize)collectionView: (NSCollectionView *)collectionView layout: (NSCollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection: (NSInteger)section
+- (NSSize)collectionView: (NSCollectionView *)collectionView
+                  layout: (NSCollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection: (NSInteger)section
 {
-    return [HeaderView baseSize];
+    return [HeaderView genericSize];
 }
 
 

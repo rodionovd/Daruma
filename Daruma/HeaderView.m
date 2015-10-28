@@ -13,7 +13,7 @@
 
 @implementation HeaderView
 
-+ (NSSize)baseSize
++ (NSSize)genericSize
 {
     return NSMakeSize(
         0  /* this width will be automatically adjusted by an enclosing collection view's layout */,
