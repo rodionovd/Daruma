@@ -31,7 +31,7 @@
         self.dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
 
         [self.dataLense addObserver: self
-                         forKeyPath: @"sections"
+                         forKeyPath: @"view"
                             options: NSKeyValueObservingOptionOld
                             context: NULL];
 
@@ -55,7 +55,7 @@
                         change: (NSDictionary<NSString *,id> *)change
                        context: (void *)context
 {
-    if (object == self.dataLense && [keyPath isEqualToString: @"sections"]) {
+    if (object == self.dataLense && [keyPath isEqualToString: @"view"]) {
         [self.browserWindowController reloadCollectionView: self];
     }
 }
@@ -96,12 +96,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 
 - (NSInteger)numberOfSectionsInCollectionView: (NSCollectionView *)collectionView
 {
-    return self.dataLense.sections.count;
+    return self.dataLense.view.count;
 }
 
 - (NSInteger)collectionView: (NSCollectionView *)collectionView numberOfItemsInSection: (NSInteger)idx
 {
-    return self.dataLense.sections[idx].items.count;
+    return self.dataLense.view[idx].items.count;
 }
 
 - (NSCollectionViewItem *)collectionView: (NSCollectionView *)collectionView
@@ -141,7 +141,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                                                 withIdentifier: identifier
                                                   forIndexPath: indexPath];
     if ([kind isEqual: NSCollectionElementKindSectionHeader] && [view isKindOfClass: HeaderView.class]) {
-        [(HeaderView *)view setTitle: self.dataLense.sections[indexPath.section].title];
+        [(HeaderView *)view setTitle: self.dataLense.view[indexPath.section].title];
     }
     return view;
 }

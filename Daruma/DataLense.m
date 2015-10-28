@@ -15,7 +15,7 @@
 
 @interface DataLense()
 @property (strong) NSArray <Section *> *allSections;
-@property (strong) NSArray <Section *> *sections;
+@property (strong) NSArray <Section *> *view;
 @property (strong) NSArray *searchDomain;
 @end
 
@@ -26,7 +26,7 @@
     if ((self = [super init])) {
         [self loadDataFromURL: contentsURL];
         _predicate = [@"" copy];
-        self.sections = self.allSections;
+        self.view = self.allSections;
     }
     return self;
 }
@@ -50,10 +50,10 @@
 
 - (Feel *)objectAtIndexPath: (NSIndexPath *)indexPath
 {
-    NSParameterAssert(indexPath.section < self.sections.count);
-    NSParameterAssert(indexPath.item < self.sections[indexPath.section].items.count);
+    NSParameterAssert(indexPath.section < self.view.count);
+    NSParameterAssert(indexPath.item < self.view[indexPath.section].items.count);
     
-    return self.sections[indexPath.section].items[indexPath.item];
+    return self.view[indexPath.section].items[indexPath.item];
 }
 
 - (NSString *)contentsForItemsAtIndexPaths: (nonnull NSSet <NSIndexPath *> *)indexPaths
@@ -72,30 +72,30 @@
 {
     if (newPredicate == nil && [_predicate isNotEqualTo: @""]) {
         _predicate = @"";
-        [self willChangeValueForKey: @"sections"];
-        self.sections = self.allSections;
-        [self didChangeValueForKey: @"sections"];
+        [self willChangeValueForKey: @"view"];
+        self.view = self.allSections;
+        [self didChangeValueForKey: @"view"];
     } else if ([newPredicate isNotEqualTo: _predicate]) {
         // TODO: use even more sophisticated logic here?
         if ([newPredicate hasPrefix: _predicate]) {
             // Search in previous results
-            self.searchDomain = self.sections;
+            self.searchDomain = self.view;
         } else {
             // Search everywhere
             self.searchDomain = self.allSections;
         }
         _predicate = [newPredicate copy];
-        self.sections = nil;
+        self.view = nil;
         // Get ready!
-        [self willChangeValueForKey: @"sections"];
-        [self didChangeValueForKey: @"sections"];
+        [self willChangeValueForKey: @"view"];
+        [self didChangeValueForKey: @"view"];
     }
 }
 
-- (NSArray <Section *> *)sections
+- (NSArray <Section *> *)view
 {
-    if (_sections != nil) {
-        return _sections;
+    if (_view != nil) {
+        return _view;
     }
 
     NSArray *searchResults =  [self.searchDomain filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:
@@ -103,20 +103,20 @@
     {
         return [evaluatedObject matchesDescription: _predicate];
     }]];
-    _sections = [searchResults copy];
+    _view = [searchResults copy];
 
-    return _sections;
+    return _view;
 }
 
 - (NSString *)description
 {
     const int kMaxItemsToDisplay = 10;
-    if (self.sections.count <= kMaxItemsToDisplay) {
+    if (self.view.count <= kMaxItemsToDisplay) {
         return [NSString stringWithFormat: @"<%@: %p, predicate: '%@', view: %@>",
-                NSStringFromClass(self.class), (void *)self, self.predicate, self.sections];
+                NSStringFromClass(self.class), (void *)self, self.predicate, self.view];
     } else {
         return [NSString stringWithFormat: @"<%@: %p, predicate: '%@', view size: %lu>",
-                NSStringFromClass(self.class), (void *)self, self.predicate, self.sections.count];
+                NSStringFromClass(self.class), (void *)self, self.predicate, self.view.count];
     }
 }
 @end
