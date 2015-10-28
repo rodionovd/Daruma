@@ -70,6 +70,7 @@
 
     self.searchField.delegate = self;
     self.searchField.placeholderString = [self.placeholders rd_randomItem];
+    [self.coordinator setupSearchFieldBindings: self.searchField];
     // Wait until next (?) run loop iteration; otherwise we'll see no effect
     [self.window performSelector: @selector(makeFirstResponder:)
                       withObject: self.searchField
@@ -110,15 +111,6 @@
 - (void)insertBacktab: (id)sender
 {
     [self.window selectPreviousKeyView: sender];
-}
-
-- (void)controlTextDidChange: (NSNotification *)obj
-{
-    if (self.searchField.stringValue.length == 0) {
-        [self.coordinator searchFieldDidCompleteSearch: obj.object];
-    } else {
-        [self.coordinator searchFieldDidReportPredicate: [(NSSearchField *)obj.object stringValue]];
-    }
 }
 
 - (void)controlTextDidEndEditing: (NSNotification *)obj

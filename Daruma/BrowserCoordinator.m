@@ -69,14 +69,13 @@
     [[NSPasteboard generalPasteboard] writeObjects: @[contents]];
 }
 
-- (void)searchFieldDidReportPredicate: (NSString *)newPredicate
+- (void)setupSearchFieldBindings: (nonnull NSSearchField *)searchField
 {
-    self.dataLense.predicate = newPredicate;
-}
-
-- (void)searchFieldDidCompleteSearch: (NSSearchField *)searchField
-{
-    self.dataLense.predicate = nil;
+    NSDictionary *bindingOptions = @{NSContinuouslyUpdatesValueBindingOption : @YES};
+    [searchField bind: NSValueBinding
+             toObject: self.dataLense
+          withKeyPath: DataLense.observablePredicateKey
+              options: bindingOptions];
 }
 
 #pragma mark - NSCollectionViewDelegate's
