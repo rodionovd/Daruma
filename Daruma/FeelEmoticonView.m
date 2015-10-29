@@ -31,16 +31,16 @@
 {
     if (newHighlightState != _highlightState) {
         _highlightState = newHighlightState;
-        [self.layer setNeedsDisplay];
     }
+    [self.layer setNeedsDisplay];
 }
 
 - (void)setSelected: (BOOL)newSelected
 {
     if (newSelected != _selected) {
         _selected = newSelected;
-        [self.layer setNeedsDisplay];
     }
+    [self.layer setNeedsDisplay];
 }
 
 - (BOOL)isFlipped
