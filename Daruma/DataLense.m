@@ -109,16 +109,16 @@
 
 #pragma mark - KVC helpers
 
-#define KVOKeyFromSelectorName(key) ([(DataLense *)nil key], @#key)
+#define KVOKeyForClass(cls, key) ([(cls *)nil key], @#key)
 
 + (nonnull NSString *)observableContentsKey
 {
-    return KVOKeyFromSelectorName(view);
+    return KVOKeyForClass(DataLense, view);
 }
 
 + (nonnull NSString *)observablePredicateKey
 {
-    return KVOKeyFromSelectorName(predicate);
+    return KVOKeyForClass(DataLense,predicate);
 }
 
 #pragma mark - Description
