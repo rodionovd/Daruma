@@ -92,6 +92,8 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
+        // Scroll to top
+        [self.collectionView scrollRectToVisible: NSZeroRect];
     });
 }
 
