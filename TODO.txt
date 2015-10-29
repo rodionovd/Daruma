@@ -1,5 +1,5 @@
-1. Fill with actual emoticons
 ------------------- THE RELEASE LINE ---------------------
+1. Add EVEN MORE EMOTICONS!!!
 2. collection view background view?
     2.1. CocoaSlideCollection demo has it — why?
 3. copy the default feels database into Application Support, then use this copy so a user could make changes (add/delete emoticons, assign lables, etc)
