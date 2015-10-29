@@ -98,7 +98,7 @@
 - (BOOL)validateMenuItem: (NSMenuItem *)menuItem
 {
     // Disable the Copy menu item if the current selection is empty
-    if (menuItem.action == NSSelectorFromString(@"copy:")) {
+    if (menuItem.action == @selector(copy:)) {
         return self.collectionView.selectionIndexPaths.count != 0;
     }
     return [super validateMenuItem: menuItem];
