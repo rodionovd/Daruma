@@ -24,13 +24,13 @@
 {
     if ((self = [super init])) {
 
-        self.collectionViewLayout = [CollectionViewBrowserLayout new];
+        _collectionViewLayout = [CollectionViewBrowserLayout new];
 
         // Load some (kinda) funny placeholders for the search field
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL *url = [[NSBundle mainBundle] URLForResource: @"FunnyPlaceholders"
                                                  withExtension: @"plist"];
-            self.placeholders = [NSArray arrayWithContentsOfURL: url];
+            _placeholders = [NSArray arrayWithContentsOfURL: url];
         });
 
         [[NSNotificationCenter defaultCenter] addObserver: self
@@ -45,7 +45,7 @@
         // Update the collection view layout on a system-wide scroller style change:
         // a legacy-styled scrollers take a few pixels from a scroll view width for a slot view
         // (and thus reducing this scroll view's contents frame) while overlay-styled ones don't
-        [[NSNotificationCenter defaultCenter] addObserver: self.collectionViewLayout
+        [[NSNotificationCenter defaultCenter] addObserver: _collectionViewLayout
                                                  selector: @selector(invalidateLayoutUponNotification:)
                                                      name: NSPreferredScrollerStyleDidChangeNotification
                                                    object: nil];

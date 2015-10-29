@@ -28,15 +28,15 @@
 - (instancetype)initWithFeelsContainerURL: (NSURL *)containerURL
 {
     if ((self = [super init])) {
-        self.dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
+        _dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
 
-        [self.dataLense addObserver: self
+        [_dataLense addObserver: self
                          forKeyPath: DataLense.observableContentsKey
                             options: NSKeyValueObservingOptionOld
                             context: NULL];
 
-        self.itemSizesCache = [NSCache new];
-        self.paintersCache = [NSCache new];
+        _itemSizesCache = [NSCache new];
+        _paintersCache = [NSCache new];
     }
     return self;
 }
