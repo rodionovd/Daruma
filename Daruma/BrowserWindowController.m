@@ -60,6 +60,7 @@
 
 - (void)dealloc
 {
+    [self.searchField setDelegate: nil];
     [[NSNotificationCenter defaultCenter] removeObserver: self.collectionViewLayout];
     [[NSNotificationCenter defaultCenter] removeObserver: self];
 }
