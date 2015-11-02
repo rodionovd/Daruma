@@ -100,7 +100,7 @@
     NSArray *searchResults =  [self.searchDomain filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:
     ^BOOL(Section *evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings)
     {
-        return [evaluatedObject matchesDescription: _predicate];
+        return [evaluatedObject matchesDescription: self->_predicate];
     }]];
     _view = [searchResults copy];
 

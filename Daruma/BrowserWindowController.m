@@ -30,7 +30,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL *url = [[NSBundle mainBundle] URLForResource: @"FunnyPlaceholders"
                                                  withExtension: @"plist"];
-            _placeholders = [NSArray arrayWithContentsOfURL: url];
+            self->_placeholders = [NSArray arrayWithContentsOfURL: url];
         });
 
         [[NSNotificationCenter defaultCenter] addObserver: self
