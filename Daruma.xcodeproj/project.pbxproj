@@ -410,6 +410,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Daruma;
 				PRODUCT_NAME = Daruma;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wfloat-equal",
+					"-Wimplicit-retain-self",
+					"-Wnewline-eof",
+					"-Wshadow",
+					"-Wundef",
+				);
 			};
 			name = Debug;
 		};
@@ -423,6 +431,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Daruma;
 				PRODUCT_NAME = Daruma;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wfloat-equal",
+					"-Wimplicit-retain-self",
+					"-Wnewline-eof",
+					"-Wshadow",
+					"-Wundef",
+				);
 			};
 			name = Release;
 		};
