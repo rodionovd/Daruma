@@ -19,7 +19,7 @@
 - (instancetype)initWithFrame:(NSRect)frameRect
 {
     if ((self = [super initWithFrame: frameRect])) {
-        [self setWantsLayer: YES];
+        self.wantsLayer = YES;
         _highlightState = NSCollectionViewItemHighlightNone;
     }
     return self;

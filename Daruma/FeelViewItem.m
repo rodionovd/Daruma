@@ -22,7 +22,7 @@
 
     NSEventModifierFlags unwantedMask = (NSShiftKeyMask | NSControlKeyMask | NSCommandKeyMask);
 
-    if ([theEvent clickCount] == 1 && (theEvent.modifierFlags & unwantedMask) == 0) {
+    if (theEvent.clickCount == 1 && (theEvent.modifierFlags & unwantedMask) == 0) {
         // :deselect all other cells if needed
         NSIndexPath *currentPath = [self.collectionView indexPathForItem: self];
         if (self.collectionView.selectionIndexPaths.count > 1) {
@@ -35,14 +35,14 @@
 
 - (void)setHighlightState: (NSCollectionViewItemHighlightState)newHighlightState
 {
-    [super setHighlightState: newHighlightState];
-    [(FeelEmoticonView *)self.view setHighlightState: newHighlightState];
+    super.highlightState = newHighlightState;
+    ((FeelEmoticonView *)self.view).highlightState = newHighlightState;
 }
 
 - (void)setSelected:(BOOL)selected
 {
-    [super setSelected: selected];
-    [(FeelEmoticonView *)self.view setSelected: selected];
+    super.selected = selected;
+    ((FeelEmoticonView *)self.view).selected = selected;
 }
 
 @end

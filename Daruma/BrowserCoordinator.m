@@ -31,7 +31,7 @@
         _dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
 
         [_dataLense addObserver: self
-                         forKeyPath: DataLense.observableContentsKey
+                         forKeyPath: [DataLense observableContentsKey]
                             options: NSKeyValueObservingOptionOld
                             context: NULL];
 
@@ -55,7 +55,7 @@
                         change: (NSDictionary<NSString *,id> *)change
                        context: (void *)context
 {
-    if (object == self.dataLense && [keyPath isEqualToString: DataLense.observableContentsKey]) {
+    if (object == self.dataLense && [keyPath isEqualToString: [DataLense observableContentsKey]]) {
         [self.browserWindowController reloadCollectionView: self];
     }
 }
@@ -74,7 +74,7 @@
     NSDictionary *bindingOptions = @{NSContinuouslyUpdatesValueBindingOption : @YES};
     [searchField bind: NSValueBinding
              toObject: self.dataLense
-          withKeyPath: DataLense.observablePredicateKey
+          withKeyPath: [DataLense observablePredicateKey]
               options: bindingOptions];
 }
 
@@ -117,7 +117,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         painter = [EmoticonRenderer rendererForEmoticon: emoticon];
         [self.paintersCache setObject: painter forKey: modelObject];
     }
-    [(FeelEmoticonView *)item.view setRenderer: painter];
+    ((FeelEmoticonView *)item.view).renderer = painter;
     return item;
 }
 
@@ -139,8 +139,8 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     NSView *view = [collectionView makeSupplementaryViewOfKind: kind
                                                 withIdentifier: identifier
                                                   forIndexPath: indexPath];
-    if ([kind isEqual: NSCollectionElementKindSectionHeader] && [view isKindOfClass: HeaderView.class]) {
-        [(HeaderView *)view setTitle: self.dataLense.view[indexPath.section].title];
+    if ([kind isEqual: NSCollectionElementKindSectionHeader] && [view isKindOfClass: [HeaderView class]]) {
+        ((HeaderView *)view).title = self.dataLense.view[indexPath.section].title;
     }
     return view;
 }
@@ -165,7 +165,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     NSValue *sizeWrapper = [self.itemSizesCache objectForKey: modelObject];
     NSSize proposedSize = NSZeroSize;
     if (sizeWrapper != nil) {
-        proposedSize = [sizeWrapper sizeValue];
+        proposedSize = sizeWrapper.sizeValue;
     } else {
         // Otherwise do the math!
         proposedSize = [emoticon rd_emoticonSize];
@@ -174,7 +174,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                                 forKey: modelObject];
     }
     // Sanitize an item's width in the flow layout mode
-    if ([collectionViewLayout isKindOfClass: NSCollectionViewFlowLayout.class]) {
+    if ([collectionViewLayout isKindOfClass: [NSCollectionViewFlowLayout class]]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
         NSEdgeInsets insets = flowLayout.sectionInset;
         CGFloat collectionViewMinWidth = collectionView.window.minSize.width;

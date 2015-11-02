@@ -28,14 +28,14 @@
 - (NSString *)transformedValue: (NSString *)value
 {
     if (NO == [value isKindOfClass: [NSString class]]) return value;
-    return [value stringByReplacingOccurrencesOfString: [self.class newLineFlag]
+    return [value stringByReplacingOccurrencesOfString: [[self class] newLineFlag]
                                             withString: @"\n"];
 }
 
 - (NSString *)transformedValueForCopying: (NSString *)value
 {
     if (NO == [value isKindOfClass: [NSString class]]) return value;
-    return [value stringByReplacingOccurrencesOfString: [self.class newLineFlag]
+    return [value stringByReplacingOccurrencesOfString: [[self class] newLineFlag]
                                             withString: @""];
 }
 

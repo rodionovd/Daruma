@@ -23,7 +23,7 @@
 {
     if ((self = [super init])) {
         _browserCoordinator =
-            [[BrowserCoordinator alloc] initWithFeelsContainerURL: [self.class _defaultFeelsURL]];
+            [[BrowserCoordinator alloc] initWithFeelsContainerURL: [[self class] _defaultFeelsURL]];
     }
     return self;
 }
@@ -40,12 +40,12 @@
 
 - (void)activate
 {
-    [self.class _sendBrowserWindowShouldAppearNotification];
+    [[self class] _sendBrowserWindowShouldAppearNotification];
 }
 
 - (void)toggleSearch
 {
-    [self.class _sendBrowserWindowActivateSearchFieldNotification];
+    [[self class] _sendBrowserWindowActivateSearchFieldNotification];
 }
 
 - (void)showAboutPanel

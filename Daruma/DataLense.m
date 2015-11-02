@@ -128,10 +128,10 @@
     const int kMaxItemsToDisplay = 10;
     if (self.view.count <= kMaxItemsToDisplay) {
         return [NSString stringWithFormat: @"<%@: %p, predicate: '%@', view: %@>",
-                NSStringFromClass(self.class), (void *)self, self.predicate, self.view];
+                NSStringFromClass([self class]), (void *)self, self.predicate, self.view];
     } else {
         return [NSString stringWithFormat: @"<%@: %p, predicate: '%@', view size: %lu>",
-                NSStringFromClass(self.class), (void *)self, self.predicate, self.view.count];
+                NSStringFromClass([self class]), (void *)self, self.predicate, self.view.count];
     }
 }
 @end

@@ -25,7 +25,7 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 
 + (nullable instancetype)deserialize: (nonnull NSDictionary *)dictionaryRepresentation
 {
-    if ([self.class _validateDictionaryRepresentation: dictionaryRepresentation] == NO) {
+    if ([[self class] _validateDictionaryRepresentation: dictionaryRepresentation] == NO) {
         [NSException exceptionWithName: @"Invalid dictionary representation for Section object"
                                 reason: [dictionaryRepresentation descriptionInStringsFileFormat]
                               userInfo:nil];
@@ -80,10 +80,10 @@ const static NSString *kSectionKeywordsKey = @"keywords";
     const int kMaxItemsToDisplay = 5;
     if (self.items.count <= kMaxItemsToDisplay) {
         return [NSString stringWithFormat: @"<%@: %p, title: '%@', items: %@>",
-                NSStringFromClass(self.class), (void *)self, self.title, self.items];
+                NSStringFromClass([self class]), (void *)self, self.title, self.items];
     } else {
         return [NSString stringWithFormat: @"<%@: %p, title: '%@', items: %lu>",
-                NSStringFromClass(self.class), (void *)self, self.title, self.items.count];
+                NSStringFromClass([self class]), (void *)self, self.title, self.items.count];
     }
 }
 

@@ -37,14 +37,14 @@
     if (self.selectionIndexPaths.count != 0) {
         return NO; // selection is not empty, so aborting
     }
-    if (self.indexPathsForVisibleItems.count == 0) {
+    if ([self indexPathsForVisibleItems].count == 0) {
         return NO; // have nothing to show and thus select
     }
 
     NSSet *firstItem = [NSSet setWithObject: [NSIndexPath indexPathForItem: 0 inSection: 0]];
 
     NSCollectionViewScrollPosition scrollPosition = NSCollectionViewScrollPositionCenteredVertically;
-    if ([self.indexPathsForVisibleItems intersectsSet: firstItem]) {
+    if ([[self indexPathsForVisibleItems] intersectsSet: firstItem]) {
         // don't scroll if the item is already onscreen
         scrollPosition = NSCollectionViewScrollPositionNone;
     }
