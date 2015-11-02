@@ -33,10 +33,10 @@ static NSString * const kFeelEmoticonKey = @"emoticon";
 
 + (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
 {
-    id rawEmoticon = [dictionaryRepresentation objectForKey: kFeelEmoticonKey];
+    id rawEmoticon = dictionaryRepresentation[kFeelEmoticonKey];
     BOOL emoticonIsValid = [rawEmoticon isKindOfClass: [NSString class]] && [rawEmoticon length] > 0;
 
-    id rawLabel = [dictionaryRepresentation objectForKey: kFeelLabelKey];
+    id rawLabel = dictionaryRepresentation[kFeelLabelKey];
     BOOL labelIsValid = (rawLabel == nil) ? YES : [rawLabel isKindOfClass: [NSString class]];
 
     return (emoticonIsValid && labelIsValid);

@@ -21,7 +21,7 @@
 
 - (nullable id)rd_randomItem
 {
-    return self.count == 0 ? nil : [self objectAtIndex: arc4random_uniform((uint32_t)self.count)];
+    return self.count == 0 ? nil : self[arc4random_uniform((uint32_t)self.count)];
 }
 
 @end

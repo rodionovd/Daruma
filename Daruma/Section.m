@@ -36,13 +36,13 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 
 + (BOOL)_validateDictionaryRepresentation: (nonnull NSDictionary *)dictionaryRepresentation
 {
-    id rawTitle = [dictionaryRepresentation objectForKey: kSectionTitleKey];
+    id rawTitle = dictionaryRepresentation[kSectionTitleKey];
     BOOL titleIsValid = [rawTitle isKindOfClass: [NSString class]];
 
-    id rawKeywords = [dictionaryRepresentation objectForKey: kSectionKeywordsKey];
+    id rawKeywords = dictionaryRepresentation[kSectionKeywordsKey];
     BOOL keywordsAreValid = (rawKeywords == nil) ? YES : [rawKeywords isKindOfClass: [NSArray class]];
 
-    id rawItems = [dictionaryRepresentation objectForKey: @"items"];
+    id rawItems = dictionaryRepresentation[@"items"];
     BOOL itemsAreValid = [rawItems isKindOfClass: [NSArray class]] && [rawItems count] > 0;
 
     return (titleIsValid && keywordsAreValid && itemsAreValid);

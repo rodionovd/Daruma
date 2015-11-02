@@ -118,7 +118,7 @@
 
 - (void)controlTextDidEndEditing: (NSNotification *)obj
 {
-    if ([[obj.userInfo objectForKey: @"NSTextMovement"] integerValue] != NSReturnTextMovement) {
+    if ([obj.userInfo[@"NSTextMovement"] integerValue] != NSReturnTextMovement) {
         // Pick new random placeholder
         self.searchField.placeholderString = [self.placeholders rd_randomItem];
         return;
