@@ -1,3 +1,8 @@
+* Refactor DataLense (the same way I implemented it in Doubler)
+* Add a persistence layer
+* make placeholders real
+* sparkle updates
+* list of categories -> list of items
 ------------------- THE RELEASE LINE ---------------------
 1. Add EVEN MORE EMOTICONS!!!
 2. collection view background view?
