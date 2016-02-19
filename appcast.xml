@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Daruma’s Changelog</title>
+        <link>https://raw.githubusercontent.com/rodionovd/Daruma/master/appcast.xml</link>
+        <description>Most recent changes with links to updates</description>
+        <language>en</language>
+        <item>
+            <title>Version 1.0.2</title>
+            <description><![CDATA[
+                This update brings the <i>«Check for Updates…»</i> menu item which can be used for downloading new versions of the application.
+
+                Have a nice day 🎉
+            ]]>
+            </description>
+            <!-- <sparkle:releaseNotesLink>
+            </sparkle:releaseNotesLink> -->
+            <pubDate>Fri, 19 Feb 2016 19:40:38 +0600</pubDate>
+            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/rodionovd/Daruma/releases/download/1.0.2/Daruma.1.0.2.zip"
+                sparkle:version="3"
+                sparkle:shortVersionString="1.0.2"
+                length="1962394"
+                type="application/octet-stream"/>
+        </item>
+    </channel>
+</rss>
