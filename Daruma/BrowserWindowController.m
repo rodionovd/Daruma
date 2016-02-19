@@ -43,7 +43,7 @@
                                                    object: nil];
 
         // Update the collection view layout on a system-wide scroller style change:
-        // a legacy-styled scrollers take a few pixels from a scroll view width for a slot view
+        // the legacy-styled scrollers take a few pixels from a scroll view width for a slot view
         // (and thus reducing this scroll view's contents frame) while overlay-styled ones don't
         [[NSNotificationCenter defaultCenter] addObserver: _collectionViewLayout
                                                  selector: @selector(invalidateLayoutUponNotification:)
