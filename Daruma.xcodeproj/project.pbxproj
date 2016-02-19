@@ -16,6 +16,8 @@
 		0A563B311BCF907000A34B8D /* NSArray+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B301BCF907000A34B8D /* NSArray+Stuff.m */; };
 		0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */; };
 		0A5E66621BD8048E002362C2 /* FunnyPlaceholders.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E66611BD8048E002362C2 /* FunnyPlaceholders.plist */; };
+		0AB816661C772C2A00998142 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB816651C772C2A00998142 /* Sparkle.framework */; };
+		0AB816681C772C5100998142 /* Sparkle.framework in Copy Sparkle.framework */ = {isa = PBXBuildFile; fileRef = 0AB816651C772C2A00998142 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0AC67BC21BDDF8AD00D549F2 /* EmoticonValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BC11BDDF8AD00D549F2 /* EmoticonValueTransformer.m */; };
 		0AC67BC81BDE360D00D549F2 /* NSFont+EmoticonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BC71BDE360D00D549F2 /* NSFont+EmoticonFont.m */; };
 		0AC67BCB1BDE372C00D549F2 /* NSString+EmoticonSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC67BCA1BDE372C00D549F2 /* NSString+EmoticonSize.m */; };
@@ -35,6 +37,20 @@
 		0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD5D411BD667FB00B74C56 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0AB816671C772C4500998142 /* Copy Sparkle.framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0AB816681C772C5100998142 /* Sparkle.framework in Copy Sparkle.framework */,
+			);
+			name = "Copy Sparkle.framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0A41F5801BD52FEC00363583 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		0A41F5811BD52FEC00363583 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
@@ -53,6 +69,7 @@
 		0A563B351BCFCC3900A34B8D /* CollectionViewBrowserLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewBrowserLayout.h; sourceTree = "<group>"; };
 		0A563B361BCFCC3900A34B8D /* CollectionViewBrowserLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewBrowserLayout.m; sourceTree = "<group>"; };
 		0A5E66611BD8048E002362C2 /* FunnyPlaceholders.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FunnyPlaceholders.plist; sourceTree = "<group>"; };
+		0AB816651C772C2A00998142 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = vendor/Sparkle.framework; sourceTree = "<group>"; };
 		0AC67BC01BDDF8AD00D549F2 /* EmoticonValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonValueTransformer.h; sourceTree = "<group>"; };
 		0AC67BC11BDDF8AD00D549F2 /* EmoticonValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonValueTransformer.m; sourceTree = "<group>"; };
 		0AC67BC61BDE360D00D549F2 /* NSFont+EmoticonFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont+EmoticonFont.h"; sourceTree = "<group>"; };
@@ -89,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB816661C772C2A00998142 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,10 +141,21 @@
 			name = Rendering;
 			sourceTree = "<group>";
 		};
+		0AB816641C772C0C00998142 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AB816651C772C2A00998142 /* Sparkle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0ACB69501BCD02E500268E8E = {
 			isa = PBXGroup;
 			children = (
 				0ACB695B1BCD02E500268E8E /* Sources */,
+				0ACB69891BCD097700268E8E /* Resources */,
+				0ACB695F1BCD02E500268E8E /* Supporting Files */,
+				0AB816641C772C0C00998142 /* Frameworks */,
 				0ACB695A1BCD02E500268E8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,8 +177,11 @@
 				0ACB698C1BCD0A5200268E8E /* App.h */,
 				0ACB698D1BCD0A5200268E8E /* App.m */,
 				0ACB69921BCD0EC700268E8E /* Browser */,
-				0ACB69891BCD097700268E8E /* Resources */,
-				0ACB695F1BCD02E500268E8E /* Supporting Files */,
+				0A8FE5FE1BE0A07100355ECD /* Rendering */,
+				0ACB69A41BCD636900268E8E /* Model */,
+				0A563B261BCE8FD800A34B8D /* View */,
+				0A563B2F1BCF907000A34B8D /* NSArray+Stuff.h */,
+				0A563B301BCF907000A34B8D /* NSArray+Stuff.m */,
 			);
 			name = Sources;
 			path = Daruma;
@@ -161,6 +193,7 @@
 				0ACB69601BCD02E500268E8E /* main.m */,
 			);
 			name = "Supporting Files";
+			path = Daruma;
 			sourceTree = "<group>";
 		};
 		0ACB69891BCD097700268E8E /* Resources */ = {
@@ -177,6 +210,7 @@
 				0A5E66611BD8048E002362C2 /* FunnyPlaceholders.plist */,
 			);
 			name = Resources;
+			path = Daruma;
 			sourceTree = "<group>";
 		};
 		0ACB69921BCD0EC700268E8E /* Browser */ = {
@@ -190,11 +224,6 @@
 				0ACB699E1BCD546E00268E8E /* FeelViewItem.m */,
 				0AC67BC01BDDF8AD00D549F2 /* EmoticonValueTransformer.h */,
 				0AC67BC11BDDF8AD00D549F2 /* EmoticonValueTransformer.m */,
-				0A8FE5FE1BE0A07100355ECD /* Rendering */,
-				0ACB69A41BCD636900268E8E /* Model */,
-				0A563B261BCE8FD800A34B8D /* View */,
-				0A563B2F1BCF907000A34B8D /* NSArray+Stuff.h */,
-				0A563B301BCF907000A34B8D /* NSArray+Stuff.m */,
 			);
 			name = Browser;
 			sourceTree = "<group>";
@@ -222,6 +251,7 @@
 				0ACB69551BCD02E500268E8E /* Sources */,
 				0ACB69561BCD02E500268E8E /* Frameworks */,
 				0ACB69571BCD02E500268E8E /* Resources */,
+				0AB816671C772C4500998142 /* Copy Sparkle.framework */,
 			);
 			buildRules = (
 			);
@@ -243,6 +273,7 @@
 				TargetAttributes = {
 					0ACB69581BCD02E500268E8E = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = C6QG5C28K7;
 					};
 				};
 			};
@@ -405,9 +436,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+				);
 				INFOPLIST_FILE = Daruma/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Daruma;
 				PRODUCT_NAME = Daruma;
 				WARNING_CFLAGS = (
@@ -425,10 +461,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
 				INFOPLIST_FILE = Daruma/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Daruma;
 				PRODUCT_NAME = Daruma;
 				WARNING_CFLAGS = (
