@@ -19,10 +19,10 @@
 
 @interface BrowserWindowController : NSWindowController <NSSearchFieldDelegate>
 // UI
-@property (weak) IBOutlet NSSearchField *searchField;
-@property (weak) IBOutlet NSCollectionView *collectionView;
+@property (weak, nullable) IBOutlet NSSearchField *searchField;
+@property (weak, nullable) IBOutlet NSCollectionView *collectionView;
 // Delegation
-@property (weak) id <BrowserCoordinatorProtocol> coordinator;
+@property (weak, nullable) id <BrowserCoordinatorProtocol> coordinator;
 
 - (nonnull instancetype)init;
 
