@@ -27,7 +27,7 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 {
     if ([[self class] _validateDictionaryRepresentation: dictionaryRepresentation] == NO) {
         [NSException exceptionWithName: @"Invalid dictionary representation for Section object"
-                                reason: [dictionaryRepresentation descriptionInStringsFileFormat]
+                                reason: dictionaryRepresentation.descriptionInStringsFileFormat
                               userInfo:nil];
         return nil;
     }
@@ -51,9 +51,9 @@ const static NSString *kSectionKeywordsKey = @"keywords";
 - (nullable instancetype)initWithDictionaryRepresentation: (nonnull NSDictionary *)dictionary
 {
     if ((self = [super init])) {
-        self.title = dictionary[kSectionTitleKey];
-        self.keywords = [NSSet setWithArray: dictionary[kSectionKeywordsKey] ?: @[]];
-        self.items = [(NSArray *)dictionary[kSectionItemsKey] rd_map: ^Feel *(NSDictionary *item) {
+        _title = dictionary[kSectionTitleKey];
+        _keywords = [NSSet setWithArray: dictionary[kSectionKeywordsKey] ?: @[]];
+        _items = [(NSArray *)dictionary[kSectionItemsKey] rd_map: ^Feel *(NSDictionary *item) {
             return [Feel deserialize: item];
         }];
     }

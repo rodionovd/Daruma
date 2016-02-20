@@ -17,7 +17,7 @@ static NSString * const kFeelEmoticonKey = @"emoticon";
 {
     if ([self _validateDictionaryRepresentation: dictionaryRepresentation] == NO) {
         [NSException exceptionWithName: @"Invalid dictionary representation for Feel object"
-                                reason: [dictionaryRepresentation descriptionInStringsFileFormat]
+                                reason: dictionaryRepresentation.descriptionInStringsFileFormat
                               userInfo:nil];
         return nil;
     }

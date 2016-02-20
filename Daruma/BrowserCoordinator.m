@@ -95,12 +95,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
 
 - (NSInteger)numberOfSectionsInCollectionView: (NSCollectionView *)collectionView
 {
-    return self.dataLense.view.count;
+    return (NSInteger)self.dataLense.view.count;
 }
 
 - (NSInteger)collectionView: (NSCollectionView *)collectionView numberOfItemsInSection: (NSInteger)idx
 {
-    return self.dataLense.view[idx].items.count;
+    return (NSInteger)self.dataLense.view[(NSUInteger)idx].items.count;
 }
 
 - (NSCollectionViewItem *)collectionView: (NSCollectionView *)collectionView
@@ -140,7 +140,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                                                 withIdentifier: identifier
                                                   forIndexPath: indexPath];
     if ([kind isEqual: NSCollectionElementKindSectionHeader] && [view isKindOfClass: [HeaderView class]]) {
-        ((HeaderView *)view).title = self.dataLense.view[indexPath.section].title;
+        ((HeaderView *)view).title = self.dataLense.view[(NSUInteger)indexPath.section].title;
     }
     return view;
 }

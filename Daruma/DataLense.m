@@ -26,7 +26,7 @@
     if ((self = [super init])) {
         [self loadDataFromURL: contentsURL];
         _predicate = [@"" copy];
-        self.view = self.allSections;
+        _view = self.allSections;
     }
     return self;
 }
@@ -55,7 +55,7 @@
     NSParameterAssert(indexPath.section < self.view.count);
     NSParameterAssert(indexPath.item < self.view[indexPath.section].items.count);
     
-    return self.view[indexPath.section].items[indexPath.item];
+    return self.view[(NSUInteger)indexPath.section].items[(NSUInteger)indexPath.item];
 }
 
 - (NSString *)contentsForItemsAtIndexPaths: (nonnull NSSet <NSIndexPath *> *)indexPaths
