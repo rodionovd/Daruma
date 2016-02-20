@@ -447,12 +447,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Daruma;
 				PRODUCT_NAME = Daruma;
 				WARNING_CFLAGS = (
-					"-Wall",
-					"-Wfloat-equal",
-					"-Wimplicit-retain-self",
-					"-Wnewline-eof",
-					"-Wshadow",
+					"-Wpedantic",
 					"-Wundef",
+					"-Wshadow",
+					"-Wnewline-eof",
+					"-Wimplicit-retain-self",
+					"-Wfloat-equal",
+					"-Wconversion",
+					"-Wall",
+					"-Wdeprecated-implementations",
+					"-Wno-gnu-conditional-omitted-operand",
+					"-Werror",
+					"-Wno-gnu",
 				);
 			};
 			name = Debug;
@@ -473,12 +479,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = exposed.internals.Daruma;
 				PRODUCT_NAME = Daruma;
 				WARNING_CFLAGS = (
-					"-Wall",
-					"-Wfloat-equal",
-					"-Wimplicit-retain-self",
-					"-Wnewline-eof",
-					"-Wshadow",
+					"-Wpedantic",
 					"-Wundef",
+					"-Wshadow",
+					"-Wnewline-eof",
+					"-Wimplicit-retain-self",
+					"-Wfloat-equal",
+					"-Wconversion",
+					"-Wall",
+					"-Wdeprecated-implementations",
+					"-Wno-gnu-conditional-omitted-operand",
+					"-Wno-gnu",
 				);
 			};
 			name = Release;
