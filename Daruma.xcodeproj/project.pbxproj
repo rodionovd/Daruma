@@ -459,6 +459,9 @@
 					"-Wno-gnu-conditional-omitted-operand",
 					"-Werror",
 					"-Wno-gnu",
+					"-Wextra",
+					"-Wno-unused-variable",
+					"-Wno-unused-parameter",
 				);
 			};
 			name = Debug;
