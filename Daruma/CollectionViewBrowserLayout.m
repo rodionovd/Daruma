@@ -66,7 +66,7 @@
     return [attributes arrayByAddingObjectsFromArray: headersAttribites];
 }
 
-// We set Z-index of all headers to NSIntegerMax so they appear "on top" of other items
+// We set Z-index of all headers to NSIntegerMax so they appear "above" other items
 - (NSCollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind: (NSString *)elementKind
                                                                      atIndexPath: (NSIndexPath *)indexPath
 {
@@ -89,7 +89,7 @@
     if (originInCollectionView.y < 0) {
         frame.origin.y += (originInCollectionView.y * (-1));
     }
-    // 2) There're more sections after that one ...
+    // 2) If there're sections after that one ...
     if (attributes.indexPath.section < [self.collectionView numberOfSections]-1) {
         NSInteger nextSection = attributes.indexPath.section + 1;
         NSIndexPath *nextHeaderIndexPath = [NSIndexPath indexPathForItem: 0 inSection: nextSection];
