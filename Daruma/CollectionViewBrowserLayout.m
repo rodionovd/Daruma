@@ -96,8 +96,9 @@
         NSCollectionViewLayoutAttributes *nextHeaderAttributes =
             [self layoutAttributesForSupplementaryViewOfKind: NSCollectionElementKindSectionHeader
                                                  atIndexPath: nextHeaderIndexPath];
-        // 3) if these two headers are collapsing we move them together as a single item
-        // (so it looks like a new header is pushing the old one out)
+        // 3) if these two headers are collapsing we move them together as a single item: the top Y
+        // of the new header must be equal to the buttom Y of the old one (so it looks like the former
+        // is pushing the latter out)
         CGFloat maxY = nextHeaderAttributes.frame.origin.y;
         if (CGRectGetMaxY(frame) >= maxY) {
             frame.origin.y = maxY - frame.size.height;
