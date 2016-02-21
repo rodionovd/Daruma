@@ -11,7 +11,7 @@
 @interface NSArray <ObjectType> (Functional)
 
 - (nonnull NSArray *)rd_map: (nonnull id _Nonnull (^)(id _Nonnull obj))mapper;
-- (nonnull NSArray *)rd_filterWithBlock: (nonnull BOOL (^)(id _Nonnull obj))block;
+- (nonnull NSArray *)rd_filter: (nonnull BOOL (^)(id _Nonnull obj))block;
 - (void)rd_each: (nonnull void (^)(id _Nonnull obj))block;
 - (nonnull NSArray *)rd_distinct;
 - (nullable ObjectType)rd_randomItem;
