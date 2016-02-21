@@ -52,8 +52,8 @@
 
 - (Feel *)objectAtIndexPath: (NSIndexPath *)indexPath
 {
-    NSParameterAssert(indexPath.section < self.view.count);
-    NSParameterAssert(indexPath.item < self.view[indexPath.section].items.count);
+    NSParameterAssert(indexPath.section < (NSInteger)self.view.count);
+    NSParameterAssert(indexPath.item < (NSInteger)self.view[indexPath.section].items.count);
     
     return self.view[(NSUInteger)indexPath.section].items[(NSUInteger)indexPath.item];
 }
