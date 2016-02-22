@@ -14,11 +14,6 @@
 
 @implementation HeaderView
 
-- (void)awakeFromNib
-{
-    self.backgroundFilters = [[self class] defaultBackgroundFilters];
-}
-
 + (NSSize)genericSize
 {
     return NSMakeSize(
@@ -67,6 +62,33 @@
     NSRect topEdgeRect = bottomEdgeRect;
     topEdgeRect.origin.y = NSMaxY(self.bounds) - 1.0;
     NSRectFillUsingOperation(topEdgeRect, NSCompositeSourceOver);
+}
+
+#pragma mark - Background filters
+
+- (void)awakeFromNib
+{
+    [self applyBackgroundFilters];
+}
+
+- (void)viewDidUnhide
+{
+    [self applyBackgroundFilters];
+}
+
+- (void)viewDidHide
+{
+    [self removeBackgroundFilters];
+}
+
+- (void)applyBackgroundFilters
+{
+    self.backgroundFilters = [[self class] defaultBackgroundFilters];
+}
+
+- (void)removeBackgroundFilters
+{
+    self.backgroundFilters = @[];
 }
 
 @end
