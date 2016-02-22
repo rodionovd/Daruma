@@ -27,7 +27,7 @@
                 <subviews>
                     <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvS-c9-OFz">
                         <rect key="frame" x="-1" y="-1" width="232" height="309"/>
-                        <clipView key="contentView" copiesOnScroll="NO" id="Bgs-Xc-l6f">
+                        <clipView key="contentView" wantsLayer="YES" copiesOnScroll="NO" id="Bgs-Xc-l6f">
                             <rect key="frame" x="1" y="1" width="230" height="307"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>

@@ -6,6 +6,7 @@
 //  Copyright © 2015 Internals Exposed. All rights reserved.
 //
 
+@import CoreImage;
 #import "HeaderView.h"
 
 @interface HeaderView()
@@ -13,12 +14,26 @@
 
 @implementation HeaderView
 
+- (void)awakeFromNib
+{
+    self.backgroundFilters = [[self class] defaultBackgroundFilters];
+}
+
 + (NSSize)genericSize
 {
     return NSMakeSize(
         0  /* this width will be automatically adjusted by an enclosing collection view's layout */,
         34
     );
+}
+
++ (NSArray <CIFilter *> *)defaultBackgroundFilters
+{
+    CIFilter *blur = [CIFilter filterWithName: @"CIGaussianBlur"];
+    [blur setValue: @(1.5) forKey: @"inputRadius"];
+
+    CIFilter *vintage_yellowish = [CIFilter filterWithName: @"CIPhotoEffectProcess"];
+    return @[blur, vintage_yellowish];
 }
 
 - (void)setTitle: (NSString *)title
