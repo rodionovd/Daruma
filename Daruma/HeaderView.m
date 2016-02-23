@@ -83,12 +83,13 @@
 
 - (void)applyBackgroundFilters
 {
-    self.backgroundFilters = [[self class] defaultBackgroundFilters];
+    [self setLayerUsesCoreImageFilters: YES];
+    self.layer.backgroundFilters = [[self class] defaultBackgroundFilters];
 }
 
 - (void)removeBackgroundFilters
 {
-    self.backgroundFilters = @[];
+    self.layer.backgroundFilters = @[];
 }
 
 @end
