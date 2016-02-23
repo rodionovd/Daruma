@@ -116,19 +116,33 @@
     [self.window selectPreviousKeyView: sender];
 }
 
+- (BOOL)control: (NSControl *)control textView: (NSTextView *)textView doCommandBySelector: (SEL)selector
+{
+    if (selector == @selector(insertTab:) || selector == @selector(moveDown:)) {
+        [self moveFocusAwayFromSearchField];
+        return YES;
+    }
+    return NO;
+}
+
 - (void)controlTextDidEndEditing: (NSNotification *)obj
 {
-    if ([obj.userInfo[@"NSTextMovement"] integerValue] != NSReturnTextMovement) {
+    NSInteger movement = [obj.userInfo[@"NSTextMovement"] integerValue];
+    if (movement != NSReturnTextMovement) {
         // Pick new random placeholder
         self.searchField.placeholderString = [self.placeholders rd_randomItem];
         return;
     }
-    // Move focus to the collection view and select the first item in results
-    if ([(ResponsiveCollectionView *)self.collectionView selectFirstItemAndScrollIfNeeded]) {
-        self.searchField.refusesFirstResponder = YES;
-        [self.window selectNextKeyView: nil];
-        self.searchField.refusesFirstResponder = NO;
-    }
+    [self moveFocusAwayFromSearchField];
+}
+
+// Move focus to the collection view and select the first item in results
+- (void)moveFocusAwayFromSearchField
+{
+    self.searchField.refusesFirstResponder = YES;
+    [self _activateCollectionView: nil];
+    [(ResponsiveCollectionView *)self.collectionView selectFirstItemAndScrollIfNeeded];
+    self.searchField.refusesFirstResponder = NO;
 }
 
 #pragma mark - Internal
@@ -137,6 +151,13 @@
 {
     [self.window performSelector: @selector(makeFirstResponder:)
                       withObject: self.searchField
+                      afterDelay: 0.0];
+}
+
+- (void)_activateCollectionView: (NSNotification *)notification
+{
+    [self.window performSelector: @selector(makeFirstResponder:)
+                      withObject: self.collectionView
                       afterDelay: 0.0];
 }
 
