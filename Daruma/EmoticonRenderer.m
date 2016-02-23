@@ -47,4 +47,10 @@
     [layoutManager drawGlyphsForGlyphRange: self.glyphRange atPoint: rect.origin];
 }
 
+- (NSRect)calculateEmoticonRect
+{
+    NSLayoutManager *layoutManager = [self.textStorage.layoutManagers firstObject];
+    return [layoutManager usedRectForTextContainer: layoutManager.textContainers.firstObject];
+}
+
 @end

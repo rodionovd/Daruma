@@ -14,5 +14,6 @@
 + (instancetype)rendererForEmoticon: (NSString *)emoticon;
 
 - (void)drawEmoticonInRect: (NSRect)rect;
+- (NSRect)calculateEmoticonRect;
 
 @end
