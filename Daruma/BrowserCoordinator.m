@@ -186,7 +186,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
                                                       scrollerStyle: [NSScroller preferredScrollerStyle]];
         }
         CGFloat maxAllowedWidth = collectionViewMinWidth - scrollerWidth - (insets.left + insets.right);
-        proposedSize.width = (proposedSize.width > maxAllowedWidth) ? maxAllowedWidth : proposedSize.width;
+        proposedSize.width = MIN(proposedSize.width, maxAllowedWidth);
     }
 
     return proposedSize;
