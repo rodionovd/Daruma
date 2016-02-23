@@ -39,10 +39,6 @@
     return YES;
 }
 
-// The code below is adopted from PDKTStickySectionHeadersCollectionViewLayout by Produkt
-// https://github.com/Produkt/PDKTStickySectionHeadersCollectionViewLayout
-// PDKTStickySectionHeadersCollectionViewLayout.m
-// Kudos to them 👍🏼!
 - (NSArray<__kindof NSCollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect: (NSRect)rect
 {
     // 0) fetch the base attributes for everything but headers
@@ -78,7 +74,11 @@
     return attributes;
 }
 
-// Here's the actual code for moving headers around
+// Here's the actual code for moving headers around.
+// The code below is adopted from PDKTStickySectionHeadersCollectionViewLayout by Produkt
+// https://github.com/Produkt/PDKTStickySectionHeadersCollectionViewLayout
+// PDKTStickySectionHeadersCollectionViewLayout.m
+// Kudos to them 👍🏼!
 - (NSCollectionViewLayoutAttributes *)transformHeaderFrameWithLayoutAttributes: (NSCollectionViewLayoutAttributes *)attributes
                                                                  contentOffset: (CGPoint)contentOffset
 {
