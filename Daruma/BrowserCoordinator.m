@@ -19,7 +19,6 @@
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
 @property (strong) DataLense *dataLense;
 @property (strong, nullable) BrowserWindowController *browserWindowController;
-@property (strong) NSCache *itemSizesCache;
 @property (strong) NSCache *paintersCache;
 @end
 
@@ -34,8 +33,6 @@
                          forKeyPath: [DataLense observableContentsKey]
                             options: NSKeyValueObservingOptionOld
                             context: NULL];
-
-        _itemSizesCache = [NSCache new];
         _paintersCache = [NSCache new];
     }
     return self;
