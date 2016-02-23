@@ -47,10 +47,13 @@
     [layoutManager drawGlyphsForGlyphRange: self.glyphRange atPoint: rect.origin];
 }
 
-- (NSRect)calculateEmoticonRect
+- (NSSize)calculateEmoticonSize
 {
     NSLayoutManager *layoutManager = [self.textStorage.layoutManagers firstObject];
-    return [layoutManager usedRectForTextContainer: layoutManager.textContainers.firstObject];
+    NSRect usedRect = [layoutManager usedRectForTextContainer: layoutManager.textContainers.firstObject];
+    // Round up since we don't neeed all the precision CGFloat has
+    // (it actually causes items popping, so just remove everything after the decimal point/comma)
+    return NSMakeSize(ceil(usedRect.size.width), ceil(usedRect.size.height));
 }
 
 @end

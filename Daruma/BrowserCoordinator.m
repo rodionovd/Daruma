@@ -163,7 +163,7 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         painter = [EmoticonRenderer rendererForEmoticon: emoticon];
         [self.paintersCache setObject: painter forKey: modelObject];
     }
-    NSSize proposedSize = [painter calculateEmoticonRect].size;
+    NSSize proposedSize = [painter calculateEmoticonSize];
     // Sanitize an item's width in the flow layout mode
     if ([collectionViewLayout isKindOfClass: [NSCollectionViewFlowLayout class]]) {
         NSCollectionViewFlowLayout *flowLayout = (NSCollectionViewFlowLayout *)collectionViewLayout;
