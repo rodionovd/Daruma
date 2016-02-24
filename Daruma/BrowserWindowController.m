@@ -115,6 +115,7 @@
 {
     [self.window selectNextKeyView: sender];
 }
+
 - (void)insertBacktab: (id)sender
 {
     [self.window selectPreviousKeyView: sender];
