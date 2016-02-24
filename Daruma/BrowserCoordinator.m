@@ -27,7 +27,6 @@
 {
     if ((self = [super init])) {
         _dataLense = [[DataLense alloc] initWithContentsOfURL: containerURL];
-
         [_dataLense addObserver: self
                          forKeyPath: [DataLense observableContentsKey]
                             options: NSKeyValueObservingOptionOld
