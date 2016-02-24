@@ -7,7 +7,21 @@
         <language>en</language>
         <item>
             <title>Version 1.0.3</title>
-            <sparkle:releaseNotesLink>http://internals.exposed/daruma/releasenotes/index.html</sparkle:releaseNotesLink>
+            <!-- <sparkle:releaseNotesLink>http://internals.exposed/daruma/releasenotes/index.html</sparkle:releaseNotesLink> -->
+            <description><![CDATA[
+                <h2>1.0.3</h2>
+                <pre><i>Released on Feb 24, 2016</i></pre>
+                Here’s <b>what’s new</b> in this version:
+                <ul>
+                    <li>Sticky headers, yay finally 🎉</li>
+                </ul>
+                Here's the list of things that <b>have become better</b>:
+                <ul>
+                    <li>Keyboard navigation: now you can press <i>Tab</i> or <i>Down Arrow</i> key while in the search bar to jump into the list of emoticons without even touching your mouse!</li>
+                    <li>Scrolling is <i>much</i> smoother now — no more lags when browsing emoticons 👍🏼</li>
+                    <li>Now Daruma suggests you real placeholders instead of fake ones from previus versions. They may not be as funny as before but you can actually find something by typing them into the search field 👓</li>
+                </ul>
+            ]]>
             <pubDate>Wed, 24 Feb 2016 20:05:12 +0600</pubDate>
             <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/rodionovd/Daruma/releases/download/1.0.3/Daruma.1.0.3.zip"
@@ -24,8 +38,7 @@
                 Have a nice day 🎉
             ]]>
             </description>
-            <!-- <sparkle:releaseNotesLink>
-            </sparkle:releaseNotesLink> -->
+            <!-- <sparkle:releaseNotesLink>http://internals.exposed/daruma/releasenotes/index.html</sparkle:releaseNotesLink> -->
             <pubDate>Fri, 19 Feb 2016 19:40:38 +0600</pubDate>
             <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/rodionovd/Daruma/releases/download/1.0.2/Daruma.1.0.2.zip"
