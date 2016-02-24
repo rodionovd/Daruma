@@ -68,15 +68,12 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-
+    // Search Field setup
     self.searchField.delegate = self;
-    self.searchField.placeholderString = [self.placeholders rd_randomItem];
+    [self randomizeSearchFieldPlaceholder];
     [self.coordinator setupSearchFieldBindings: self.searchField];
-    // Wait until next (?) run loop iteration; otherwise we'll see no effect
-    [self.window performSelector: @selector(makeFirstResponder:)
-                      withObject: self.searchField
-                      afterDelay: 0.0];
-
+    [self _activateSearchField: nil];
+    // Collection View setup
     self.collectionView.delegate = self.coordinator;
     self.collectionView.dataSource = self.coordinator;
     self.collectionView.collectionViewLayout = self.collectionViewLayout;
@@ -98,6 +95,11 @@
     });
 }
 
+- (void)randomizeSearchFieldPlaceholder
+{
+    self.searchField.placeholderString = [self.placeholders rd_randomItem];
+}
+
 - (BOOL)validateMenuItem: (NSMenuItem *)menuItem
 {
     // Disable the Copy menu item if the current selection is empty
@@ -106,6 +108,8 @@
     }
     return [super validateMenuItem: menuItem];
 }
+
+#pragma mark - Keyboard navigation
 
 - (void)insertTab: (id)sender
 {
@@ -116,10 +120,11 @@
     [self.window selectPreviousKeyView: sender];
 }
 
+// Pressing Tab or Down Arrow will select the next key view (i.e. collection view)
 - (BOOL)control: (NSControl *)control textView: (NSTextView *)textView doCommandBySelector: (SEL)selector
 {
     if (selector == @selector(insertTab:) || selector == @selector(moveDown:)) {
-        [self moveFocusAwayFromSearchField];
+        [self switchToCollectionView];
         return YES;
     }
     return NO;
@@ -128,30 +133,32 @@
 - (void)controlTextDidEndEditing: (NSNotification *)obj
 {
     NSInteger movement = [obj.userInfo[@"NSTextMovement"] integerValue];
-    if (movement != NSReturnTextMovement) {
-        // Pick new random placeholder
-        self.searchField.placeholderString = [self.placeholders rd_randomItem];
-        return;
+    if (movement == NSReturnTextMovement) {
+        // Search request commited, go to the collection view
+        [self switchToCollectionView];
+    } else {
+        // Search aborted, pick new placeholder
+        [self randomizeSearchFieldPlaceholder];
     }
-    [self moveFocusAwayFromSearchField];
 }
 
-// Move focus to the collection view and select the first item in results
-- (void)moveFocusAwayFromSearchField
+// Move the collection view first responder and select the first item in results
+- (void)switchToCollectionView
 {
-    self.searchField.refusesFirstResponder = YES;
     [self _activateCollectionView: nil];
     [(ResponsiveCollectionView *)self.collectionView selectFirstItemAndScrollIfNeeded];
-    self.searchField.refusesFirstResponder = NO;
 }
 
-#pragma mark - Internal
+#pragma mark - Run Loop Hacks
+// Schedule switching the first responder on the next run loop iteration; otherwise we may see no effect
 
 - (void)_activateSearchField: (NSNotification *)notification
 {
+    self.searchField.refusesFirstResponder = YES;
     [self.window performSelector: @selector(makeFirstResponder:)
                       withObject: self.searchField
                       afterDelay: 0.0];
+    self.searchField.refusesFirstResponder = NO;
 }
 
 - (void)_activateCollectionView: (NSNotification *)notification
