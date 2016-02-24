@@ -6,6 +6,17 @@
         <description>Most recent changes with links to updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.0.3</title>
+            <sparkle:releaseNotesLink>http://internals.exposed/daruma/releasenotes/index.html</sparkle:releaseNotesLink>
+            <pubDate>Wed, 24 Feb 2016 20:05:12 +0600</pubDate>
+            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/rodionovd/Daruma/releases/download/1.0.3/Daruma.1.0.3.zip"
+                sparkle:version="4"
+                sparkle:shortVersionString="1.0.3"
+                length="1963624"
+                type="application/octet-stream"/>
+        </item>
+        <item>
             <title>Version 1.0.2</title>
             <description><![CDATA[
                 This update brings the <i>«Check for Updates…»</i> menu item which can be used for downloading new versions of the application.
