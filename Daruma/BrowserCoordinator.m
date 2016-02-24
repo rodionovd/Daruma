@@ -44,7 +44,7 @@
     // Load placeholders :: all sections' keywords
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSArray *placeholders = [[self.dataLense.view rd_flatMap: ^NSArray *(Section *section) {
-            return section.keywords.allObjects;
+            return [section.keywords.allObjects arrayByAddingObject: section.title.lowercaseString];
         }] rd_filter: ^BOOL(NSString *placeholder) {
             return placeholder.length > 1;
         }];
