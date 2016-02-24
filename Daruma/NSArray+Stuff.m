@@ -19,6 +19,15 @@
     return result;
 }
 
+- (nonnull NSArray *)rd_flatMap: (nonnull NSArray *_Nonnull (^)(id _Nonnull obj))mapper
+{
+    NSMutableArray *result = [NSMutableArray array];
+    [self enumerateObjectsUsingBlock: ^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [result addObjectsFromArray: mapper(obj)];
+    }];
+    return result;
+}
+
 - (NSArray *)rd_filter:(BOOL (^)(id))block
 {
     NSMutableArray *new = [NSMutableArray array];
