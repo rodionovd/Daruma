@@ -31,18 +31,4 @@
     return chosenFont;
 }
 
-+ (NSFont *)rd_emoticonFontForMeasurements
-{
-#define kEmoticonFontSizeMultiplier (1.15)
-    static NSFont *fontForMeasurements = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSFont *baseFont = [self rd_emoticonFont];
-        // Make more room for huge emoticons
-        fontForMeasurements = [NSFont fontWithName: baseFont.fontName
-                                       size: baseFont.pointSize * kEmoticonFontSizeMultiplier];
-    });
-    return fontForMeasurements;
-}
-
 @end

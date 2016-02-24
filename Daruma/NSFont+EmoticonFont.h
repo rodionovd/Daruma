@@ -11,6 +11,5 @@
 @interface NSFont (Emoticons)
 
 + (NSFont *)rd_emoticonFont;
-+ (NSFont *)rd_emoticonFontForMeasurements;
 
 @end

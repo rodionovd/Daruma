@@ -11,7 +11,6 @@
 #import "DataLense.h"
 #import "Feel.h"
 #import "HeaderView.h"
-#import "NSString+EmoticonSize.h"
 #import "EmoticonValueTransformer.h"
 #import "EmoticonRenderer.h"
 #import "FeelEmoticonView.h"
