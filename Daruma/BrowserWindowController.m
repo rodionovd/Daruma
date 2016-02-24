@@ -13,7 +13,7 @@
 
 @interface BrowserWindowController ()
 @property (strong) CollectionViewBrowserLayout *collectionViewLayout;
-@property (strong) NSArray *placeholders;
+@property (copy) NSArray *placeholders;
 
 - (void)_activateSearchField: (NSNotification *)notification;
 @end
@@ -25,13 +25,6 @@
     if ((self = [super init])) {
 
         _collectionViewLayout = [CollectionViewBrowserLayout new];
-
-        // Load some (kinda) funny placeholders for the search field
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL *url = [[NSBundle mainBundle] URLForResource: @"FunnyPlaceholders"
-                                                 withExtension: @"plist"];
-            self->_placeholders = [NSArray arrayWithContentsOfURL: url];
-        });
 
         [[NSNotificationCenter defaultCenter] addObserver: self
                                                  selector: @selector(showWindow:)
@@ -95,9 +88,17 @@
     });
 }
 
+- (void)usePlaceholders: (nonnull NSArray *)placeholders
+{
+    self.placeholders = placeholders;
+    [self randomizeSearchFieldPlaceholder];
+}
+
 - (void)randomizeSearchFieldPlaceholder
 {
-    self.searchField.placeholderString = [self.placeholders rd_randomItem];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.searchField.placeholderString = [self.placeholders rd_randomItem];
+    });
 }
 
 - (BOOL)validateMenuItem: (NSMenuItem *)menuItem

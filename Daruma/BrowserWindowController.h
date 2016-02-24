@@ -28,5 +28,6 @@
 
 - (IBAction)copy: (nullable id)sender;
 - (void)reloadCollectionView: (nullable id)sender;
+- (void)usePlaceholders: (nonnull NSArray *)placeholders;
 
 @end
