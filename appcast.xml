@@ -22,6 +22,7 @@
                     <li>Now Daruma suggests you real placeholders instead of fake ones from previus versions. They may not be as funny as before but you can actually find something by typing them into the search field 👓</li>
                 </ul>
             ]]>
+            </description>
             <pubDate>Wed, 24 Feb 2016 20:05:12 +0600</pubDate>
             <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/rodionovd/Daruma/releases/download/1.0.3/Daruma.1.0.3.zip"
