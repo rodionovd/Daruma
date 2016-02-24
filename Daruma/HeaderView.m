@@ -25,7 +25,7 @@
 + (NSArray <CIFilter *> *)defaultBackgroundFilters
 {
     CIFilter *blur = [CIFilter filterWithName: @"CIGaussianBlur"];
-    [blur setValue: @(1.5) forKey: @"inputRadius"];
+    [blur setValue: @(3) forKey: @"inputRadius"];
 
     CIFilter *vintage_yellowish = [CIFilter filterWithName: @"CIPhotoEffectProcess"];
     return @[blur, vintage_yellowish];
