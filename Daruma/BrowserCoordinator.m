@@ -14,6 +14,7 @@
 #import "EmoticonValueTransformer.h"
 #import "EmoticonRenderer.h"
 #import "FeelEmoticonView.h"
+#import "NSArray+Stuff.h"
 
 @interface BrowserCoordinator() <BrowserCoordinatorProtocol>
 @property (strong) DataLense *dataLense;
@@ -40,6 +41,15 @@
 {
     self.browserWindowController = [BrowserWindowController new];
     self.browserWindowController.coordinator = self;
+    // Load placeholders :: all sections' keywords
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSArray *placeholders = [[self.dataLense.view rd_flatMap: ^NSArray *(Section *section) {
+            return section.keywords.allObjects;
+        }] rd_filter: ^BOOL(NSString *placeholder) {
+            return placeholder.length > 1;
+        }];
+        [self.browserWindowController usePlaceholders: placeholders];
+    });
     [self.browserWindowController showWindow: self];
 }
 
