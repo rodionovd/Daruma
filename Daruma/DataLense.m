@@ -118,7 +118,7 @@
 
 + (nonnull NSString *)observablePredicateKey
 {
-    return KVOKeyForClass(DataLense,predicate);
+    return KVOKeyForClass(DataLense, predicate);
 }
 
 #pragma mark - Description

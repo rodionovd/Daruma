@@ -39,13 +39,13 @@
 
 #pragma mark Custom actions
 
-- (IBAction)openAboutPanel:(id)sender
+- (IBAction)openAboutPanel: (id)sender
 {
     [self.app showAboutPanel];
 }
 
 // CMD+F action handler
-- (IBAction)performFindPanelAction:(id)sender
+- (IBAction)performFindPanelAction: (id)sender
 {
     [self.app toggleSearch];
 }

@@ -156,7 +156,6 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
     return [HeaderView genericSize];
 }
 
-
 #pragma mark - NSCollectionViewDelegateFlowLayout
 
 - (NSSize)collectionView: (NSCollectionView *)collectionView

@@ -10,7 +10,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-- (IBAction)openAboutPanel:(id)sender;
+- (IBAction)openAboutPanel: (id)sender;
 
 @end
 

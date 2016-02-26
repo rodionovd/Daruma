@@ -8,13 +8,10 @@
 
 @import Cocoa;
 
-
 @protocol BrowserCoordinatorProtocol <NSCollectionViewDataSource, NSCollectionViewDelegate>
-
 @required
 - (void)writeItemsToPasteboard: (nonnull NSSet <NSIndexPath *> *)indexPaths;
 - (void)setupSearchFieldBindings: (nonnull NSSearchField *)searchField;
-
 @end
 
 @interface BrowserWindowController : NSWindowController <NSSearchFieldDelegate>
