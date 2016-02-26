@@ -18,11 +18,7 @@ static CGFloat const kDarumaDefaultEmoticonFontSize = 27.f;
     static NSFont *chosenFont = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        // Well. If we try to use -[NSFont systemFontOfSize:weight:] here
-        // we'll got *so many* leaks when trying to calculate an emoticon size with
-        // -[NSString boundingRectWithSize:options:attributes:context:], because for some reason it
-        // creates a new font on every call if we pass -systemFontOfSize:weight: as a value to the
-        // NSFontAttributeName attribute ¯\_(ツ)_/¯
+        // TODO: use -[NSFont systemFontOfSize:weight:] instead so we won't rely on internal font names
         chosenFont = [NSFont fontWithName: kDarumaDefaultEmoticonFontName size: kDarumaDefaultEmoticonFontSize];
         // We could also fallback to Helvetica or something else, but I don't care since
         // Daruma requires 10.11+ anyway
