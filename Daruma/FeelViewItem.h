@@ -8,5 +8,6 @@
 
 @import Cocoa;
 
+// This collection view item's controller handles selection, highlighting and mouse clicking behaviour.
 @interface FeelViewItem : NSCollectionViewItem
 @end

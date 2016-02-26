@@ -16,6 +16,7 @@
 
 #pragma mark - Mouse Events
 
+/// If there're a few selected items and user clicks on *one* of them, we remove selection from other items.
 - (void)mouseDown:(NSEvent *)theEvent
 {
     [super mouseDown: theEvent];

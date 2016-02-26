@@ -50,22 +50,28 @@
 
 - (void)drawRect: (NSRect)dirtyRect
 {
+    // Draw an emoticon
     [self lockFocus];
     [self.renderer drawEmoticonInRect: dirtyRect];
     [self unlockFocus];
 
-    NSColor *borderColor = nil;
-    if (self.highlightState == NSCollectionViewItemHighlightForSelection) {
-        borderColor = kSelectionCandidateBorderColor;
-    } else if (self.selected && self.highlightState != NSCollectionViewItemHighlightForDeselection) {
-        borderColor = kSelectionBorderColor;
-    } else {
-        borderColor = nil;
-    }
-    
+    // Draw a border around the cell if needed
+    NSColor *borderColor = [self currentBorderColor];
     self.layer.borderColor = borderColor.CGColor ?: nil;
     self.layer.borderWidth = borderColor.CGColor ? kSelectionBorderWidth : 0.0;
     self.layer.cornerRadius = kSelectionBorderRadius;
+}
+
+- (NSColor *)currentBorderColor
+{
+    if (self.highlightState == NSCollectionViewItemHighlightForSelection) {
+        return kSelectionCandidateBorderColor;
+    }
+    if (self.selected && self.highlightState != NSCollectionViewItemHighlightForDeselection) {
+        return kSelectionBorderColor;
+    }
+
+    return nil;
 }
 
 @end
