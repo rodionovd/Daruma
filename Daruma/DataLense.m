@@ -6,12 +6,17 @@
 //  Copyright © 2015-2016 Internals Exposed. All rights reserved.
 //
 
-#import <AppKit/NSCollectionView.h> // for UIKit-style NSIndexPath accessors (section, item)
 #import "DataLense.h"
 #import "Feel.h"
 #import "Section.h"
 #import "NSArray+Stuff.h"
 #import "EmoticonValueTransformer.h"
+
+// For UIKit-style NSIndexPath accessors (section, item)
+@interface NSIndexPath (rd_SectionItemAccessors)
+@property (readonly) NSInteger item;
+@property (readonly) NSInteger section;
+@end
 
 @interface DataLense()
 @property (strong) NSArray <Section *> *allSections;
