@@ -6,7 +6,7 @@
 //  Copyright © 2015-2016 Internals Exposed. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 @interface ResponsiveCollectionView : NSCollectionView
 
