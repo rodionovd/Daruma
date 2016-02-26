@@ -20,11 +20,8 @@
 {
     if ((self = [super init])) {
 
-        NSDictionary *attrs = @{
-            NSFontAttributeName: [NSFont rd_emoticonFont]
-        };
         _textStorage = [[NSTextStorage alloc] initWithString: emoticon
-                                                  attributes: attrs];
+                                                  attributes: [self textStorageAttributes]];
         NSLayoutManager *layoutManager = [NSLayoutManager new];
         NSTextContainer *textContainer = [NSTextContainer new];
         [layoutManager addTextContainer: textContainer];
@@ -41,6 +38,13 @@
     return [[self alloc] initWithEmoticon: emoticon];
 }
 
+- (NSDictionary *)textStorageAttributes
+{
+    return  @{
+        NSFontAttributeName: [NSFont rd_emoticonFont]
+    };
+}
+
 - (void)drawEmoticonInRect: (NSRect)rect
 {
     NSLayoutManager *layoutManager = [self.textStorage.layoutManagers firstObject];
@@ -52,7 +56,7 @@
     NSLayoutManager *layoutManager = [self.textStorage.layoutManagers firstObject];
     NSRect usedRect = [layoutManager usedRectForTextContainer: layoutManager.textContainers.firstObject];
     // Round up since we don't neeed all the precision CGFloat has
-    // (it actually causes items popping, so just remove everything after the decimal point/comma)
+    // (it actually causes items popping, so just remove everything after the decimal point)
     return NSMakeSize(ceil(usedRect.size.width), ceil(usedRect.size.height));
 }
 
