@@ -40,7 +40,7 @@
 
 - (NSDictionary *)textStorageAttributes
 {
-    return  @{
+    return @{
         NSFontAttributeName: [NSFont rd_emoticonFont]
     };
 }
