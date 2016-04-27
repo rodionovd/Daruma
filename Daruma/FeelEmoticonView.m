@@ -6,8 +6,10 @@
 //  Copyright © 2015-2016 Internals Exposed. All rights reserved.
 //
 
+@import QuartzCore;
 #import "FeelEmoticonView.h"
 #import "EmoticonRenderer.h"
+#import "BorderPulseLayer.h"
 
 #define kSelectionBorderRadius (3.5)
 #define kSelectionBorderWidth (1.0)
@@ -16,13 +18,33 @@
 
 @implementation FeelEmoticonView
 
-- (instancetype)initWithFrame:(NSRect)frameRect
+- (instancetype)initWithFrame: (NSRect)frameRect
 {
     if ((self = [super initWithFrame: frameRect])) {
         self.wantsLayer = YES;
         _highlightState = NSCollectionViewItemHighlightNone;
+        _actionsQueue = dispatch_queue_create("double-click-actions-queue",
+                                              DISPATCH_QUEUE_SERIAL);
     }
     return self;
+}
+
+#pragma mark - Double click: animation + handler
+
+- (void)mouseDown: (NSEvent *)theEvent
+{
+    [super mouseDown: theEvent];
+    if (theEvent.clickCount < 2) {
+        return;
+    }
+    // Indicate that we've doing something on double click
+    BorderPulseLayer *pulseLayer = [BorderPulseLayer layerForBorder: self.layer];
+    [self.layer addSublayer: pulseLayer];
+    [pulseLayer pulse];
+    // Call a handler if any
+    dispatch_async(_actionsQueue, ^{
+        if (self.doubleClickAction) self.doubleClickAction();
+    });
 }
 
 #pragma mark - Custom setters
