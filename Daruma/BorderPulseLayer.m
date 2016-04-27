@@ -9,14 +9,15 @@
 #import "BorderPulseLayer.h"
 
 // Pulse properties
-static CGFloat const kPulseDuration     = 0.4f;
+static CGFloat const kPulseDuration     = 0.45f;
 static float   const kPulseRepeatCount  = 1.0f;
 static CGFloat const kPulseInitialScale = 0.0f;
 static CGFloat const kPulseFinalScale   = 1.0f;
 static CGFloat const kPulseBorderWidthAdjustment = 0.1f;
+static CGFloat const kPulseBorderColorAlpha = 1.0f;
 // Animation timings
 #define kOpacityAnimationKeyFrameTimings @[@0.0, @0.4, @1]
-#define kOpacityAnimationKeyFrameValues  @[@0.8, @0.9, @1]
+#define kOpacityAnimationKeyFrameValues  @[@0.6, @0.9, @0.6]
 
 @implementation BorderPulseLayer
 
@@ -24,7 +25,7 @@ static CGFloat const kPulseBorderWidthAdjustment = 0.1f;
 {
     BorderPulseLayer *layer = [[self class] layer];
     layer.frame = borderLayer.bounds;
-    layer.borderColor  = borderLayer.borderColor;
+    layer.borderColor  = CGColorCreateCopyWithAlpha(borderLayer.borderColor, kPulseBorderColorAlpha);
     layer.borderWidth  = borderLayer.borderWidth + kPulseBorderWidthAdjustment;
     layer.cornerRadius = borderLayer.cornerRadius;
 
