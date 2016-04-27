@@ -9,7 +9,7 @@
 #import "BorderPulseLayer.h"
 
 // Pulse properties
-static CGFloat const kPulseDuration     = 0.45f;
+static CGFloat const kPulseDuration     = 0.4f;
 static float   const kPulseRepeatCount  = 1.0f;
 static CGFloat const kPulseInitialScale = 0.0f;
 static CGFloat const kPulseFinalScale   = 1.0f;
