@@ -34,6 +34,7 @@
 		0ACB69A11BCD546E00268E8E /* FeelEmoticon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */; };
 		0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69A21BCD564C00268E8E /* Feels.plist */; };
 		0AE112251CD0D0E80017467C /* BorderPulseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE112241CD0D0E80017467C /* BorderPulseLayer.m */; };
+		0AE112291CD0EA780017467C /* appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0AE112281CD0EA780017467C /* appcast.xml */; };
 		0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD5D411BD667FB00B74C56 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		0ACB69A21BCD564C00268E8E /* Feels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feels.plist; sourceTree = "<group>"; };
 		0AE112231CD0D0E80017467C /* BorderPulseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderPulseLayer.h; sourceTree = "<group>"; };
 		0AE112241CD0D0E80017467C /* BorderPulseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderPulseLayer.m; sourceTree = "<group>"; };
+		0AE112281CD0EA780017467C /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
 		0AFD5D411BD667FB00B74C56 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 		0ACB69501BCD02E500268E8E = {
 			isa = PBXGroup;
 			children = (
+				0AE112281CD0EA780017467C /* appcast.xml */,
 				0ACB695B1BCD02E500268E8E /* Sources */,
 				0ACB69891BCD097700268E8E /* Resources */,
 				0ACB695F1BCD02E500268E8E /* Supporting Files */,
@@ -302,6 +305,7 @@
 			files = (
 				0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */,
 				0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */,
+				0AE112291CD0EA780017467C /* appcast.xml in Resources */,
 				0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */,
 				0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */,
 				0A41F5841BD5312600363583 /* HeaderView.xib in Resources */,
