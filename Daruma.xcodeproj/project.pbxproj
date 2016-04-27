@@ -34,7 +34,6 @@
 		0ACB69A11BCD546E00268E8E /* FeelEmoticon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */; };
 		0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69A21BCD564C00268E8E /* Feels.plist */; };
 		0AE112251CD0D0E80017467C /* BorderPulseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE112241CD0D0E80017467C /* BorderPulseLayer.m */; };
-		0AE112291CD0EA780017467C /* appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0AE112281CD0EA780017467C /* appcast.xml */; };
 		0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD5D411BD667FB00B74C56 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
@@ -305,7 +304,6 @@
 			files = (
 				0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */,
 				0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */,
-				0AE112291CD0EA780017467C /* appcast.xml in Resources */,
 				0ACB698B1BCD099D00268E8E /* BrowserWindow.xib in Resources */,
 				0ACB69631BCD02E500268E8E /* Assets.xcassets in Resources */,
 				0A41F5841BD5312600363583 /* HeaderView.xib in Resources */,
