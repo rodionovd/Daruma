@@ -34,7 +34,7 @@
 - (void)mouseDown: (NSEvent *)theEvent
 {
     [super mouseDown: theEvent];
-    if (theEvent.clickCount < 2) {
+    if (theEvent.clickCount != 2) {
         return;
     }
     // Indicate that we've doing something on double click
