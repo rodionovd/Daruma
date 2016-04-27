@@ -122,7 +122,12 @@ writeItemsAtIndexPaths: (NSSet<NSIndexPath *> *)indexPaths
         painter = [EmoticonRenderer rendererForEmoticon: emoticon];
         [self.paintersCache setObject: painter forKey: modelObject];
     }
-    ((FeelEmoticonView *)item.view).renderer = painter;
+    
+    FeelEmoticonView *view = (FeelEmoticonView *)item.view;
+    view.renderer = painter;
+    view.doubleClickAction = ^() {
+        [self writeItemsToPasteboard: [NSSet setWithObject: indexPath]];
+    };
     return item;
 }
 

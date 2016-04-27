@@ -33,6 +33,7 @@
 		0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB699E1BCD546E00268E8E /* FeelViewItem.m */; };
 		0ACB69A11BCD546E00268E8E /* FeelEmoticon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */; };
 		0ACB69A31BCD564C00268E8E /* Feels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB69A21BCD564C00268E8E /* Feels.plist */; };
+		0AE112251CD0D0E80017467C /* BorderPulseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE112241CD0D0E80017467C /* BorderPulseLayer.m */; };
 		0AFD5D421BD667FB00B74C56 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD5D411BD667FB00B74C56 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,9 @@
 		0ACB699E1BCD546E00268E8E /* FeelViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeelViewItem.m; sourceTree = "<group>"; };
 		0ACB699F1BCD546E00268E8E /* FeelEmoticon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeelEmoticon.xib; sourceTree = "<group>"; };
 		0ACB69A21BCD564C00268E8E /* Feels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feels.plist; sourceTree = "<group>"; };
+		0AE112231CD0D0E80017467C /* BorderPulseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderPulseLayer.h; sourceTree = "<group>"; };
+		0AE112241CD0D0E80017467C /* BorderPulseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderPulseLayer.m; sourceTree = "<group>"; };
+		0AE112281CD0EA780017467C /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
 		0AFD5D411BD667FB00B74C56 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,8 @@
 				0A41F5811BD52FEC00363583 /* HeaderView.m */,
 				0A4DE1111BD7A1B20069764F /* ResponsiveCollectionView.h */,
 				0A4DE1121BD7A1B20069764F /* ResponsiveCollectionView.m */,
+				0AE112231CD0D0E80017467C /* BorderPulseLayer.h */,
+				0AE112241CD0D0E80017467C /* BorderPulseLayer.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 		0ACB69501BCD02E500268E8E = {
 			isa = PBXGroup;
 			children = (
+				0AE112281CD0EA780017467C /* appcast.xml */,
 				0ACB695B1BCD02E500268E8E /* Sources */,
 				0ACB69891BCD097700268E8E /* Resources */,
 				0ACB695F1BCD02E500268E8E /* Supporting Files */,
@@ -328,6 +335,7 @@
 				0AC67BD41BDF89D400D549F2 /* EmoticonRenderer.m in Sources */,
 				0A4DE1131BD7A1B20069764F /* ResponsiveCollectionView.m in Sources */,
 				0A41F58A1BD53CE200363583 /* Section.m in Sources */,
+				0AE112251CD0D0E80017467C /* BorderPulseLayer.m in Sources */,
 				0A563B371BCFCC3900A34B8D /* CollectionViewBrowserLayout.m in Sources */,
 				0ACB69A01BCD546E00268E8E /* FeelViewItem.m in Sources */,
 			);

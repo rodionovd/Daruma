@@ -6,6 +6,17 @@
         <description>Most recent changes with links to updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.1.0</title>
+             <sparkle:releaseNotesLink>http://internals.exposed/daruma/releasenotes/index.html</sparkle:releaseNotesLink>
+            <pubDate>Wed, 27 Apr 2016 19:31:41 +0600</pubDate>
+            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/rodionovd/Daruma/releases/download/1.1.0/Daruma.1.1.0.zip"
+            sparkle:version="5"
+            sparkle:shortVersionString="1.1.0"
+            length="1980508"
+            type="application/octet-stream"/>
+        </item>
+        <item>
             <title>Version 1.0.3</title>
             <!-- <sparkle:releaseNotesLink>http://internals.exposed/daruma/releasenotes/index.html</sparkle:releaseNotesLink> -->
             <description><![CDATA[
